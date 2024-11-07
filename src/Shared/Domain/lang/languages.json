@@ -1,0 +1,155 @@
+{
+  "es": {
+    "nav": {
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "experience": "Experiencia",
+      "education": "Educación",
+      "hobbies": "Aficiones",
+      "achievements": "Logros",
+      "contact": "Contacto"
+    },
+    "about": {
+      "name": "Tu Nombre",
+      "slogan": "Desarrollador Full Stack",
+      "description": "Desarrollador apasionado enfocado en crear soluciones eficientes y escalables.",
+      "email": "tu.email@example.com",
+      "linkedin": "https://linkedin.com/in/tuperfil",
+      "github": "https://github.com/tuusuario",
+      "cv": "/ruta-a-tu-cv.pdf"
+    },
+    "projects": [
+      {
+        "name": "Proyecto 1",
+        "description": "Una breve descripción del proyecto",
+        "learnt": "Lo que aprendiste de este proyecto",
+        "technologies": ["React", "Node.js", "MongoDB"],
+        "link": "https://proyecto1.com",
+        "image": "/proyecto1.jpg"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Desarrollador Senior",
+        "company": "Empresa Tech",
+        "companyLink": "https://empresa.com",
+        "initialDate": "2020-01",
+        "finalDate": "Presente",
+        "country": "España",
+        "description": "Lideré equipo de desarrollo e implementé características clave"
+      }
+    ],
+    "education": [
+      {
+        "title": "Ingeniería Informática",
+        "institution": "Nombre Universidad",
+        "initialDate": "2015",
+        "finalDate": "2019",
+        "country": "España",
+        "description": "Enfoque en ingeniería de software",
+        "type": "qualification",
+        "level": "Grado Universitario"
+      }
+    ],
+    "hobbies": [
+      {
+        "name": "Fotografía",
+        "description": "Capturando momentos y paisajes",
+        "image": "/fotografia.jpg"
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Mejor Desarrollador 2023",
+        "image": "/premio.jpg",
+        "link": "https://enlace-premio.com"
+      }
+    ]
+  },
+  "en": {
+    "nav": {
+      "about": "About",
+      "projects": "Projects",
+      "experience": "Experience",
+      "education": "Education",
+      "hobbies": "Hobbies",
+      "achievements": "Achievements",
+      "contact": "Contact"
+    },
+    "about": {
+      "name": "Your Name",
+      "slogan": "Full Stack Developer",
+      "description": "Passionate developer focused on creating efficient and scalable solutions.",
+      "email": "your.email@example.com",
+      "linkedin": "https://linkedin.com/in/yourprofile",
+      "github": "https://github.com/yourusername",
+      "cv": "/path-to-your-cv.pdf"
+    },
+    "projects": [
+      {
+        "name": "Project 1",
+        "description": "A brief description of the project",
+        "learnt": "What you learned from this project",
+        "technologies": ["React", "Node.js", "MongoDB"],
+        "link": "https://project1.com",
+        "image": "/project1.jpg"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Senior Developer",
+        "company": "Tech Company",
+        "companyLink": "https://company.com",
+        "initialDate": "2020-01",
+        "finalDate": "Present",
+        "country": "Spain",
+        "description": "Led development team and implemented key features"
+      },
+      {
+        "title": "Senior Developer",
+        "company": "Tech Company",
+        "companyLink": "https://company.com",
+        "initialDate": "2020-01",
+        "finalDate": "Present",
+        "country": "Spain",
+        "description": "Led development team and implemented key features"
+      }
+    ],
+    "education": [
+      {
+        "title": "Computer Science",
+        "institution": "University Name",
+        "initialDate": "2015",
+        "finalDate": "2019",
+        "country": "Spain",
+        "description": "Focus on software engineering",
+        "type": "qualification",
+        "level": "Bachelor's Degree"
+      },
+      {
+        "title": "English",
+        "institution": "University Name",
+        "initialDate": "2015",
+        "finalDate": "2019",
+        "country": "Spain",
+        "description": "Focus on software engineering",
+        "type": "qualification",
+        "level": "Bachelor's Degree"
+      }
+    ],
+    "hobbies": [
+      {
+        "name": "Photography",
+        "description": "Capturing moments and landscapes",
+        "image": "/photography.jpg"
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Best Developer Award 2023",
+        "image": "/award.jpg",
+        "link": "https://award-link.com"
+      }
+    ]
+  }
+}

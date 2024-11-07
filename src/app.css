@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color-scheme: light dark;
+  background-color: #242424;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  scrollbar-color: #8dc0e2 #f1f1f1;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.dark {
+  scrollbar-color: #e26411 #4f4f4f;
+  scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  max-width: 100dvw;
+  max-height: 100dvh;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+h1,
+h3 {
+  @apply text-primary dark:text-orange-600;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  @apply text-primary dark:text-white;
+}
+
+a:hover {
+  @apply text-blue-800 dark:text-orange-300;
+}
+
+input {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+#app {
+  @apply accent-blue-700 dark:accent-orange-600 caret-blue-700 dark:caret-orange-600;
+}
+
+.navigation {
+  @apply fixed top-0 w-full bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-700 z-50;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  height: 2.3rem;
+  width: 2.3rem;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  @apply p-2 bg-gray-100 dark:bg-gray-700 text-primary dark:text-white;
+}
+
+.btn:hover {
+  @apply bg-blue-300 dark:bg-orange-600;
+}
+
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.prev-next {
+  @apply absolute right-[-1.5em] top-1/2 transform -translate-y-1/2 bg-gray-200 dark:bg-gray-700 rounded-full p-2 pb-3;
+}
+
+.section {
+  @apply p-12;
+  width: inherit;
+}
+
+.section-title {
+  @apply text-3xl font-bold mb-8 text-gray-900 dark:text-white text-center;
+}
+
+.btn-primary {
+  @apply text-sm inline-flex items-center px-4 py-2 bg-primary text-white hover:text-white rounded-lg hover:bg-blue-900 transition-colors dark:bg-gray-600 dark:hover:bg-orange-600 dark:hover:text-white;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-blue-100 transition-colors dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-orange-100 dark:hover:text-orange-700;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('/src/assets/fonts/ReadexPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('/src/assets/fonts/ReadexPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@layer components {
+  .readex-bold {
+    @apply font-readex font-bold;
+    letter-spacing: 0.05em;
+  }
+
+  .readex-thin {
+    @apply font-readex font-light;
+    letter-spacing: 0.05em;
+  }
+}
