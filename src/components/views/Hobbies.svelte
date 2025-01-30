@@ -1,26 +1,62 @@
 <script lang="ts">
-    import { i18nStores } from '@App/components/stores/i18n-data.ts';
-    
-    const { nav, hobbies } = i18nStores;
-  </script>
-  
-  <section id="hobbies" class="section">
-    <h2 class="section-title">{$nav.hobbies}</h2>
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {#each $hobbies as hobby}
-        <div 
-          class="relative h-64 rounded-lg overflow-hidden group"
-          style="background-image: url({hobby.image}); background-size: cover;"
+  import Fa from 'svelte-fa';
+  import { faBookOpen, faFistRaised, faGamepad, faCode } from '@fortawesome/free-solid-svg-icons';
+  import { i18nStores } from '@App/components/stores/i18n-data.ts';
+  const { nav, hobbies } = i18nStores;
+
+  const hobbiesData = [
+    {
+      icon: faCode,
+      image: '/images/coding.jpg'
+    },
+    {
+      icon: faGamepad,
+      image: '/images/gaming.jpg'
+    },
+    {
+      icon: faBookOpen,
+      image: '/images/reading.jpg'
+    },
+    {
+      icon: faFistRaised,
+      image: '/images/training.jpg'
+    }
+  ];
+</script>
+
+<section id="hobbies" class="section lg:px-6">
+  <h2 class="section-title">&lt;{$nav.hobbies}/&gt;</h2>
+  <div class="grid gap-2 md:grid-cols-3 w-full">
+    {#each $hobbies as hobby, index}
+        <article
+            class={`
+              h-64 rounded-lg overflow-hidden group bg-cover bg-no-repeat bg-bottom relative
+              ${index % 3 === 0 ? 'md:col-span-2' : 'md:col-span-1'}
+            `}
+            style="background-image: url({hobby.image})"
         >
-          <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all">
-            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 class="text-xl font-bold mb-2">{hobby.name}</h3>
-              <p class="text-sm opacity-40 group-hover:opacity-100 transition-opacity readex-thin">
-                {hobby.description}
-              </p>
+            <div class="flex items-end justify-start w-full h-full bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all">
+                <section class="p-6 text-white text-xl w-full">
+                  <div class={`
+                      flex gap-2 items-center
+                      ${index % 3 === 0 ? 'group-hover:text-flame' : 'group-hover:text-gold'}
+                    `}
+                  >
+                    <Fa icon={hobbiesData[index].icon} />
+                    <h3 class="text-inherit">{hobby.name}</h3>
+                  </div>
+                  <p class="text-sm opacity-40 group-hover:opacity-100 transition-opacity readex-thin text-balance">
+                      {hobby.description}
+                  </p>
+                </section>
             </div>
-          </div>
-        </div>
-      {/each}
-    </div>
-  </section>
+        </article>
+    {/each}
+  </div>
+</section>
+
+<style>
+  .section-title {
+    @apply lg:text-start;
+  }
+</style>

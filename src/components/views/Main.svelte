@@ -1,41 +1,36 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import { waitLocale } from 'svelte-i18n';
     import Nav from '@App/components/views/Nav.svelte';
     import About from '@App/components/views/About.svelte';
     import Projects from '@App/components/views/Projects.svelte';
+    import Skills from '@App/components/views/Skills.svelte';
     import Experience from '@App/components/views/Experience.svelte';
     import Education from '@App/components/views/Education.svelte';
     import Hobbies from '@App/components/views/Hobbies.svelte';
     import Achievements from '@App/components/views/Achievements.svelte';
     import Contact from '@App/components/views/Contact.svelte';
-    let darkMode = $state(false);
-  
-    onMount(async () => {
-        await waitLocale();
-        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        darkMode = isDark;
-        updateTheme(isDark);
-    });
-    
-    function updateTheme(isDark: boolean) {
-        document.documentElement.classList.toggle('dark', isDark);
-    }
-    
-    $effect(() => {
-        updateTheme(darkMode);
-    });
 </script>
 
-<main class="mx-auto pt-10">
-    <Nav bind:darkMode />
-    <div class="section-container bg-white dark:bg-gray-800">
+<main>
+    <Nav />
+    <div class="section-container bg-obscure">
         <About />
         <Projects />
-        <Experience />
-        <Education />
-        <Hobbies />
-        <Achievements />
+        <Skills />
+        <div class="flex justify-center flex-col lg:flex-row lg:px-4">
+            <Experience />
+            <Education />
+        </div>
+        <div class="grid grid-cols-4 w-full lg:px-[8%] relative">
+            <div class="col-span-4 lg:col-span-1">
+                <Achievements />
+            </div>
+            <pre class="comment-block">
+                01010010 01101111 01100011 01101011 01111001 00100000 01000010 01101001 01101110 01100001 01110010 01111001 01010010 01101111 01100011 01101011 01111001 00100000 01000010 01101001 01101110 01100001 01110010 01111001
+            </pre>
+            <div class="col-span-4 lg:col-span-3">
+                <Hobbies />
+            </div>
+        </div>
         <Contact />
     </div>
 </main>
@@ -43,7 +38,7 @@
 <style>
     .section-container {
         font-family: 'Readex Pro';
-        src: url('/src/assets/fonts/ReadexPro-Bold.ttf') format('truetype');
+        src: url('/fonts/ReadexPro-Bold.ttf') format('truetype');
         font-weight: 700;
         font-style: normal;
         display: grid;
@@ -52,5 +47,8 @@
         min-width: 80dvw;
         width: 100%;
         margin: 0 auto;
+    }
+    .comment-block {
+        @apply absolute -ml-[25%] w-full text-start text-white opacity-[12%] text-base lg:text-xl leading-[0.6rem] lg:leading-[0.8rem] select-none;
     }
   </style>

@@ -1,0 +1,10 @@
+/* TEAM */
+Developer: Rocky Steven Barrios
+Design: Rocky Steven Barrios
+Contact: rockystevendeveloper@gmail.com
+
+/* THANKS */
+Agradecimientos y apoyo a: Svelte, Vite, TailwindCSS
+Framework: Svelte + Vite
+
+01-2025

@@ -7,22 +7,15 @@
   line-height: 1.5;
   font-weight: 400;
   
-  color-scheme: light dark;
-  background-color: #242424;
-  
+  color-scheme: light dark;  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  scrollbar-color: #8dc0e2 #f1f1f1;
+  scrollbar-color: #FFB005 #13141A;
   scrollbar-width: thin;
   scroll-behavior: smooth;
-}
-
-.dark {
-  scrollbar-color: #e26411 #4f4f4f;
-  scrollbar-width: thin;
 }
 
 body {
@@ -37,23 +30,15 @@ h1 {
   line-height: 1.1;
 }
 
-h1,
-h3 {
-  @apply text-primary dark:text-orange-600;
-}
-
 a {
   font-weight: 500;
   text-decoration: inherit;
-  @apply text-primary dark:text-white;
+  @apply text-caramel;
 }
 
-a:hover {
-  @apply text-blue-800 dark:text-orange-300;
-}
-
-input {
-  @apply text-gray-700 dark:text-gray-300;
+input,
+textarea {
+  @apply text-gray-700 readex-thin;
 }
 
 input[type=text],
@@ -65,30 +50,33 @@ textarea {
   outline: none;
 }
 
+img {
+  @apply select-none pointer-events-none;
+}
+
 #app {
-  @apply accent-blue-700 dark:accent-orange-600 caret-blue-700 dark:caret-orange-600;
+  @apply w-full overflow-x-hidden accent-orange-700 caret-orange-700;
 }
 
 .navigation {
-  @apply fixed top-0 w-full bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-700 z-50;
+  @apply sticky top-0 w-full bg-white z-50;
 }
 
 .btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid transparent;
   height: 2.3rem;
   width: 2.3rem;
   font-size: 1rem;
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
-  @apply p-2 bg-gray-100 dark:bg-gray-700 text-primary dark:text-white;
+  @apply p-2 bg-gray-100 text-elegant;
 }
 
 .btn:hover {
-  @apply bg-blue-300 dark:bg-orange-600;
+  @apply bg-flame;
 }
 
 .btn:focus,
@@ -97,24 +85,59 @@ textarea {
 }
 
 .prev-next {
-  @apply absolute right-[-1.5em] top-1/2 transform -translate-y-1/2 bg-gray-200 dark:bg-gray-700 rounded-full p-2 pb-3;
+  @apply absolute right-[-1.5em] top-1/2 transform -translate-y-1/2 bg-caramel rounded-full p-2 pb-3;
 }
 
 .section {
-  @apply p-12;
+  @apply py-8 px-[8%];
   width: inherit;
 }
 
 .section-title {
-  @apply text-3xl font-bold mb-8 text-gray-900 dark:text-white text-center;
+  @apply text-3xl font-bold mb-8 text-caramel text-center;
+}
+
+.btn-default {
+  @apply text-base inline-flex items-center px-4 py-2 rounded-lg transition-colors;
 }
 
 .btn-primary {
-  @apply text-sm inline-flex items-center px-4 py-2 bg-primary text-white hover:text-white rounded-lg hover:bg-blue-900 transition-colors dark:bg-gray-600 dark:hover:bg-orange-600 dark:hover:text-white;
+  @apply inline-flex items-center font-bold px-4 py-2 bg-gold text-ocean rounded-lg hover:bg-flame hover:text-white transition-colors;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-blue-100 transition-colors dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-orange-100 dark:hover:text-orange-700;
+  @apply text-xl inline-flex items-center px-3 py-3 bg-ocean text-white hover:text-ocean rounded-full hover:bg-gold transition-colors ;
+}
+
+.shadow-neon {
+  @apply drop-shadow-[2px_2px_10px_rgba(255,192,56,0.5)];
+}
+
+.shadow-below {
+  @apply drop-shadow-[0_1.2px_1.2px_rgba(28,28,28,0.8)];
+}
+
+.tooltip {
+  @apply relative;
+}
+
+.tooltiptext {
+  @apply absolute top-[-1.85em] left-1/2 w-max opacity-80 readex-thin text-white text-center z-10 px-2 py-1 rounded transform -translate-x-1/2;
+  visibility: hidden;
+}
+
+.tooltiptext-sm {
+  @apply absolute text-[0.8rem] top-[-1.85em] left-3 w-max opacity-80 readex-thin text-white text-center z-10 px-2 py-1 rounded transform -translate-x-1/2;
+  visibility: hidden;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:hover .tooltiptext-sm {
+  visibility: visible;
+}
+
+.comment {
+  @apply absolute text-white opacity-[12%] w-full text-base md:text-lg lg:text-xl leading-[0.6rem] md:leading-[0.65rem] lg:leading-[0.7rem] ml-[-4.5em] select-none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -124,7 +147,7 @@ textarea {
   }
 
   a:hover {
-    color: #747bff;
+    color: #fa4d0e;
   }
 
   button {
@@ -134,15 +157,22 @@ textarea {
 
 @font-face {
   font-family: 'Readex Pro';
-  src: url('/src/assets/fonts/ReadexPro-Regular.ttf') format('truetype');
+  src: url('/fonts/ReadexPro-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Readex Pro';
-  src: url('/src/assets/fonts/ReadexPro-Bold.ttf') format('truetype');
+  src: url('/fonts/ReadexPro-Bold.ttf') format('truetype');
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Shadows Into Light';
+  src: url('/fonts/ShadowsIntoLight-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -154,6 +184,11 @@ textarea {
 
   .readex-thin {
     @apply font-readex font-light;
+    letter-spacing: 0.05em;
+  }
+  
+  .italic {
+    @apply font-shadow-light font-light;
     letter-spacing: 0.05em;
   }
 }
