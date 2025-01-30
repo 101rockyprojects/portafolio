@@ -1,9 +1,8 @@
 export interface About {
-    name: string;
+    title: string;
     slogan: string;
+    extra?: string;
     description: string;
-    email: string;
-    linkedin: string;
-    github: string;
-    cv: string;
+    salute: string;
+    gag: string;
 }

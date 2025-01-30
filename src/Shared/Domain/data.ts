@@ -1,4 +1,7 @@
-import dataJson from '@Shared/Domain/lang/languages.json';
+import info from '@Shared/Domain/lang/info.json';
+import es from '@Shared/Domain/lang/es.json';
+import en from '@Shared/Domain/lang/en.json';
+import type { Info } from '@Shared/Domain/types/info.ts';
 import type { Nav } from '@Shared/Domain/types/nav.ts';
 import type { About } from '@Shared/Domain/types/about.ts';
 import type { Project } from '@Shared/Domain/types/project.ts';
@@ -9,6 +12,7 @@ import type { Achievement } from '@Shared/Domain/types/achievement.ts';
 
 interface Data {
     [key: string]: any;
+    info: Info;
     es: {
       nav: Nav;
       about: About;
@@ -29,6 +33,10 @@ interface Data {
     };
 }
 
-const data: Data = dataJson;
+const data: Data = {
+    info: info.personal,
+    es,
+    en
+};
 
 export default data;

@@ -1,0 +1,115 @@
+{
+    "nav": {
+      "about": "About",
+      "projects": "Projects",
+      "experience": "Experience",
+      "education": "Education",
+      "achievements": "Awards",
+      "hobbies": "Hobbies",
+      "contact": "Contact me"
+    },
+    "about": {
+      "title": "Backend Developer",
+      "slogan": "Small upgrades lead to great systems.",
+      "extra": "Adaptable, efficient, and curious.",
+      "description": "Specialized in large-scale system development. Focused on providing simple solutions to complex problems. Like the systems, I am in constant improvement and learning.",
+      "salute": "Hello! My name is",
+      "gag": "Yes, like the movies!"
+    },
+    "projects": [
+      {
+        "name": "Meloday",
+        "description": "A website that offers a different song for each day of the year.",
+        "learnt": "Setting up the YouTube API, handling large volumes of data, getting familiar with Svelte and Vite.",
+        "technologies": ["Javascript", "Svelte", "Vite", "Youtube API", "Tailwind"],
+        "link": "https://101rockyprojects.github.io/meloday/",
+        "image": "/images/meloday.png"
+      },
+      {
+        "name": "Cuida Backend",
+        "description": "Platform for the visibility of Animal Shelters in Cúcuta, Colombia.",
+        "learnt": "Setting up the RESTful API for Cuida's front-end, the admin panel, creating middleware, managing roles and databases.",
+        "technologies": ["Javascript", "Typescript", "Strapi"],
+        "link": "https://101rockyprojects.github.io/meloday/"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Backend Developer",
+        "company": "Sespesoft SAS",
+        "companyLink": "https://sespesoft.com/",
+        "initialDate": "May 2023",
+        "finalDate": "Present",
+        "country": "Colombia",
+        "description": "Highlights include the creation of a queuing system with RabbitMQ to notify events between various company systems, modular APIs with Scoop for dynamic georeferencing and role-based authentication.",
+        "extra": "Working with Hexagonal and DDD architectures, configuring Docker environments, handling ORMs like Hibernate, scripting with PHP, and applying SOLID principles; under SCRUM and Kanban methodologies."
+      }
+    ],
+    "education": [
+      {
+        "title": "Systems Engineering",
+        "logo": "/images/simonbolivar.png",
+        "institution": "Simón Bolívar University",
+        "initialDate": "2020",
+        "finalDate": "2024",
+        "country": "Colombia",
+        "description": "Focus on software engineering",
+        "type": "qualification"
+      },
+      {
+        "title": "English",
+        "logo": "/images/universal.png",
+        "level": "B2",
+        "institution": "'Universal Centro de Idiomas'",
+        "initialDate": "2021",
+        "finalDate": "2022",
+        "country": "Colombia",
+        "type": "language"
+      }
+    ],
+    "achievements": [
+      {
+        "title": "EFSET English C1",
+        "description": "Latest results from the 90-minute exam (Reading, listening, writing, and speaking).",
+        "extra": "Taken on August 4th, 2024.",
+        "image": "/images/efset_67.png",
+        "link": "https://cert.efset.org/PTbQL6"
+      },
+      {
+          "title": "B2 English Certificate",
+          "description": "After a year of effort, I completed modules B1 and B2 in English at Universal Language Center.",
+          "extra": "Through daily virtual classes, exercises, readings, and weekly exams I obtained the certification in just one year.",
+          "image": "/images/certificate_universal.jpg",
+          "link": "https://www.universal.edu.co/"
+      },
+      {
+          "title": "3rd Place - Training Camp of Los Santanderes",
+          "description": "Can you learn what you need for a programming marathon in only one week? Yes! After this wonderful event that lasted three weeks learning advanced algorithm and math concepts we achieved third place.",
+          "extra": "In teams of three, we held a four-hour marathon where 'Agileware', the only team of two people and being novices, managed to come third among 16 teams!",
+          "image": "/images/certificate_marathon.jpg",
+          "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"
+      }
+    ],
+    "hobbies": [
+      {
+        "name": "Programming",
+        "description": "Always seeking new challenges or something innovative.",
+        "image": "/images/coding.jpg"
+      },
+      {
+        "name": "Video Games",
+        "description": "Super competitive, although playing with friends is better.",
+        "image": "/images/gaming.jpg"
+      },
+      {
+        "name": "Reading",
+        "description": "Aficionado of novels about dystopias, science fiction, horror, and suspense.",
+        "image": "/images/reading.jpg"
+      },
+      {
+        "name": "Training",
+        "description": "The body is a temple; it must be cared for and admired.",
+        "image": "/images/training.jpg"
+      }
+    ]
+}
