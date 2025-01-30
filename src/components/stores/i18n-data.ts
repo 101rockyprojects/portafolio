@@ -10,10 +10,6 @@ import type { Education } from '@App/Shared/Domain/types/education.ts';
 import type { Hobby } from '@App/Shared/Domain/types/hobby.ts';
 import type { Achievement } from '@App/Shared/Domain/types/achievement.ts';
 
-type DataSection<T> = {
-  [K in keyof typeof data]: T;
-};
-
 // Helper function to create an i18n store
 export function createI18nStore<T>(section: keyof (typeof data)['es']): Readable<T> {
   return derived(locale, ($locale = 'es') => {
