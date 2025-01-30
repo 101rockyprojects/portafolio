@@ -30,7 +30,7 @@
         "description": "Plataforma para la visibilidad de Refugios Animales de Cúcuta, Colombia.",
         "learnt": "Configuración de la API RESTful para el front-end de Cuida, el panel de administración, creación de middleware, manejo de roles y base de datos.",
         "technologies": ["Javascript", "Typescript", "Strapi"],
-        "link": "https://101rockyprojects.github.io/meloday/"
+        "link": "https://github.com/101rockyprojects/cuida-backend/"
       }
   ],
   "experience": [

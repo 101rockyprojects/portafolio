@@ -30,7 +30,7 @@
         "description": "Platform for the visibility of Animal Shelters in Cúcuta, Colombia.",
         "learnt": "Setting up the RESTful API for Cuida's front-end, the admin panel, creating middleware, managing roles and databases.",
         "technologies": ["Javascript", "Typescript", "Strapi"],
-        "link": "https://101rockyprojects.github.io/meloday/"
+        "link": "https://github.com/101rockyprojects/cuida-backend/"
       }
     ],
     "experience": [

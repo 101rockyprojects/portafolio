@@ -1,11 +1,12 @@
 <script lang="ts">
   import info from '@App/components/stores/info.ts';
   import { i18nStores } from '@App/components/stores/i18n-data.ts';
-  const { about } = i18nStores;
   import { locale } from 'svelte-i18n';
   import Fa from 'svelte-fa';
   import { faEnvelope, faAddressBook, faIdCard } from '@fortawesome/free-solid-svg-icons';
   import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+
+  const { about } = i18nStores;
 </script>
   
 <section id="about" class="section flex justify-center items-center relative">
@@ -30,22 +31,25 @@
     <p class="text-xl text-white readex-thin text-balance mb-6 italic">{$about.extra}</p>
     
     <div class="flex flex-wrap gap-4">
-      <a href={`mailto:${$info.email}`} class="btn-secondary">
+      <a href={`mailto:${$info.email}`} class="btn-secondary tooltip">
         <Fa icon={faEnvelope} />
+        <span class="tooltiptext text-base">Email</span>
       </a>
-      <a href={$info.linkedin} target="_blank" rel="noopener noreferrer" class="btn-secondary">
+      <a href={$info.linkedin} target="_blank" rel="noopener noreferrer" class="btn-secondary tooltip">
         <Fa icon={faLinkedinIn} />
+        <span class="tooltiptext text-base">Linkedin</span>
       </a>
-      <a href={$info.github} target="_blank" rel="noopener noreferrer" class="btn-secondary">
+      <a href={$info.github} target="_blank" rel="noopener noreferrer" class="btn-secondary tooltip">
         <Fa icon={faGithub} />
+        <span class="tooltiptext text-base">Github</span>
+      </a>
+      <a href={$info.card} target="_blank" rel="noopener noreferrer" class="btn-secondary tooltip">
+        <Fa icon={faIdCard} />
+        <span class="tooltiptext text-base">{$locale === 'en' ? 'Cover Letter' : 'Carta de presentación'}</span>
       </a>
       <a href={$info.cv} target="_blank" rel="noopener noreferrer" class="btn-primary flex gap-2">
         <Fa icon={faAddressBook} />
         {$locale === 'en' ? 'CV/Resume' : 'Hoja de vida'}
-      </a>
-      <a href={$info.card} target="_blank" rel="noopener noreferrer" class="btn-primary flex gap-2">
-        <Fa icon={faIdCard} />
-        {$locale === 'en' ? 'Cover Letter' : 'Carta de presentación'}
       </a>
     </div>
   </article>

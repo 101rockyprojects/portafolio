@@ -1,18 +1,22 @@
 <script lang="ts">
+  import Skills from '@App/components/views/Skills.svelte';
+  import Tech from '@App/components/views/Tech.svelte';
 	import { slide } from 'svelte/transition';
   import { onMount } from 'svelte';
   import { locale } from 'svelte-i18n';
-  import Skills from '@App/components/views/Skills.svelte';
   import { i18nStores } from '@App/components/stores/i18n-data.ts';
   import { Fa } from 'svelte-fa';
   import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
   import { circInOut } from 'svelte/easing';
+  import { techData } from '@App/Shared/Domain/const/skills.ts';
+	import { LARGE_SCREEN_WIDTH, MAX_PROJECTS_PER_ROW } from '@App/Shared/Domain/const/viewport.ts';
 
   const { nav, projects } = i18nStores;
 
   let expandedIndex: number | null = 0;
-  let isSmallScreen = false;
   let selectedTechnologies: string[] = [];
+  let columnMode = false;
+  if ($projects.length > MAX_PROJECTS_PER_ROW) columnMode = true;
 
   let technologies: string[] = [];
   onMount(() => {
@@ -26,7 +30,7 @@
   });
 
   function checkScreenSize() {
-    isSmallScreen = window.innerWidth <= 1335;
+    columnMode = window.innerWidth <= LARGE_SCREEN_WIDTH;
   }
 
   function toggleExpand(index: number) {
@@ -64,16 +68,22 @@
   <article class="project-container">
     <aside class="filter-container">
       {#each technologies as tech}
-        <label class="filter-label readex-thin {selectedTechnologies.includes(tech) ? 'selected' : ''}">
+        <label class="flex items-center gap-2 filter-label readex-thin h-12 group {selectedTechnologies.includes(tech) ? 'selected' : ''}">
           <input type="checkbox" bind:group={selectedTechnologies} value={tech} />
+          <Tech
+            name={tech}
+            source={techData[tech].source}
+            color={techData[tech].color}
+          />
           {tech}
         </label>
       {/each}
     </aside>
+    
     {#each $projects.filter(filterProjects) as project, index}
       <button
         class="project-card"
-        class:expanded={expandedIndex === index || isSmallScreen}
+        class:expanded={expandedIndex === index || columnMode}
         on:click={() => toggleExpand(index)}
       >
         <img 
@@ -85,16 +95,16 @@
 
         <div
           class="card-content"
-          class:expanded={expandedIndex === index || isSmallScreen}
+          class:expanded={expandedIndex === index || columnMode}
         >
           <h3
             class="card-title shadow-below"
-            class:expanded={expandedIndex === index || isSmallScreen}
+            class:expanded={expandedIndex === index || columnMode}
           >
             {project.name}
           </h3>
 
-          {#if expandedIndex === index || isSmallScreen}
+          {#if expandedIndex === index || columnMode}
             <div
               class="card-details"
               transition:slide={{ duration: 600, easing: circInOut }}
@@ -119,9 +129,13 @@
                 </a>
                 <div class="tech-tags shadow-below">
                   {#each project.technologies as tech}
-                    <span class="tech-tag">
-                      <Skills {tech} />
-                    </span>
+                    <a href={techData[tech].link} target="_blank" class="tech-tag tooltip">
+                      <Tech
+                        name={tech}
+                        source={techData[tech].source}
+                        color={techData[tech].color}
+                      />
+                    </a>
                   {/each}
                 </div>
               </div>
@@ -144,22 +158,22 @@
     @apply flex justify-center items-center flex-wrap w-full gap-2 mb-4 z-10;
   }
   .filter-label {
-    @apply bg-ocean cursor-pointer py-2 px-3 rounded-md text-center text-sm transition-colors duration-300;
+    @apply bg-ocean/30 cursor-pointer py-2 px-3 rounded-md text-center text-sm transition-colors duration-300;
   }
   .filter-label input {
     @apply absolute opacity-0;
   }
-  .filter-label.selected {
-    @apply bg-gold text-ocean font-bold;
-  }
   .filter-label:hover {
-    @apply bg-caramel text-ocean;
+    @apply bg-ocean;
+  }
+  .filter-label.selected {
+    @apply bg-ocean border-2 border-gold text-gold;
   }
   .project-container {
     @apply flex justify-center items-start flex-wrap gap-4;
   }
   .project-card {
-    @apply relative rounded-lg shadow-xl overflow-hidden cursor-pointer w-32 h-[22.5em];
+    @apply relative rounded-lg shadow-xl overflow-hidden cursor-pointer w-24 h-[22.5em];
   }
   .project-card.expanded {
     @apply w-[42.5em] max-w-full;

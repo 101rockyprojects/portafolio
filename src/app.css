@@ -84,8 +84,8 @@ img {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.prev-next {
-  @apply absolute right-[-1.5em] top-1/2 transform -translate-y-1/2 bg-caramel rounded-full p-2 pb-3;
+.icon {
+  @apply flex flex-col items-center justify-center w-full min-w-[5rem] lg:min-w-20 h-[4.5rem] hover:scale-110;
 }
 
 .section {
@@ -122,7 +122,7 @@ img {
 }
 
 .tooltiptext {
-  @apply absolute top-[-1.85em] left-1/2 w-max opacity-80 readex-thin text-white text-center z-10 px-2 py-1 rounded transform -translate-x-1/2;
+  @apply absolute top-[-1.8em] left-1/2 w-max opacity-80 readex-thin text-white text-center z-10 px-2 py-1 rounded transform -translate-x-1/2;
   visibility: hidden;
 }
 

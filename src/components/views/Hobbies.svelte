@@ -5,22 +5,10 @@
   const { nav, hobbies } = i18nStores;
 
   const hobbiesData = [
-    {
-      icon: faCode,
-      image: '/images/coding.jpg'
-    },
-    {
-      icon: faGamepad,
-      image: '/images/gaming.jpg'
-    },
-    {
-      icon: faBookOpen,
-      image: '/images/reading.jpg'
-    },
-    {
-      icon: faFistRaised,
-      image: '/images/training.jpg'
-    }
+    { icon: faCode },
+    { icon: faGamepad },
+    { icon: faBookOpen },
+    { icon: faFistRaised }
   ];
 </script>
 

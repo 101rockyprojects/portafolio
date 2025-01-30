@@ -1,6 +1,5 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import info from '@App/components/stores/info.ts';
   import LanguageToggle from '@App/components/views/LanguageToggle.svelte';
   import { i18nStores } from '@App/components/stores/i18n-data.ts';
   const { nav } = i18nStores;

@@ -1,4 +1,4 @@
-import { derived } from 'svelte/store';
+import { derived, writable } from 'svelte/store';
 import { locale } from 'svelte-i18n';
 import data from '@Shared/Domain/data.ts';
 import type { Readable } from 'svelte/store';
@@ -32,3 +32,14 @@ export const i18nStores = {
 export function getI18nSection<K extends keyof (typeof data)['en']>(section: K): Readable<(typeof data)['es'][K]> {
   return createI18nStore(section);
 }
+
+export const tool = writable<string>('Tools');
+locale.subscribe(($locale) => {
+  tool.set($locale === 'es' ? 'Herramientas' : 'Tools');
+});
+
+export const categories = derived(tool, ($tool) => ({
+  "Back": "Backend",
+  "Front": "Frontend",
+  "Tool": $tool,
+}));
