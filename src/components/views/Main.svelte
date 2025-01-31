@@ -49,6 +49,6 @@
         margin: 0 auto;
     }
     .comment-block {
-        @apply absolute -ml-[25%] w-full text-start text-white opacity-[12%] text-base lg:text-xl leading-[0.6rem] lg:leading-[0.8rem] select-none;
+        @apply absolute -ml-[25%] w-full overflow-hidden text-start text-white opacity-[12%] text-base lg:text-xl leading-[0.6rem] lg:leading-[0.8rem] select-none;
     }
   </style>

@@ -43,18 +43,18 @@
 
 <header class="navigation max-w-[100vw]">
   <nav class="mx-auto px-4 bg-ocean">
-    <div class="flex items-center h-12 text-base md:text-lg justify-between md:justify-center">
-      <img src="images/logo.png" alt="Personal Logo" class="hidden md:block rounded-full overflow-hidden w-10 h-10 absolute left-5">
-      <div class="flex space-x-2 md:space-x-6">
+    <div class="flex items-center h-14 text-base md:text-lg justify-between md:justify-center">
+      <img src="images/logo.png" alt="Personal Logo" class="hidden md:block rounded-full overflow-hidden w-12 h-12 absolute left-5">
+      <div class="flex space-x-3 md:space-x-6">
         {#each navItems as item}
           <a 
             href={item.href}
             class={`
-              text-[0.9rem] md:text-base hover:text-gold
+              text-base md:text-lg hover:text-gold h-14 flex items-center
               ${activeSection === item.href.substring(1) ? 'text-caramel' : 'text-white'}
             `}
           >
-            &lt;{item.title}/&gt;
+            {item.title}
           </a>
         {/each}
       </div>

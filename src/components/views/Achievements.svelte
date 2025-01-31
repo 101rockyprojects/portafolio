@@ -35,14 +35,14 @@
   {#if showModal}
       <section class="modal">
           <article id="modal-content" class="bg-elegant rounded-lg shadow-2xl pt-0 px-6 pb-6 max-w-2xl w-3/4 max-h-[85dvh] overflow-x-auto relative">
-            <button class="flex justify-end w-full sticky top-2 right-2" on:click={closeModal}>
+            <button class="flex justify-end w-full sticky top-2 right-2 mb-2" on:click={closeModal}>
                 <Fa icon={faTimes} class="text-3xl text-flame hover:scale-110 hover:rotate-90 transition-all duration-300 ease-out" />
             </button>
             <a
                 href="{selectedAchievement.link}"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-lg md:text-xl lg:text-2xl font-bold mb-4 text-balance flex gap-2 text-caramel hover:text-gold hover:underline"
+                class="text-lg md:text-xl lg:text-2xl font-bold mb-4 text-balance flex items-center gap-2 text-caramel hover:text-gold hover:underline"
             >
                 <h3>{selectedAchievement.title}</h3>
                 <Fa icon={faExternalLink} class="text-2xl mt-1" />
