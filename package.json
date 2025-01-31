@@ -1,6 +1,6 @@
 {
   "name": "portfolio-svelte",
-  "homepage":"https://101rockyprojects.github.io/portafolio/",
+  "homepage": "https://101rockyprojects.github.io/portafolio/",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json",
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
@@ -36,6 +36,7 @@
     "@svelte-plugins/tooltips": "^3.0.1",
     "@tailwindcss/forms": "^0.5.9",
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.47",
     "svelte-fa": "^4.0.3",
     "svelte-i18n": "^4.0.0",
