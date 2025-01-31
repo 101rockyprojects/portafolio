@@ -7,7 +7,7 @@
     import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
     const { nav } = i18nStores;
-    const { api_key } = get(info);
+    
     let formData = {
       name: "",
       email: "",
@@ -19,7 +19,7 @@
     const handleSubmit = async (event: Event) => {
       event.preventDefault();
       const json = JSON.stringify({
-        access_key: api_key,
+        access_key: $info.api_key,
         ...formData
       });
       try {
