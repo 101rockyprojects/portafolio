@@ -56,9 +56,9 @@
 </section>
 <hr class="w-5/6 mx-auto opacity-20">
 
-  <style>
-    .about {
-      margin-top: calc(4rem + 20dvw);
-      @apply pt-6 max-w-2xl z-[1] md:mt-12 mx-auto md:rounded-lg md:bg-white/5 md:p-6 md:backdrop-blur-sm;
-    }
-  </style>
+<style lang="postcss">
+  .about {
+    margin-top: calc(4rem + 20dvw);
+    @apply pt-6 max-w-2xl z-[1] md:mt-12 mx-auto md:rounded-lg md:bg-white/5 md:p-6 md:backdrop-blur-sm;
+  }
+</style>

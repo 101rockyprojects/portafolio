@@ -1,6 +1,6 @@
-import info from '@Shared/Domain/lang/info.json';
-import es from '@Shared/Domain/lang/es.json';
-import en from '@Shared/Domain/lang/en.json';
+import info from '@Shared/Domain/lang/info.json' assert { type: 'json' };
+import es from '@Shared/Domain/lang/es.json' assert { type: 'json' };
+import en from '@Shared/Domain/lang/en.json' assert { type: 'json' };
 import type { Info } from '@Shared/Domain/types/info.ts';
 import type { Nav } from '@Shared/Domain/types/nav.ts';
 import type { About } from '@Shared/Domain/types/about.ts';

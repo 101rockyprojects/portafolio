@@ -57,7 +57,7 @@
   {/if}
 </section>
 
-<style>
+<style lang="postcss">
   .section-title {
     @apply lg:text-start;
   }

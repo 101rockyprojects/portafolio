@@ -35,7 +35,7 @@
     </div>
 </main>
 
-<style>
+<style lang="postcss">
     .section-container {
         font-family: 'Readex Pro';
         src: url('/fonts/ReadexPro-Bold.ttf') format('truetype');

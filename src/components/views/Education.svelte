@@ -48,7 +48,7 @@
   </div>
 </section>
 
-<style>
+<style lang="postcss">
   .section-title {
     @apply pt-4 lg:text-start;
   }
