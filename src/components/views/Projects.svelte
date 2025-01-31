@@ -117,12 +117,12 @@
                 <span class="text-caramel">{$locale === 'en' ? 'Learning: ' : 'Aprendizaje: '}</span>
                 {project.learnt}
               </p>
-              <div class="flex justify-between">
+              <div class="flex justify-between items-center">
                 <a 
                   href={project.link} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  class="btn-primary flex gap-2"
+                  class="btn-primary flex gap-2 max-h-12 min-w-fit"
                 >
                   {$locale === 'en' ? 'View demo' : 'Ver proyecto'}
                   <Fa icon={faExternalLink} />
