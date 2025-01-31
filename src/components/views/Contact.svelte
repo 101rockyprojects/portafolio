@@ -44,7 +44,7 @@
   
 <hr class="w-5/6 mx-auto opacity-20">
 <aside class="w-full pl-[10%]">
-  <img src="/images/logo.png" alt="Personal Logo Signature" class="w-48 h-full opacity-20">
+  <img src="images/logo.png" alt="Personal Logo Signature" class="w-48 h-full opacity-20">
 </aside>
 <section id="contact" class="section -mt-[11rem] mb-10">
   <h2 class="section-title pt-4">&lt;{$nav.contact}/&gt;</h2>

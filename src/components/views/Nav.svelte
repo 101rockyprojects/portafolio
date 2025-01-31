@@ -44,7 +44,7 @@
 <header class="navigation max-w-[100vw]">
   <nav class="mx-auto px-4 bg-ocean">
     <div class="flex items-center h-12 text-base md:text-lg justify-between md:justify-center">
-      <img src="/images/logo.png" alt="Personal Logo" class="hidden md:block rounded-full overflow-hidden w-10 h-10 absolute left-5">
+      <img src="images/logo.png" alt="Personal Logo" class="hidden md:block rounded-full overflow-hidden w-10 h-10 absolute left-5">
       <div class="flex space-x-2 md:space-x-6">
         {#each navItems as item}
           <a 

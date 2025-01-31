@@ -23,7 +23,7 @@
         "learnt": "Configuración de la API de Youtube, manejo de grandes volúmenes de datos, familiarizándome con Svelte y Vite.",
         "technologies": ["Javascript", "Svelte", "Vite", "Youtube API", "Tailwind"],
         "link": "https://101rockyprojects.github.io/meloday/ ",
-        "image": "/images/meloday.png"
+        "image": "images/meloday.png"
       },
       {
         "name": "Cuida Backend",
@@ -48,7 +48,7 @@
   "education": [
       {
         "title": "Ingeniería de Sistemas",
-        "logo": "/images/simonbolivar.png",
+        "logo": "images/simonbolivar.png",
         "institution": "Universidad Simón Bolívar",
         "initialDate": "2020",
         "finalDate": "2024",
@@ -58,7 +58,7 @@
       },
       {
         "title": "Inglés",
-        "logo": "/images/universal.png",
+        "logo": "images/universal.png",
         "level": "B2",
         "institution": "Universal Centro de Idiomas",
         "initialDate": "2021",
@@ -72,21 +72,21 @@
         "title": "EFSET Inglés C1",
         "description": "Últimos resultados del examen de 90 minutos (Lectura, escucha, escritura, y habla).",
         "extra": "Realizado el 4 de Agosto del 2024.",
-        "image": "/images/efset_67.png",
+        "image": "images/efset_67.png",
         "link": "https://cert.efset.org/PTbQL6"
       },
       {
         "title": "Certificado Inglés B2",
         "description": "Luego de un año de esfuerzo, logré completar los módulos B1 y B2 de inglés en Universal Centro de Idiomas.",
         "extra": "A través de clases virtuales diarias, ejercicios, lecturas, y examenes semanales obtuve la certificación en un solo año.",
-        "image": "/images/certificate_universal.jpg",
+        "image": "images/certificate_universal.jpg",
         "link": "https://www.universal.edu.co/"
       },
       {
         "title": "3er Lugar - Training Camp de los Santanderes",
         "description": "¿En una semana puedes aprender lo necesario para una maratón de programación? ¡Sí! Tras este maravilloso evento que duró 3 semanas aprendiendo conceptos avanzados de algortimia y matemática se obtuvo el 3er puesto.",
         "extra": "En equipos de 3, se realizó una maratón de 4 horas donde 'Agileware', el único equipo de 2 personas y siendo novatos, ¡logramos ser los terceros entre 16 equipos!",
-        "image": "/images/certificate_marathon.jpg",
+        "image": "images/certificate_marathon.jpg",
         "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"
       }
   ],
@@ -94,22 +94,22 @@
       {
         "name": "Programar",
         "description": "Siempre buscando nuevos desafíos o algo innovador.",
-        "image": "/images/coding.jpg"
+        "image": "images/coding.jpg"
       },
       {
         "name": "Videojuegos",
         "description": "Supercompetitivo, aunque jugar con amigos es mejor.",
-        "image": "/images/gaming.jpg"
+        "image": "images/gaming.jpg"
       },
       {
         "name": "Leer",
         "description": "Aficionado de novelas sobre distopías, ciencia ficción, terror y suspenso.",
-        "image": "/images/reading.jpg"
+        "image": "images/reading.jpg"
       },
       {
         "name": "Entrenar",
         "description": "El cuerpo es un templo, debe ser cuidado y admirado.",
-        "image": "/images/training.jpg"
+        "image": "images/training.jpg"
       }
   ]
 }  

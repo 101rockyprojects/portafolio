@@ -16,7 +16,7 @@
 </script>
 
 {#if typeof source === 'string'}
-    <img src={`/images/${source}`} alt={`${name} Logo`} class={classImage} />
+    <img src={`images/${source}`} alt={`${name} Logo`} class={classImage} />
 {:else}
     <Fa icon={source} class={`${classIcon} ${color}`} />
 {/if}

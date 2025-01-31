@@ -87,7 +87,7 @@
         on:click={() => toggleExpand(index)}
       >
         <img 
-          src={project.image || "/images/placeholder.png"} 
+          src={project.image || "images/placeholder.png"} 
           alt={project.name} 
           class="card-image"
         />
