@@ -11,7 +11,7 @@
     "about": {
       "title": "Backend Developer",
       "slogan": "Small upgrades lead to great systems.",
-      "extra": "Adaptable, efficient, and curious.",
+      "extra": "Adaptable, efficient, and curious System Engineer.",
       "description": "Specialized in large-scale system development. Focused on providing simple solutions to complex problems. Like the systems, I am in constant improvement and learning.",
       "salute": "Hello! My name is",
       "gag": "Yes, like the movies!"
@@ -68,6 +68,13 @@
       }
     ],
     "achievements": [
+      {
+        "title": "Systems Engineer",
+        "description": "The titanic effort of 5 years, the tangible fruit of resilience! Being an engineer.",
+        "extra": "One of the greatest achievements of my personal and professional life, the title that will precede my name for the rest of my life.",
+        "image": "images/engineer.jpg",
+        "link": "https://www.unisimon.edu.co/cucuta/pregrados/ingenieria-de-sistemas/cucuta"
+      },
       {
         "title": "EFSET English C1",
         "description": "Latest results from the 90-minute exam (Reading, listening, writing, and speaking).",

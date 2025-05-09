@@ -11,7 +11,7 @@
   "about": {
       "title": "Desarrollador Back-end",
       "slogan": "Pequeñas mejoras hacen grandes sistemas.",
-      "extra": "Adaptable, eficiente y curioso.",
+      "extra": "Ingenierio de sistemas adaptable, eficiente y curioso.",
       "description": "Especializado en desarrollo de sistemas de amplio alcance. Enfocado en otorgar soluciones sencillas a problemas complejos. Tal como los sistemas, estoy en constante mejora y aprendizaje.",
       "salute": "Un gusto, soy",
       "gag": "¿Balboa? Casi"
@@ -68,6 +68,13 @@
       }
   ],
   "achievements": [
+      {
+        "title": "Ingeniero de Sistemas",
+        "description": "¡El titánico esfuerzo de 5 años, el fruto tangible de la resiliencia! Ser ingeniero.",
+        "extra": "Uno de los mayores logros de mi vida personal y profesional, el título que estará precediendo mi nombre por el resto de mi vida.",
+        "image": "images/engineer.jpg",
+        "link": "https://www.unisimon.edu.co/cucuta/pregrados/ingenieria-de-sistemas/cucuta"
+      },
       {
         "title": "EFSET Inglés C1",
         "description": "Últimos resultados del examen de 90 minutos (Lectura, escucha, escritura, y habla).",
