@@ -16,9 +16,9 @@
       <div class="absolute w-3 h-3 bg-white rounded-full -left-[8px] top-[5.75rem]"></div>
       <div class="absolute w-[0.4rem] h-[0.4rem] bg-obscure rounded-full -left-[5px] top-[5.9rem]"></div>
       <section class="flex flex-col flex-wrap gap-1">
-        <span class="">Fix: Remove exposed api_key</span>
+        <span class="">hotfix: Remove exposed api_key</span>
         <p class="text-sm mb-1">Oops, removed from index.html</p>
-        <span class="">Feat: Make the best portfolio</span>
+        <span class="">feat: Make the best portfolio</span>
         <p class="text-sm mb-1">Add some text and color</p>
         <span class="">Init project</span>
       </section>
@@ -43,8 +43,8 @@
           {experience.company}
           <Fa icon={faExternalLink} />
         </a>
-        <p class="description readex-thin mb-3">{experience.description}</p>
-        <p class="description readex-thin">{experience.extra}</p>
+        <p class="description readex-thin my-[1lh]">{experience.description}</p>
+        <p class="description readex-thin my-[1lh]">{experience.extra}</p>
       </article>
     {/each}
   </div>

@@ -30,10 +30,10 @@
                 {education.initialDate} - {education.finalDate} | {education.country}
               </time>
             </div>
-            <img src="{education.logo}" alt="{education.institution} Logo" class="w-14 h-14 object-contain shadow-neon">
+            <img src="{education.logo}" alt="{education.institution} Logo" class="w-14 h-14 object-contain shadow-neon" loading="lazy">
           </article>
         {:else}
-          <img src="{education.logo}" alt="{education.institution} Logo" class="absolute max-w-20 max-h-20 right-4 shadow-neon">
+          <img src="{education.logo}" alt="{education.institution} Logo" class="absolute max-w-20 max-h-20 right-4 shadow-neon" loading="lazy">
           <article class="flex flex-col justify-between items-start">
             <h3 class="text-xl font-bold text-caramel mb-1">{education.title}</h3>
             <p class="text-white">{education.institution}</p>

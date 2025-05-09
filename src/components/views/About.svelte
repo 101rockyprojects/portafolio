@@ -25,10 +25,10 @@
       {$about.salute}
       <span class="font-bold">{$info.name}</span>
     </p>
-    <p class="text-2xl text-flame">{$about.title}</p>
-    <p class="text-xl text-gold mb-4 italic"><q>{$about.slogan}</q></p>
-    <p class="text-white readex-thin text-balance">{$about.description}</p>
-    <p class="text-xl text-white readex-thin text-balance mb-6 italic">{$about.extra}</p>
+    <p class="text-2xl text-gold">{$about.title}</p>
+    <p class="text-[1.45rem] text-flame text-balance mb-4 italic"><q>{$about.slogan}</q></p>
+    <p class="text-white readex-thin text-balance my-[0.5lh]">{$about.description}</p>
+    <p class="text-[1.35rem] text-white readex-thin mb-6 italic">{$about.extra}</p>
     
     <div class="flex flex-wrap gap-4">
       <a href={`mailto:${$info.email}`} class="btn-secondary tooltip">

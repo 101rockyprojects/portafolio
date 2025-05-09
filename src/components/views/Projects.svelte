@@ -90,6 +90,7 @@
           src={project.image || "images/placeholder.png"} 
           alt={project.name} 
           class="card-image"
+          loading="eager"
         />
         <div class="card-overlay"></div>
 
@@ -174,6 +175,7 @@
   }
   .project-card {
     @apply relative rounded-lg shadow-xl overflow-hidden cursor-pointer w-24 h-[22.5em];
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   .project-card.expanded {
     @apply w-[42.5em] max-w-full;
