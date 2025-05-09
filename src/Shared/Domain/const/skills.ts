@@ -79,7 +79,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
   'RabbitMQ': {
     source: 'rabbitmq.png',
     category: 'Tool',
-    level: 'Learning',
+    level: 'Experienced',
     link: 'https://www.rabbitmq.com'
   },
   'Scalar': {
@@ -149,9 +149,9 @@ export const techData: Record<string, { source: IconDefinition | string; categor
   'Laravel': {
     source: faLaravel,
     category: 'Back',
-    level: 'Want',
+    level: 'Experienced',
     link: 'https://laravel.com',
-    color: 'text-gray-500',
+    color: 'text-red-700',
   },
   'Go': {
     source: faGolang,
