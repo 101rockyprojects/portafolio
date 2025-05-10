@@ -13,7 +13,7 @@
 
   const { nav, projects } = i18nStores;
 
-  let expandedIndex: number | null = null;
+  let expandedIndex: number | null = 0;
   let selectedTechnologies: string[] = [];
   let columnMode = false;
   if ($projects.length > MAX_PROJECTS_PER_ROW) columnMode = true;
@@ -124,15 +124,28 @@
                 {project.learnt}
               </p>
               <div class="flex justify-between items-center">
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="btn-primary flex gap-2 max-h-12 min-w-fit"
-                >
-                  {$locale === 'en' ? 'View demo' : 'Ver proyecto'}
-                  <Fa icon={faExternalLink} />
-                </a>
+                <div class="max-w-fit flex flex-wrap gap-2">
+                  {#if project.link}
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      class="btn-primary flex gap-2 max-h-12 w-fit"
+                    >
+                      {$locale === 'en' ? 'View demo' : 'Ver proyecto'}
+                      <Fa icon={faExternalLink} />
+                    </a>
+                  {/if}
+                  <a 
+                    href={project.documentation} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="btn-default flex gap-2 max-h-12 w-fit shadow-sm shadow-ocean hover:bg-ocean"
+                  >
+                    {$locale === 'en' ? 'View docs' : 'Documentación'}
+                    <Fa icon={faExternalLink} />
+                  </a>
+                </div>
                 <div class="tech-tags shadow-below">
                   {#each project.technologies as tech}
                     <a href={techData[tech].link} target="_blank" class="tech-tag tooltip">

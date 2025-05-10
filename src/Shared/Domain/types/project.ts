@@ -4,5 +4,6 @@ export interface Project {
     learnt: string;
     technologies: string[];
     link?: string;
+    documentation: string;
     image?: string;
 }

@@ -102,7 +102,7 @@ img {
 }
 
 .btn-default {
-  @apply text-base inline-flex items-center px-4 py-2 rounded-lg transition-colors;
+  @apply inline-flex items-center px-4 py-2 rounded-lg transition-colors;
 }
 
 .btn-primary {

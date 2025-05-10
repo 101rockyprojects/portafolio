@@ -90,7 +90,7 @@
         type="submit"
         class={`
           ${sended ? 'bg-green-600' : 'bg-ocean'}
-          w-full btn-default flex justify-center readex-bold gap-2 text-white hover:bg-gold hover:text-elegant
+          text-base w-full btn-default flex justify-center readex-bold gap-2 text-white hover:bg-gold hover:text-elegant
         `}
       >
         {#if sended}

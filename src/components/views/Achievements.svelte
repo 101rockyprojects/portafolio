@@ -54,9 +54,11 @@
             </a>
             <img src={selectedAchievement.image} alt={selectedAchievement.title} class="w-[80%] h-full max-h-[20rem] object-cover mb-4 rounded-md mx-auto" loading="lazy"/>
             <div class="text-[0.8rem] md:text-sm transition-opacity readex-thin">
-                <p class="mb-2">{selectedAchievement.description}</p>
-                <p>{selectedAchievement.extra}</p>
-            </div>
+              {#if selectedAchievement.description?.length}
+              {#each selectedAchievement.description as paragraph}
+                <p class="readex-thin my-[1lh]">{paragraph}</p>
+              {/each}
+            {/if}
           </article>
       </section>
   {/if}

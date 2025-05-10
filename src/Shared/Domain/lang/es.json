@@ -23,14 +23,16 @@
         "learnt": "Configuración de la API de Youtube, manejo de grandes volúmenes de datos, familiarizándome con Svelte y Vite.",
         "technologies": ["Javascript", "Svelte", "Vite", "Youtube API", "Tailwind"],
         "link": "https://101rockyprojects.github.io/meloday/ ",
+        "documentation": "https://deepwiki.com/101rockyprojects/meloday",
         "image": "images/meloday.webp"
       },
       {
         "name": "Cuida Backend",
         "description": "Plataforma para la visibilidad de Refugios Animales de Cúcuta, Colombia.",
         "learnt": "Configuración de la API RESTful para el front-end de Cuida, el panel de administración, creación de middleware, manejo de roles y base de datos.",
-        "technologies": ["Javascript", "Typescript", "Strapi"],
-        "link": "https://github.com/101rockyprojects/cuida-backend/"
+        "technologies": ["Javascript", "Typescript", "Node.js", "Strapi"],
+        "link": "https://github.com/101rockyprojects/cuida-backend/",
+        "documentation": "https://deepwiki.com/101rockyprojects/cuida-backend"
       }
   ],
   "experience": [
@@ -73,29 +75,37 @@
   "achievements": [
       {
         "title": "Ingeniero de Sistemas",
-        "description": "¡El titánico esfuerzo de 5 años, el fruto tangible de la resiliencia! Ser ingeniero.",
-        "extra": "Uno de los mayores logros de mi vida personal y profesional, el título que estará precediendo mi nombre por el resto de mi vida.",
+        "description": [
+          "!El titanico esfuerzo de 5 años, el fruto tangible de la resiliencia! Ser ingeniero.",
+          "Uno de los mayores logros de mi vida personal y profesional, el título que estará precediendo mi nombre por el resto de mi vida."
+        ],
         "image": "images/engineer.webp",
         "link": "https://www.unisimon.edu.co/cucuta/pregrados/ingenieria-de-sistemas/cucuta"
       },
       {
         "title": "EFSET Inglés C1",
-        "description": "Últimos resultados del examen de 90 minutos (Lectura, escucha, escritura, y habla).",
-        "extra": "Realizado el 4 de Agosto del 2024.",
+        "description": [
+          "Últimos resultados del examen de 90 minutos (Lectura, escucha, escritura, y habla).",
+          "Realizado el 4 de Agosto del 2024. Aprendiendo cada día para mejorarlo."
+        ],
         "image": "images/efset_67.webp",
         "link": "https://cert.efset.org/PTbQL6"
       },
       {
         "title": "Certificado Inglés B2",
-        "description": "Luego de un año de esfuerzo, logré completar los módulos B1 y B2 de inglés en Universal Centro de Idiomas.",
-        "extra": "A través de clases virtuales diarias, ejercicios, lecturas, y examenes semanales obtuve la certificación en un solo año.",
+        "description": [
+          "Luego de un año de esfuerzo, logré completar los módulos B1 y B2 de inglés en Universal Centro de Idiomas.",
+          "A través de clases virtuales diarias, ejercicios, lecturas, y examenes semanales obtuve la certificación en un solo año."
+        ],
         "image": "images/certificate_universal.webp",
         "link": "https://www.universal.edu.co/"
       },
       {
         "title": "3er Lugar - Training Camp de los Santanderes",
-        "description": "¿En una semana puedes aprender lo necesario para una maratón de programación? ¡Sí! Tras este maravilloso evento que duró 3 semanas aprendiendo conceptos avanzados de algortimia y matemática se obtuvo el 3er puesto.",
-        "extra": "En equipos de 3, se realizó una maratón de 4 horas donde 'Agileware', el único equipo de 2 personas y siendo novatos, ¡logramos ser los terceros entre 16 equipos!",
+        "description": [
+          "¿En una semana puedes aprender lo necesario para una maratón de programación? ¡Sí! Tras este maravilloso evento que duró 3 semanas aprendiendo conceptos avanzados de algortimia y matemática se obtuvo el 3er puesto.",
+          "En equipos de 3, se realizó una maratón de 4 horas donde 'Agileware', el único equipo de 2 personas y siendo novatos, ¡logramos ser los terceros entre 16 equipos!"
+        ],
         "image": "images/certificate_marathon.webp",
         "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"
       }

@@ -29,8 +29,9 @@
         "name": "Cuida Backend",
         "description": "Platform for the visibility of Animal Shelters in Cúcuta, Colombia.",
         "learnt": "Setting up the RESTful API for Cuida's front-end, the admin panel, creating middleware, managing roles and databases.",
-        "technologies": ["Javascript", "Typescript", "Strapi"],
-        "link": "https://github.com/101rockyprojects/cuida-backend/"
+        "technologies": ["Javascript", "Typescript", "Strapi", "Node.js"],
+        "link": "https://github.com/101rockyprojects/cuida-backend/",
+        "documentation": "https://deepwiki.com/101rockyprojects/cuida-backend"
       }
     ],
     "experience": [
@@ -73,29 +74,37 @@
     "achievements": [
       {
         "title": "Systems Engineer",
-        "description": "The titanic effort of 5 years, the tangible fruit of resilience! Being an engineer.",
-        "extra": "One of the greatest achievements of my personal and professional life, the title that will precede my name for the rest of my life.",
+        "description": [
+          "The titanic effort of 5 years, the tangible fruit of resilience! Being an engineer.",
+          "One of the greatest achievements of my personal and professional life, the title that will precede my name for the rest of my life."
+        ],
         "image": "images/engineer.webp",
         "link": "https://www.unisimon.edu.co/cucuta/pregrados/ingenieria-de-sistemas/cucuta"
       },
       {
         "title": "EFSET English C1",
-        "description": "Latest results from the 90-minute exam (Reading, listening, writing, and speaking).",
-        "extra": "Taken on August 4th, 2024.",
+        "description": [
+          "Latest results from the 90-minute exam (Reading, listening, writing, and speaking).",
+          "Realized on August 4th, 2024. Learning every day to improve it."
+        ],
         "image": "images/efset_67.webp",
         "link": "https://cert.efset.org/PTbQL6"
       },
       {
           "title": "B2 English Certificate",
-          "description": "After a year of effort, I completed modules B1 and B2 in English at Universal Language Center.",
-          "extra": "Through daily virtual classes, exercises, readings, and weekly exams I obtained the certification in just one year.",
+          "description": [
+            "After one year of effort, I completed modules B1 and B2 in English at Universal Language Center.",
+            "Through daily virtual classes, exercises, readings, and weekly exams I obtained the certification in just one year."
+          ],
           "image": "images/certificate_universal.webp",
           "link": "https://www.universal.edu.co/"
       },
       {
           "title": "3rd Place - Training Camp of Los Santanderes",
-          "description": "Can you learn what you need for a programming marathon in only one week? Yes! After this wonderful event that lasted three weeks learning advanced algorithm and math concepts we achieved third place.",
-          "extra": "In teams of three, we held a four-hour marathon where 'Agileware', the only team of two people and being novices, managed to come third among 16 teams!",
+          "description": [
+            "Can you learn what you need for a programming marathon in only one week? Yes! After this wonderful event that lasted three weeks learning advanced algorithm and math concepts we achieved third place.",
+            "In teams of three, we held a four-hour marathon where 'Agileware', the only team of two people and being novices, managed to come third among 16 teams!"
+          ],
           "image": "images/certificate_marathon.webp",
           "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"
       }
