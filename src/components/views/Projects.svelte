@@ -13,7 +13,7 @@
 
   const { nav, projects } = i18nStores;
 
-  let expandedIndex: number | null = 0;
+  let expandedIndex: number | null = null;
   let selectedTechnologies: string[] = [];
   let columnMode = false;
   if ($projects.length > MAX_PROJECTS_PER_ROW) columnMode = true;
@@ -45,6 +45,10 @@
       expandedIndex = 0;
       return project.technologies.includes(tech);
     });
+  }
+
+  function formatNameToId(name: string) {
+    return name.toLowerCase().replace(/\s+/g, '-');
   }
 </script>
 
@@ -82,6 +86,7 @@
     
     {#each $projects.filter(filterProjects) as project, index}
       <button
+        id={formatNameToId(project.name)}
         class="project-card"
         class:expanded={expandedIndex === index || columnMode}
         on:click={() => toggleExpand(index)}
@@ -174,7 +179,7 @@
     @apply flex justify-center items-start flex-wrap gap-4;
   }
   .project-card {
-    @apply relative rounded-lg shadow-xl overflow-hidden cursor-pointer w-24 h-[22.5em];
+    @apply relative rounded-lg shadow-xl overflow-hidden cursor-pointer w-24 h-[25em] md:h-[22.5em];
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   .project-card.expanded {

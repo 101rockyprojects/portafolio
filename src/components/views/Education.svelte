@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { i18nStores } from '@App/components/stores/i18n-data.ts';
+    import { locale } from 'svelte-i18n';
+    import { i18nStores } from '@App/components/stores/i18n-data.ts';
     
   const { nav, educations } = i18nStores;
 </script>
@@ -45,6 +46,11 @@
         {/if}
       </article>
     {/each}
+    <article class="flex justify-between items-start">
+        <p class="text-2xl text-center text-white/50 readex-bold w-full">
+          {$locale === 'en' ? 'And every day learning more...' : 'Y cada día aprendiendo más...'}
+        </p>
+    </article>
   </div>
 </section>
 

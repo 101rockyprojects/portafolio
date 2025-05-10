@@ -21,7 +21,7 @@
   </article>
   <article class="about">
     <img src="{$info.image}" alt="Personal Logo" class="hidden md:block absolute rounded-full overflow-hidden w-28 h-28 border-2 right-6 top-6">
-    <p class="text-4xl italic hidden md:flex gap-4 mb-2">
+    <p class="text-[2.5rem] italic hidden md:flex gap-4 mb-2">
       {$about.salute}
       <span class="font-bold">{$info.name}</span>
     </p>
@@ -54,7 +54,7 @@
     </div>
   </article>
 </section>
-<hr class="w-5/6 mx-auto opacity-20">
+<hr />
 
 <style lang="postcss">
   .about {

@@ -38,7 +38,7 @@ locale.subscribe(($locale) => {
   tool.set($locale === 'es' ? 'Herramientas' : 'Tools');
 });
 
-export const categories = derived(tool, ($tool) => ({
+export const categories: Readable<Record<string, string>> = derived(tool, ($tool) => ({
   "Back": "Backend",
   "Front": "Frontend",
   "Tool": $tool,

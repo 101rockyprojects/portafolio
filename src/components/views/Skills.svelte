@@ -33,7 +33,7 @@
     </select>
   </aside>
   
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-4 w-5/6 mb-1">
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-4 w-5/6 mb-6">
     {#each Object.keys($categories) as category}
       <article class="category-container shadow-below">
         <h2 class="text-[1.05rem] md:text-lg lg:text-2xl text-center mb-2 flex flex-wrap justify-center">
@@ -58,8 +58,6 @@
     {/each}
   </section>
 </section>
-
-<hr class="w-5/6 mx-auto opacity-20">
 
 <style lang="postcss">
   .category-container {

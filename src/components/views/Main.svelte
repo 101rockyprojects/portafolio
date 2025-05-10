@@ -14,12 +14,13 @@
     <Nav />
     <div class="section-container bg-obscure">
         <About />
-        <Projects />
-        <Skills />
         <div class="flex justify-center flex-col lg:flex-row lg:px-4">
             <Experience />
             <Education />
         </div>
+        <hr>
+        <Projects />
+        <Skills />
         <div class="grid grid-cols-4 w-full lg:px-[8%] relative">
             <div class="col-span-4 lg:col-span-1">
                 <Achievements />
@@ -49,6 +50,6 @@
         margin: 0 auto;
     }
     .comment-block {
-        @apply absolute -ml-[25%] w-max overflow-hidden text-start text-white opacity-[12%] text-base lg:text-xl leading-[0.6rem] lg:leading-[0.8rem] select-none;
+        @apply absolute -ml-[35%] w-max overflow-hidden text-start text-white opacity-[12%] text-base lg:text-xl leading-[0.6rem] lg:leading-[0.8rem] select-none;
     }
   </style>

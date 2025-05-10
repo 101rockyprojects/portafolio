@@ -23,7 +23,7 @@
             `}
             style="background-image: url({hobby.image})"
         >
-            <div class="flex items-end justify-start w-full h-full bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all">
+            <div class="flex items-end justify-start w-full h-full bg-black bg-opacity-40 group-hover:bg-opacity-[60%] transition-all">
                 <section class="p-6 text-white text-xl w-full">
                   <div class={`
                       flex gap-2 items-center

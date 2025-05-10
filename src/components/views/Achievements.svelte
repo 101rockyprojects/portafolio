@@ -24,8 +24,13 @@
   <article class="flex flex-wrap gap-4 flex-col mx-auto md:w-11/12 lg:w-full">
       {#each $achievements as achievement}
           <button class="relative flex items-center cursor-pointer gap-4 py-3 mb-4 group" on:click={() => openModal(achievement)}>
-            <Fa icon={faAward} class="text-2xl text-caramel group-hover:text-flame transition-colors duration-300 ease-out" />
-            <h3 class="text-lg font-bold text-start text-balance">{achievement.title}</h3>
+            <Fa 
+              icon={faAward}
+              class="text-2xl text-caramel group-hover:text-flame transition-colors duration-500 ease-out"
+            />
+            <h3 class="text-lg font-bold text-start w-full transform transition-all duration-300 ease-in-out translate-x-1 group-hover:-translate-x-1">
+              {achievement.title}
+            </h3>
             <span class="top-0 left-0 w-1/3 h-[2px] bars"></span>
             <span class="bottom-0 right-0 w-3/4 h-[2px] bars"></span>
           </button>

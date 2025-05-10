@@ -42,7 +42,7 @@
     }
   </script>
   
-<hr class="w-5/6 mx-auto opacity-20">
+<hr />
 <section id="contact" class="section mb-10">
   <h2 class="section-title pt-4">&lt;{$nav.contact}/&gt;</h2>
   <article class="max-w-xl mx-auto">
