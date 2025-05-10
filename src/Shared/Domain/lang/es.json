@@ -23,7 +23,7 @@
         "learnt": "Configuración de la API de Youtube, manejo de grandes volúmenes de datos, familiarizándome con Svelte y Vite.",
         "technologies": ["Javascript", "Svelte", "Vite", "Youtube API", "Tailwind"],
         "link": "https://101rockyprojects.github.io/meloday/ ",
-        "image": "images/meloday.png"
+        "image": "images/meloday.webp"
       },
       {
         "name": "Cuida Backend",
@@ -51,7 +51,7 @@
   "education": [
       {
         "title": "Ingeniería de Sistemas",
-        "logo": "images/simonbolivar.png",
+        "logo": "images/simonbolivar.webp",
         "institution": "Universidad Simón Bolívar",
         "initialDate": "2020",
         "finalDate": "2024",
@@ -61,7 +61,7 @@
       },
       {
         "title": "Inglés",
-        "logo": "images/universal.png",
+        "logo": "images/universal.webp",
         "level": "B2",
         "institution": "Universal Centro de Idiomas",
         "initialDate": "2021",
@@ -82,7 +82,7 @@
         "title": "EFSET Inglés C1",
         "description": "Últimos resultados del examen de 90 minutos (Lectura, escucha, escritura, y habla).",
         "extra": "Realizado el 4 de Agosto del 2024.",
-        "image": "images/efset_67.png",
+        "image": "images/efset_67.webp",
         "link": "https://cert.efset.org/PTbQL6"
       },
       {

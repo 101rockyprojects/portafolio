@@ -92,7 +92,7 @@
         on:click={() => toggleExpand(index)}
       >
         <img 
-          src={project.image || "images/placeholder.png"} 
+          src={project.image || "images/placeholder.webp"} 
           alt={project.name} 
           class="card-image"
           loading="eager"

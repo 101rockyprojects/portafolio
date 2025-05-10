@@ -23,7 +23,7 @@
         "learnt": "Setting up the YouTube API, handling large volumes of data, getting familiar with Svelte and Vite.",
         "technologies": ["Javascript", "Svelte", "Vite", "Youtube API", "Tailwind"],
         "link": "https://101rockyprojects.github.io/meloday/",
-        "image": "images/meloday.png"
+        "image": "images/meloday.webp"
       },
       {
         "name": "Cuida Backend",
@@ -51,7 +51,7 @@
     "education": [
       {
         "title": "Systems Engineering",
-        "logo": "images/simonbolivar.png",
+        "logo": "images/simonbolivar.webp",
         "institution": "Simón Bolívar University",
         "initialDate": "2020",
         "finalDate": "2024",
@@ -61,7 +61,7 @@
       },
       {
         "title": "English",
-        "logo": "images/universal.png",
+        "logo": "images/universal.webp",
         "level": "B2",
         "institution": "'Universal Centro de Idiomas'",
         "initialDate": "2021",
@@ -82,7 +82,7 @@
         "title": "EFSET English C1",
         "description": "Latest results from the 90-minute exam (Reading, listening, writing, and speaking).",
         "extra": "Taken on August 4th, 2024.",
-        "image": "images/efset_67.png",
+        "image": "images/efset_67.webp",
         "link": "https://cert.efset.org/PTbQL6"
       },
       {
