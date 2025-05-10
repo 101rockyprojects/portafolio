@@ -3,7 +3,7 @@ import { faArrowsAlt, faSpoon } from '@fortawesome/free-solid-svg-icons';
 
 export const techData: Record<string, { source: IconDefinition | string; category: string; level: string; link: string, color?: string }> = {
   'Composer': {
-    source: 'composer.png',
+    source: 'composer.webp',
     category: 'Tool',
     level: 'Experienced',
     link: 'https://getcomposer.org',
@@ -37,7 +37,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     color: 'text-red-600',
   },
   'Mysql': {
-    source: 'mysql.png',
+    source: 'mysql.webp',
     category: 'Tool',
     level: 'Experienced',
     link: 'https://www.mysql.com',
@@ -64,7 +64,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     color: 'text-indigo-500',
   },
   'Postgres': {
-    source: 'postgres.png',
+    source: 'postgres.webp',
     category: 'Tool',
     level: 'Experienced',
     link: 'https://www.postgresql.org',
@@ -77,7 +77,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     color: 'text-indigo-700',
   },
   'RabbitMQ': {
-    source: 'rabbitmq.png',
+    source: 'rabbitmq.webp',
     category: 'Tool',
     level: 'Experienced',
     link: 'https://www.rabbitmq.com'
@@ -109,7 +109,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     link: 'https://svelte.dev',
   },
   'Tailwind': {
-    source: 'tailwind.png',
+    source: 'tailwind.webp',
     category: 'Front',
     level: 'Experienced',
     link: 'https://tailwindcss.com/',
@@ -122,7 +122,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     color: 'text-blue-700',
   },
   'Typescript': {
-    source: 'typescript.png',
+    source: 'typescript.webp',
     category: 'Front',
     level: 'Experienced',
     link: 'https://www.typescriptlang.org',
@@ -141,7 +141,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     color: 'text-red-600',
   },
   'Hibernate': {
-    source: 'hibernate.png',
+    source: 'hibernate.webp',
     category: 'Back',
     level: 'Experienced',
     link: 'https://hibernate.org'
@@ -159,5 +159,17 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     level: 'Want',
     link: 'https://golang.org/',
     color: 'text-gray-500',
-  }
+  },
+  'C#': {
+    source: 'cSharp.webp',
+    category: 'Back',
+    level: 'Want',
+    link: 'https://dotnet.microsoft.com/es-es/languages/csharp'
+  },
+  '.NET': {
+    source: 'dotNET.svg',
+    category: 'Back',
+    level: 'Want',
+    link: 'https://dotnet.microsoft.com/es-es/'
+  },
 };

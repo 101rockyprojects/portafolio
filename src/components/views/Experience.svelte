@@ -38,13 +38,16 @@
           href={experience.companyLink} 
           target="_blank" 
           rel="noopener noreferrer"
-          class="flex gap-2 items-center text-gold hover:underline"
+          class="flex gap-2 items-center text-gold hover:underline w-fit"
         >
           {experience.company}
           <Fa icon={faExternalLink} />
         </a>
-        <p class="description readex-thin my-[1lh]">{experience.description}</p>
-        <p class="description readex-thin my-[1lh]">{experience.extra}</p>
+        {#if experience.description?.length}
+          {#each experience.description as paragraph}
+            <p class="description readex-thin my-[1lh]">{paragraph}</p>
+          {/each}
+        {/if}
       </article>
     {/each}
   </div>

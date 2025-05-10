@@ -39,10 +39,13 @@
         "company": "Sespesoft SAS",
         "companyLink": "https://sespesoft.com/",
         "initialDate": "May 2023",
-        "finalDate": "Present",
+        "finalDate": "July 2025",
         "country": "Colombia",
-        "description": "Highlights include the creation of a queuing system with RabbitMQ to notify events between various company systems, modular APIs with Scoop for dynamic georeferencing and role-based authentication.",
-        "extra": "Working with Hexagonal and DDD architectures, configuring Docker environments, handling ORMs like Hibernate, scripting with PHP, and applying SOLID principles; under SCRUM and Kanban methodologies."
+        "description": [
+          "Highlights include the creation of a queuing system with RabbitMQ to notify events between various systems using Laravel, and dynamic georeferencing and role-based authentication systems.",
+          "I implemented in record time critical functionalities in the Aisalud, health services invoice registration and control, system to comply with Resolution 2275 of 2023 of the Colombian Ministry of Health.",
+          "Working with Hexagonal and DDD architectures, configuring Docker environments, handling ORMs like Hibernate, scripting with PHP, and applying SOLID principles; under SCRUM and Kanban methodologies."
+        ]
       }
     ],
     "education": [
@@ -72,7 +75,7 @@
         "title": "Systems Engineer",
         "description": "The titanic effort of 5 years, the tangible fruit of resilience! Being an engineer.",
         "extra": "One of the greatest achievements of my personal and professional life, the title that will precede my name for the rest of my life.",
-        "image": "images/engineer.jpg",
+        "image": "images/engineer.webp",
         "link": "https://www.unisimon.edu.co/cucuta/pregrados/ingenieria-de-sistemas/cucuta"
       },
       {
@@ -86,14 +89,14 @@
           "title": "B2 English Certificate",
           "description": "After a year of effort, I completed modules B1 and B2 in English at Universal Language Center.",
           "extra": "Through daily virtual classes, exercises, readings, and weekly exams I obtained the certification in just one year.",
-          "image": "images/certificate_universal.jpg",
+          "image": "images/certificate_universal.webp",
           "link": "https://www.universal.edu.co/"
       },
       {
           "title": "3rd Place - Training Camp of Los Santanderes",
           "description": "Can you learn what you need for a programming marathon in only one week? Yes! After this wonderful event that lasted three weeks learning advanced algorithm and math concepts we achieved third place.",
           "extra": "In teams of three, we held a four-hour marathon where 'Agileware', the only team of two people and being novices, managed to come third among 16 teams!",
-          "image": "images/certificate_marathon.jpg",
+          "image": "images/certificate_marathon.webp",
           "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"
       }
     ],
@@ -101,22 +104,22 @@
       {
         "name": "Programming",
         "description": "Always seeking new challenges or something innovative.",
-        "image": "images/coding.jpg"
+        "image": "images/coding.webp"
       },
       {
         "name": "Video Games",
         "description": "Super competitive, although playing with friends is better.",
-        "image": "images/gaming.jpg"
+        "image": "images/gaming.webp"
       },
       {
         "name": "Reading",
         "description": "Aficionado of novels about dystopias, science fiction, horror, and suspense.",
-        "image": "images/reading.jpg"
+        "image": "images/reading.webp"
       },
       {
         "name": "Training",
         "description": "The body is a temple; it must be cared for and admired.",
-        "image": "images/training.jpg"
+        "image": "images/training.webp"
       }
     ]
 }

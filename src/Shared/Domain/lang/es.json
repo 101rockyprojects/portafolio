@@ -39,10 +39,13 @@
         "company": "Sespesoft SAS",
         "companyLink": "https://sespesoft.com/",
         "initialDate": "Mayo 2023",
-        "finalDate": "Presente",
+        "finalDate": "Julio 2025",
         "country": "Colombia",
-        "description": "Destaco la creación de un sistema de colas con RabbitMQ para notificar eventos entre diversos sistemas de la empresa, APIs modulares con Scoop para georreferenciación dinamica y autenticación por roles y permisos.",
-        "extra": "Trabajando con arquitecturas Hexagonal y DDD, configuración de entornos Docker, manejo de ORMs como Hibernate, scripts con PHP y uso de principios SOLID; bajo metolodologías SCRUM y Kanban."
+        "description": [
+          "Destaco la creación de un sistema de colas con RabbitMQ para notificar eventos entre diversos sistemas de la empresa con Laravel, un sistema de georreferenciación dinamica y autenticación por roles y permisos.",
+          "Logré implementar en tiempo récord funcionalidades críticas en el sistema de registro y control de facturas de servicios de salud Aisalud para cumplir con la Resolución 2275 de 2023 del Ministerio de Salud de Colombia.",
+          "Trabajando con arquitecturas Hexagonal y DDD, configuración de entornos Docker, manejo de ORMs como Hibernate, scripts con PHP y uso de principios SOLID; bajo metolodologías SCRUM y Kanban."
+        ]
       }
   ],
   "education": [
@@ -72,7 +75,7 @@
         "title": "Ingeniero de Sistemas",
         "description": "¡El titánico esfuerzo de 5 años, el fruto tangible de la resiliencia! Ser ingeniero.",
         "extra": "Uno de los mayores logros de mi vida personal y profesional, el título que estará precediendo mi nombre por el resto de mi vida.",
-        "image": "images/engineer.jpg",
+        "image": "images/engineer.webp",
         "link": "https://www.unisimon.edu.co/cucuta/pregrados/ingenieria-de-sistemas/cucuta"
       },
       {
@@ -86,14 +89,14 @@
         "title": "Certificado Inglés B2",
         "description": "Luego de un año de esfuerzo, logré completar los módulos B1 y B2 de inglés en Universal Centro de Idiomas.",
         "extra": "A través de clases virtuales diarias, ejercicios, lecturas, y examenes semanales obtuve la certificación en un solo año.",
-        "image": "images/certificate_universal.jpg",
+        "image": "images/certificate_universal.webp",
         "link": "https://www.universal.edu.co/"
       },
       {
         "title": "3er Lugar - Training Camp de los Santanderes",
         "description": "¿En una semana puedes aprender lo necesario para una maratón de programación? ¡Sí! Tras este maravilloso evento que duró 3 semanas aprendiendo conceptos avanzados de algortimia y matemática se obtuvo el 3er puesto.",
         "extra": "En equipos de 3, se realizó una maratón de 4 horas donde 'Agileware', el único equipo de 2 personas y siendo novatos, ¡logramos ser los terceros entre 16 equipos!",
-        "image": "images/certificate_marathon.jpg",
+        "image": "images/certificate_marathon.webp",
         "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"
       }
   ],
@@ -101,22 +104,22 @@
       {
         "name": "Programar",
         "description": "Siempre buscando nuevos desafíos o algo innovador.",
-        "image": "images/coding.jpg"
+        "image": "images/coding.webp"
       },
       {
         "name": "Videojuegos",
         "description": "Supercompetitivo, aunque jugar con amigos es mejor.",
-        "image": "images/gaming.jpg"
+        "image": "images/gaming.webp"
       },
       {
         "name": "Leer",
         "description": "Aficionado de novelas sobre distopías, ciencia ficción, terror y suspenso.",
-        "image": "images/reading.jpg"
+        "image": "images/reading.webp"
       },
       {
         "name": "Entrenar",
         "description": "El cuerpo es un templo, debe ser cuidado y admirado.",
-        "image": "images/training.jpg"
+        "image": "images/training.webp"
       }
   ]
 }  
