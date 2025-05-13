@@ -25,9 +25,11 @@
 body {
   margin: 0;
   width: 100%;
+  min-width: 320px;
   max-width: 100dvw;
   max-height: 100dvh;
   overflow-x: hidden;
+  @apply accent-orange-700 caret-orange-700;
 }
 
 h1 {
@@ -61,14 +63,6 @@ textarea {
 
 img {
   @apply select-none pointer-events-none;
-}
-
-#app {
-  @apply w-full overflow-x-hidden accent-orange-700 caret-orange-700;
-}
-
-.navigation {
-  @apply sticky top-0 w-full bg-white z-50;
 }
 
 .btn {
