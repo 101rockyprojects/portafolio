@@ -36,7 +36,7 @@
 
   function handleResize() {
     windowWidth = window.innerWidth;
-    if (windowWidth >= 768 && isMenuOpen) { // 768px es el breakpoint de 'md' en Tailwind
+    if (windowWidth >= 768 && isMenuOpen) {
       isMenuOpen = false;
     }
   }
@@ -77,7 +77,7 @@
 
 <svelte:window on:scroll={handleScroll} on:resize={handleResize} />
 
-<header class={`fixed w-full z-50 transition-transform duration-300 ${showNav ? 'translate-y-0' : '-translate-y-full'}`}>
+<header class={`fixed w-[100dvw] z-50 transition-transform duration-300 ${showNav ? 'translate-y-0' : '-translate-y-full'}`}>
   <nav class={`mx-auto px-4 pb-3 bg-gradient-to-b from-ocean via-ocean ${isMenuOpen ? 'bg-ocean' : 'to-transparent shadow-lg'}`} aria-label="Navigation">
     <div class="flex items-center h-14 text-base md:text-lg justify-between">
       <img src="images/logo.webp" alt="Personal Logo" class="hidden md:block rounded-full overflow-hidden w-14 h-14 pt-2">
