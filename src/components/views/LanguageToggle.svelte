@@ -8,7 +8,7 @@
 
 <button
   onclick={toggleLanguage}
-  class="btn rounded-full font-bold border-elegant border-4 hover:text-white hover:border-gold"
+  class="btn rounded-full font-bold border-elegant border-4 hover:text-ocean hover:border-gold"
   aria-label="Toggle language"
 >
   {$locale === 'en' ? 'EN' : 'ES'}

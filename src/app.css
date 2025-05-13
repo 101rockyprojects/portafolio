@@ -106,7 +106,7 @@ img {
 }
 
 .btn-primary {
-  @apply inline-flex items-center font-bold px-4 py-2 bg-gold text-ocean rounded-lg hover:bg-flame hover:text-white transition-colors;
+  @apply inline-flex items-center font-bold px-4 py-2 bg-gold text-ocean rounded-lg hover:bg-flame hover:text-obscure transition-colors;
 }
 
 .btn-secondary {
