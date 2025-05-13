@@ -73,13 +73,14 @@
     ],
     "achievements": [
       {
-        "title": "Systems Engineer",
+        "title": "The Engineering Card",
         "description": [
-          "The titanic effort of 5 years, the tangible fruit of resilience! Being an engineer.",
-          "One of the greatest achievements of my personal and professional life, the title that will precede my name for the rest of my life."
+          "I'm no longer just an engineer at heart, it's official now! And endorsed by COPNIA.",
+          "The titanic effort of 5 years, the tangible fruit of resilience. An image of 50KB with the incalculable weight of being one of the greatest achievements of my life.",
+          "The title that will always precede my name: 'Systems Engineer'."
         ],
-        "image": "images/engineer.webp",
-        "link": "https://www.unisimon.edu.co/cucuta/pregrados/ingenieria-de-sistemas/cucuta"
+        "image": "images/engineer_professional_card.webp",
+        "link": "https://tramites.copnia.gov.co/Copnia_Microsite/CertificateOfGoodStanding/CertificateOfGoodStandingStart"
       },
       {
         "title": "EFSET English C1",

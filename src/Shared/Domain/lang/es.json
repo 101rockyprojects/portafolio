@@ -74,13 +74,14 @@
   ],
   "achievements": [
       {
-        "title": "Ingeniero de Sistemas",
+        "title": "Carta profesional de Ingeniería",
         "description": [
-          "!El titanico esfuerzo de 5 años, el fruto tangible de la resiliencia! Ser ingeniero.",
-          "Uno de los mayores logros de mi vida personal y profesional, el título que estará precediendo mi nombre por el resto de mi vida."
+          "¡Ya no solo soy ingeniero de corazón, ahora es oficial! Avalado por el COPNIA.",
+          "El titánico esfuerzo de 5 años, el fruto tangible de la resiliencia. Una imagen de 50KB con el peso incalculable de ser uno de los mayores logros de mi vida.",
+          "El título que siempre va a preceder a mi nombre: 'Ingeniero de Sistemas'."
         ],
-        "image": "images/engineer.webp",
-        "link": "https://www.unisimon.edu.co/cucuta/pregrados/ingenieria-de-sistemas/cucuta"
+        "image": "images/engineer_professional_card.webp",
+        "link": "https://tramites.copnia.gov.co/Copnia_Microsite/CertificateOfGoodStanding/CertificateOfGoodStandingStart"
       },
       {
         "title": "EFSET Inglés C1",
