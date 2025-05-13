@@ -18,8 +18,13 @@
   scroll-behavior: smooth;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  width: 100%;
   max-width: 100dvw;
   max-height: 100dvh;
   overflow-x: hidden;
