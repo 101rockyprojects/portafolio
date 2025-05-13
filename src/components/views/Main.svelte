@@ -10,7 +10,7 @@
     import Contact from '@App/components/views/Contact.svelte';
 </script>
 
-<main>
+<main class="w-[100dvw]">
     <Nav />
     <div class="section-container bg-obscure">
         <About />
