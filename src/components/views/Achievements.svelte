@@ -69,7 +69,7 @@
     @apply lg:text-start;
   }
   .modal {
-    @apply fixed inset-0 bg-white/10 backdrop-blur-sm flex items-center justify-center z-50 max-w-[100dvw] overflow-y-hidden;
+    @apply fixed inset-0 bg-white/10 backdrop-blur-sm flex items-center justify-center z-50 overflow-y-hidden;
   }
   .bars {
     @apply  absolute bg-caramel group-hover:bg-flame group-hover:w-full transition-all duration-300 ease-out;

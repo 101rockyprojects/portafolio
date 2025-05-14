@@ -26,7 +26,6 @@ body {
   margin: 0;
   width: 100%;
   min-width: 320px;
-  max-width: 100dvw;
   max-height: 100dvh;
   overflow-x: hidden;
   @apply accent-orange-700 caret-orange-700;
@@ -155,6 +154,15 @@ img {
 
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    scrollbar-width: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
   }
 }
 
