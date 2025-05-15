@@ -158,7 +158,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     category: 'Back',
     level: 'Want',
     link: 'https://golang.org/',
-    color: 'text-gray-500',
+    color: 'text-blue-400',
   },
   'C#': {
     source: 'cSharp.webp',
