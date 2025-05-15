@@ -54,7 +54,6 @@
     </div>
   </article>
 </section>
-<hr />
 
 <style lang="postcss">
   .about {
