@@ -55,6 +55,9 @@
   }
 
   function toggleExpand(project: any) {
+    if (columnMode) {
+      return;
+    }
     const projectId = formatNameToId(project.name);
     expandedProjectId = expandedProjectId === projectId ? null : projectId;
   }
