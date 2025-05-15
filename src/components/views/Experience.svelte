@@ -7,7 +7,7 @@
 </script>
 
 <section id="experience" class="section relative">
-  <aside class="comment text-start top-3">
+  <aside class="comment text-start top-0 min-w-fit">
     <div class="relative border-l-4 ml-[20dvw] pt-1 pl-4 border-white">
       <div class="absolute w-5 h-5 bg-white rounded-full -left-[12px] top-0"></div>
       <div class="absolute w-3 h-3 bg-obscure rounded-full -left-[8px] top-1"></div>

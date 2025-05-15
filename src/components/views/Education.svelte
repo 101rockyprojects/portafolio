@@ -7,7 +7,7 @@
   
 <section id="education" class="section relative w-full lg:min-w-[45dvw] lg:pl-0">
   <aside class="comment text-start top-0">
-    <pre class="ml-[11rem]">
+    <pre class="ml-[10dvw] md:ml-[55dvw] lg:ml-[15dvw]">
       &lbrace;
 
         &quot;{$nav.education}&quot;: &lbrace;

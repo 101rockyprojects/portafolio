@@ -25,9 +25,8 @@
 body {
   margin: 0;
   width: 100%;
-  min-width: 320px;
+  max-width: 100dvw;
   max-height: 100dvh;
-  overflow-x: hidden;
   @apply accent-orange-700 caret-orange-700;
 }
 
@@ -139,7 +138,7 @@ img {
 }
 
 .comment {
-  @apply absolute text-white opacity-[12%] w-full text-base md:text-lg lg:text-xl leading-[0.6rem] md:leading-[0.65rem] lg:leading-[0.7rem] ml-[-4.5em] select-none;
+  @apply absolute text-white opacity-[12%] w-full max-w-[99dvw] text-base md:text-lg lg:text-xl leading-[0.6rem] md:leading-[0.65rem] lg:leading-[0.7rem] ml-[-4.5em] select-none;
 }
 
 @media (prefers-color-scheme: light) {
