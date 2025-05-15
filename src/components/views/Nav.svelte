@@ -77,7 +77,7 @@
 
 <svelte:window on:scroll={handleScroll} on:resize={handleResize} />
 
-<header class={`fixed w-[100dvw] z-50 transition-transform duration-300 ${showNav ? 'translate-y-0' : '-translate-y-full'}`}>
+<header class={`fixed w-full z-50 transition-transform duration-300 ${showNav ? 'translate-y-0' : '-translate-y-full'}`}>
   <nav class={`mx-auto px-4 pb-3 bg-gradient-to-b from-ocean via-ocean ${isMenuOpen ? 'bg-ocean' : 'to-transparent shadow-lg'}`} aria-label="Navigation">
     <div class="flex items-center h-14 text-base md:text-lg justify-between">
       <img src="images/logo.webp" alt="Personal Logo" class="hidden md:block rounded-full overflow-hidden w-16 h-16 pt-2">
@@ -87,7 +87,7 @@
           <a 
             href={item.href}
             class={`
-              text-base md:text-lg transform transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-gold h-16 w-16 flex items-center
+              text-base md:text-lg transform transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-gold h-16 flex items-center
               ${activeSection === item.href.substring(1) ?
                 'text-caramel' :
                 'text-white'
@@ -109,7 +109,7 @@
         <span class={`burger-layer ${isMenuOpen ? '-rotate-45 -translate-y-2 bg-flame h-1' : 'bg-white h-0.5'}`}></span>
       </button>
 
-      <img src="images/logo.webp" alt="Personal Logo" class="block md:hidden rounded-full overflow-hidden w-14 h-14 pt-2">
+      <img src="images/logo.webp" alt="Personal Logo" class="block md:hidden rounded-full overflow-hidden w-16 h-16 pt-2 ml-3">
       <LanguageToggle />
     </div>
   </nav>
@@ -149,7 +149,7 @@
   ></button>
 {/if}
 
-<style>
+<style lang="postcss">
   nav {
     font-family: 'Readex Pro';
     src: url('/fonts/ReadexPro-Regular.ttf') format('truetype');
