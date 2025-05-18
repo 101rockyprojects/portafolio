@@ -6,11 +6,12 @@
       "education": "Educación",
       "achievements": "Logros",
       "hobbies": "Pasatiempos",
-      "contact": "Contáctame"
+      "contact": "Contáctame",
+      "recommendations": "Referencias"
   },
   "about": {
       "title": "Desarrollador Back-end",
-      "slogan": "Pequeñas mejoras hacen grandes sistemas.",
+      "slogan": "Pequeñas mejoras llevan a grandes sistemas.",
       "extra": "Ingenierio de sistemas adaptable, eficiente y curioso.",
       "description": "Especializado en desarrollo de sistemas de amplio alcance. Enfocado en otorgar soluciones sencillas a problemas complejos. Tal como los sistemas, estoy en constante mejora y aprendizaje.",
       "salute": "Un gusto, soy",
@@ -131,6 +132,25 @@
         "name": "Entrenar",
         "description": "El cuerpo es un templo, debe ser cuidado y admirado.",
         "image": "images/training.webp"
+      }
+  ],
+  "recommendations": [
+      {
+        "name": "Recomendación Personal",
+        "person_name": "Mary Rojas",
+        "photo": "https://media.licdn.com/dms/image/v2/D5603AQGzabiJPEbAlw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1673375097689?e=1752710400&v=beta&t=TLTrDeS_IWYLOylikudVRE6IjjgLFlhBWCWtVkzvvo0",
+        "role": "Arquitecta de Soluciones | SRE | DevOps | AWS",
+        "link": "https://www.linkedin.com/in/mary-evelyn-rojas-roa-03a1801a6/",
+        "email": "mevere66@gmail.com",
+        "comment": "Excelente compañero, proactivo y curioso; en otras palabras, 'un man que resuelve'."
+      },
+      {
+        "name": "Recomendación Laboral",
+        "person_name": "Mauricio Acevedo",
+        "photo": "https://media.licdn.com/dms/image/v2/D4E35AQHBoNs45tBzsA/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1664297440977?e=1748030400&v=beta&t=dbG4q-lfpxF6CvaODxkpy7lmHHfpqWEKul1rjVbXpbE",
+        "role": "Magister en Gestión de Proyectos",
+        "link": "https://www.linkedin.com/in/msc-mauricio-alfredo-acevedo-d%C3%ADaz-32055464/",
+        "email": "mauricioacevedodiaz@gmail.com"
       }
   ]
 }  

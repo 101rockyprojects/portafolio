@@ -9,6 +9,7 @@ import type { Experience } from '@Shared/Domain/types/experience.ts';
 import type { Education } from '@Shared/Domain/types/education.ts';
 import type { Hobby } from '@Shared/Domain/types/hobby.ts';
 import type { Achievement } from '@Shared/Domain/types/achievement.ts';
+import type { Recommendation } from '@Shared/Domain/types/recommendation.ts';
 
 interface Data {
     [key: string]: any;
@@ -21,6 +22,7 @@ interface Data {
       education: Education[];
       hobbies: Hobby[];
       achievements: Achievement[];
+      recommendations: Recommendation[];
     };
     en: {
       nav: Nav;
@@ -30,6 +32,7 @@ interface Data {
       education: Education[];
       hobbies: Hobby[];
       achievements: Achievement[];
+      recommendations: Recommendation[];
     };
 }
 

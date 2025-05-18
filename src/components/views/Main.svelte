@@ -7,7 +7,9 @@
     import Education from '@App/components/views/Education.svelte';
     import Hobbies from '@App/components/views/Hobbies.svelte';
     import Achievements from '@App/components/views/Achievements.svelte';
+    import Recommendations from '@App/components/views/Recommendations.svelte';
     import Contact from '@App/components/views/Contact.svelte';
+    import BinaryScroll from '@App/components/views/BinaryScroll.svelte';
 </script>
 
 <main class="w-[100dvw]">
@@ -15,13 +17,7 @@
     <div class="section-container bg-obscure">
         <About />
         <div class="relative w-full mb-12">
-            <div class="scroll-container">
-                <pre class="infinite-scroll-content readex-bold">
-                    <!-- Ingeniero Rocky -->
-                    01001001 01101110 01100111 01100101 01101110 01101001 01100101 01110010 01101111 00100000 01010010 01101111 01100011 01101011 01111001
-                    01001001 01101110 01100111 01100101 01101110 01101001 01100101 01110010 01101111 00100000 01010010 01101111 01100011 01101011 01111001
-                </pre>
-            </div>
+            <BinaryScroll />
         </div>
         <div class="flex justify-center flex-col lg:flex-row lg:px-4">
             <Experience />
@@ -34,18 +30,20 @@
             <div class="col-span-4 lg:col-span-1">
                 <Achievements />
             </div>
-            <div class="scroll-container">
-                <pre class="infinite-scroll-content readex-bold">
-                    <!-- Ingeniero Rocky -->
-                    01001001 01101110 01100111 01100101 01101110 01101001 01100101 01110010 01101111 00100000 01010010 01101111 01100011 01101011 01111001
-                    01001001 01101110 01100111 01100101 01101110 01101001 01100101 01110010 01101111 00100000 01010010 01101111 01100011 01101011 01111001
-                </pre>
-            </div>
+            <BinaryScroll />
             <div class="col-span-4 lg:col-span-3">
                 <Hobbies />
             </div>
         </div>
-        <Contact />
+        <hr />
+        <div class="grid grid-cols-5 w-full lg:px-[8%] relative">
+            <div class="col-span-5 lg:col-span-2">
+                <Recommendations />
+            </div>
+            <div class="col-span-5 lg:col-span-3">
+                <Contact />
+            </div>
+        </div>
     </div>
 </main>
 
@@ -61,23 +59,5 @@
         min-width: 80dvw;
         width: 100%;
         margin: 0 auto;
-    }
-    .scroll-container {
-        @apply absolute w-[100dvw] max-w-[100dvw] text-white opacity-20 select-none overflow-hidden;
-    }
-
-    .infinite-scroll-content {
-        @apply text-start text-base lg:text-lg leading-[0.6rem] lg:leading-[0.75rem] whitespace-nowrap max-w-[100dvw];
-        display: inline-block;
-        animation: scrollText 8s linear infinite;
-    }
-
-    @keyframes scrollText {
-        0% {
-            transform: translateX(0%);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
     }
   </style>

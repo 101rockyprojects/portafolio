@@ -16,6 +16,7 @@
   scrollbar-color: #FFB005 #13141A;
   scrollbar-width: thin;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {

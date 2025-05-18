@@ -6,4 +6,5 @@ export interface Nav {
     hobbies: string;
     achievements: string;
     contact: string;
+    recommendations: string;
 }
