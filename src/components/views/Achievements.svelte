@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { i18nStores } from '@App/components/stores/i18n-data.ts';
+  import { i18nStores } from '@App/components/stores/data.ts';
   import Fa from 'svelte-fa';
   import { faAward, faExternalLink, faTimes } from '@fortawesome/free-solid-svg-icons';
 

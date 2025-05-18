@@ -1,6 +1,6 @@
 <script lang="ts">
     import { locale } from 'svelte-i18n';
-    import { i18nStores } from '@App/components/stores/i18n-data.ts';
+    import { i18nStores } from '@App/components/stores/data.ts';
     
   const { nav, educations } = i18nStores;
 </script>

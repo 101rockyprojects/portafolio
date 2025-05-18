@@ -2,7 +2,7 @@
     import { locale } from 'svelte-i18n';
     import { get } from 'svelte/store';
     import info from '@App/components/stores/info.ts';
-    import { i18nStores } from '@App/components/stores/i18n-data.ts';
+    import { i18nStores } from '@App/components/stores/data.ts';
     import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
     import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
@@ -42,7 +42,7 @@
     }
   </script>
   
-<hr />
+<hr class="lg:hidden"/>
 <section id="contact" class="section mb-10">
   <h2 class="section-title pt-4">&lt;{$nav.contact}/&gt;</h2>
   <article class="max-w-xl mx-auto">

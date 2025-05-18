@@ -1,6 +1,6 @@
 <script lang="ts">
   import info from '@App/components/stores/info.ts';
-  import { i18nStores } from '@App/components/stores/i18n-data.ts';
+  import { i18nStores } from '@App/components/stores/data.ts';
   import { locale } from 'svelte-i18n';
   import Fa from 'svelte-fa';
   import { faEnvelope, faAddressBook, faIdCard } from '@fortawesome/free-solid-svg-icons';

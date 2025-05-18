@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { fade, fly } from 'svelte/transition';
   import LanguageToggle from '@App/components/views/LanguageToggle.svelte';
-  import { i18nStores } from '@App/components/stores/i18n-data.ts';
+  import { i18nStores } from '@App/components/stores/data.ts';
   const { nav } = i18nStores;
   
   let isMenuOpen = false;
@@ -94,7 +94,7 @@
               }
             `}
           >
-            {item.title}
+            &lt;{item.title}/&gt;
           </a>
         {/each}
       </div>
@@ -132,7 +132,7 @@
               }
             `}
           >
-            {item.title}
+            &lt;{item.title}/&gt;
           </a>
         {/each}
       </div>

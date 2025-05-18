@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Fa } from 'svelte-fa';
 	import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
-  import { i18nStores } from '@App/components/stores/i18n-data.ts';
+  import { i18nStores } from '@App/components/stores/data.ts';
     
   const { nav, experiences } = i18nStores;
 </script>

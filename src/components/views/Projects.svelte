@@ -3,7 +3,7 @@
   import { blur, fly, fade, crossfade, scale } from 'svelte/transition';
   import { onMount } from 'svelte';
   import { locale } from 'svelte-i18n';
-  import { i18nStores } from '@App/components/stores/i18n-data.ts';
+  import { i18nStores } from '@App/components/stores/data.ts';
   import { Fa } from 'svelte-fa';
   import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
   import { circInOut } from 'svelte/easing';

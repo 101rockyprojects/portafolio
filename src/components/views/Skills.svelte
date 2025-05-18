@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import { locale } from 'svelte-i18n';
   import { techData } from '@App/Shared/Domain/const/skills.ts';
-  import { categories } from '@App/components/stores/i18n-data.ts';
+  import { categories } from '@App/components/stores/data.ts';
 	import { MEDIUM_SCREEN_WIDTH } from '@App/Shared/Domain/const/viewport.ts';
 
   let filterLevel: string = 'All';
