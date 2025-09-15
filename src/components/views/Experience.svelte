@@ -2,8 +2,10 @@
 	import { Fa } from 'svelte-fa';
 	import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
   import { i18nStores } from '@App/components/stores/data.ts';
+  import { locale } from 'svelte-i18n';
     
   const { nav, experiences } = i18nStores;
+  const years: number = new Date().getFullYear() - 2021;
 </script>
 
 <section id="experience" class="section relative">
@@ -33,7 +35,7 @@
         </time>
         <div class="absolute w-5 h-5 bg-flame rounded-full -left-[12px] top-0"></div>
         <div class="absolute w-3 h-3 bg-obscure rounded-full -left-[8px] top-1"></div>
-        <h3 class="pt-4 text-2xl font-bold">{experience.title}</h3>
+        <h3 class="pt-4 text-2xl font-bold">{experience.title} | {years}+ {$locale === 'en' ? 'years' : 'años'}</h3>
         <a 
           href={experience.companyLink} 
           target="_blank" 

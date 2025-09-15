@@ -1,7 +1,7 @@
 <script lang="ts">
     import { i18nStores } from '@App/components/stores/data.ts';
     import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-    import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+    import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
     import Fa from 'svelte-fa';
     const { nav, recommendations } = i18nStores;
 </script>
@@ -16,14 +16,23 @@
                         <blockquote class="text-[1.2rem] md:text-xl lg:text-[1.15rem] leading-snug text-white group-hover:text-gold italic">“{rec.comment}”</blockquote>
                     </div>
                 {/if}
-                <div class="flex items-center justify-center text-center gap-4 mx-auto p-2 lg:p-0">
-                    <img src={rec.photo} alt={`${rec.person_name} Photo`} class="profile-photo" loading="lazy" />
-                    <div class="flex flex-col justify-center text-start space-y-1 max-w-[58%]">
-                        <div class="flex gap-2 items-center max-w-[80%]">
-                            <h3 class="text-base lg:text-[0.9rem] font-semibold text-white group-hover:text-gold leading-none text-wrap">{rec.person_name}</h3>
-                            <a href={rec.link} target="_blank" rel="noopener noreferrer" aria-label="Photo">
-                                <Fa icon={faLinkedin} class="text-white/60 group-hover:text-blue-500 text-xl md:text-2xl hover:scale-105 transition-all duration-100 ease-out" />
-                            </a>
+                <div class="flex items-center justify-center text-center gap-4 mx-auto p-2 lg:p-0 lg:mt-2">
+                    {#if rec.photo}
+                        <img src={rec.photo} alt={`${rec.person_name} Photo`} class="profile-photo" loading="lazy" />
+                    {/if}
+                    <div class={`flex flex-col justify-center space-y-1 ${rec.photo ? 'max-w-[58%] text-start' : 'max-w-full items-center text-center'}`}>
+                        <div class={`flex gap-2 items-center ${rec.photo ? 'justify-start max-w-[80%]' : 'justify-center'}`}>
+                            <h3 class="text-base lg:text-[0.85rem] font-semibold text-white group-hover:text-gold leading-none text-wrap">{rec.person_name}</h3>
+                            {#if rec.link}
+                                <a href={rec.link} target="_blank" rel="noopener noreferrer" aria-label="Photo">
+                                    <Fa icon={faLinkedin} class="text-white/60 group-hover:text-blue-500 text-xl md:text-2xl hover:scale-105 transition-all duration-100 ease-out" />
+                                </a>
+                            {/if}
+                            {#if rec.phone}
+                                <a href={`tel:${rec.phone}`} aria-label="Phone">
+                                    <Fa icon={faPhone} class="text-white/60 group-hover:text-blue-500 text-xl md:text-xl hover:scale-105 transition-all duration-100 ease-out" />
+                                </a>
+                            {/if}
                             <a href={`mailto:${rec.email}`} aria-label="Email">
                                 <Fa icon={faEnvelope} class="text-white/60 group-hover:text-blue-500 text-xl md:text-2xl hover:scale-105 transition-all duration-100 ease-out" />
                             </a>

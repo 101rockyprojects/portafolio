@@ -1,8 +1,9 @@
 export interface Recommendation {
     person_name: string;
-    photo: string;
-    role: string;
-    link: string;
     email: string;
+    role?: string;
+    photo?: string;
+    link?: string;
+    phone?: string;
     comment?: string;
 }

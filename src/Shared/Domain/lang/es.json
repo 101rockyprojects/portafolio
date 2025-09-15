@@ -41,8 +41,8 @@
         "title": "Desarrollador Backend",
         "company": "Sespesoft SAS",
         "companyLink": "https://sespesoft.com/",
-        "initialDate": "Mayo 2023",
-        "finalDate": "Julio 2025",
+        "initialDate": "Mayo 2021",
+        "finalDate": "Agosto 2025",
         "country": "Colombia",
         "description": [
           "Destaco la creación de un sistema de colas con RabbitMQ para notificar eventos entre diversos sistemas de la empresa con Laravel, un sistema de georreferenciación dinamica y autenticación por roles y permisos.",
@@ -136,21 +136,20 @@
   ],
   "recommendations": [
       {
-        "name": "Recomendación Personal",
+        "type": "Recomendación Personal",
         "person_name": "Mary Rojas",
-        "photo": "https://media.licdn.com/dms/image/v2/D5603AQGzabiJPEbAlw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1673375097689?e=1752710400&v=beta&t=TLTrDeS_IWYLOylikudVRE6IjjgLFlhBWCWtVkzvvo0",
+        "photo": "https://www.linkedin.com/in/mary-evelyn-rojas-roa-03a1801a6/overlay/photo/",
         "role": "Arquitecta de Soluciones | SRE | DevOps | AWS",
         "link": "https://www.linkedin.com/in/mary-evelyn-rojas-roa-03a1801a6/",
         "email": "mevere66@gmail.com",
         "comment": "Excelente compañero, proactivo y curioso; en otras palabras, 'un man que resuelve'."
       },
       {
-        "name": "Recomendación Laboral",
-        "person_name": "Mauricio Acevedo",
-        "photo": "https://media.licdn.com/dms/image/v2/D4E35AQHBoNs45tBzsA/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1664297440977?e=1748030400&v=beta&t=dbG4q-lfpxF6CvaODxkpy7lmHHfpqWEKul1rjVbXpbE",
-        "role": "Magister en Gestión de Proyectos",
-        "link": "https://www.linkedin.com/in/msc-mauricio-alfredo-acevedo-d%C3%ADaz-32055464/",
-        "email": "mauricioacevedodiaz@gmail.com"
+        "type": "Recomendación Personal",
+        "person_name": "Katherine Andrade",
+        "email": "katherin2511@hotmail.com",
+        "phone": "+34 665 84 20 23",
+        "comment":"Lo he visto crecer y convertirse en una persona responsable, trabajadora y amable. Siempre aprendiendo y superándose a sí mismo."
       }
   ]
 }  

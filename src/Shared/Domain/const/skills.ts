@@ -1,4 +1,4 @@
-import { type IconDefinition, faPhp, faJs, faNodeJs, faJava, faPython, faGitAlt, faYoutubeSquare, faDocker, faTrello, faNpm, faGolang, faLaravel } from '@fortawesome/free-brands-svg-icons';
+import { type IconDefinition, faPhp, faJs, faNodeJs, faJava, faPython, faGitAlt, faYoutubeSquare, faDocker, faNpm, faGolang, faLaravel } from '@fortawesome/free-brands-svg-icons';
 import { faArrowsAlt, faSpoon } from '@fortawesome/free-solid-svg-icons';
 
 export const techData: Record<string, { source: IconDefinition | string; category: string; level: string; link: string, color?: string }> = {
@@ -76,6 +76,12 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     link: 'https://www.python.org',
     color: 'text-indigo-700',
   },
+  'Kafka': {
+    source: 'kafka.webp',
+    category: 'Tool',
+    level: 'Experienced',
+    link: 'https://kafka.apache.org/'
+  },
   'RabbitMQ': {
     source: 'rabbitmq.webp',
     category: 'Tool',
@@ -114,13 +120,6 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     level: 'Experienced',
     link: 'https://tailwindcss.com/',
   },
-  'Trello': {
-    source: faTrello,
-    category: 'Tool',
-    level: 'N/A',
-    link: 'https://trello.com',
-    color: 'text-blue-700',
-  },
   'Typescript': {
     source: 'typescript.webp',
     category: 'Front',
@@ -156,20 +155,20 @@ export const techData: Record<string, { source: IconDefinition | string; categor
   'Go': {
     source: faGolang,
     category: 'Back',
-    level: 'Want',
+    level: 'Learning',
     link: 'https://golang.org/',
     color: 'text-blue-400',
   },
-  'C#': {
-    source: 'cSharp.webp',
-    category: 'Back',
-    level: 'Want',
-    link: 'https://dotnet.microsoft.com/es-es/languages/csharp'
-  },
-  '.NET': {
-    source: 'dotNET.svg',
-    category: 'Back',
-    level: 'Want',
-    link: 'https://dotnet.microsoft.com/es-es/'
-  },
+  // 'C#': {
+  //   source: 'cSharp.webp',
+  //   category: 'Back',
+  //   level: 'Want',
+  //   link: 'https://dotnet.microsoft.com/es-es/languages/csharp'
+  // },
+  // '.NET': {
+  //   source: 'dotNET.svg',
+  //   category: 'Back',
+  //   level: 'Want',
+  //   link: 'https://dotnet.microsoft.com/es-es/'
+  // },
 };

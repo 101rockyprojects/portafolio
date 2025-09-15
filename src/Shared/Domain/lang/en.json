@@ -14,7 +14,7 @@
       "slogan": "Small upgrades lead to great systems.",
       "extra": "Adaptable, efficient, and curious System Engineer.",
       "description": "Specialized in large-scale system development. Focused on providing simple solutions to complex problems. Like the systems, I am in constant improvement and learning.",
-      "salute": "Hello! My name is",
+      "salute": "Hello! I'm",
       "gag": "Yes, like the movies!"
     },
     "projects": [
@@ -40,8 +40,8 @@
         "title": "Backend Developer",
         "company": "Sespesoft SAS",
         "companyLink": "https://sespesoft.com/",
-        "initialDate": "May 2023",
-        "finalDate": "July 2025",
+        "initialDate": "May 2021",
+        "finalDate": "August 2025",
         "country": "Colombia",
         "description": [
           "Highlights include the creation of a queuing system with RabbitMQ to notify events between various systems using Laravel, and dynamic georeferencing and role-based authentication systems.",
@@ -135,21 +135,20 @@
     ],
     "recommendations": [
       {
-        "name": "Personal Recommendation",
+        "type": "Personal Recommendation",
         "person_name": "Mary Rojas",
-        "photo": "https://media.licdn.com/dms/image/v2/D5603AQGzabiJPEbAlw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1673375097689?e=1752710400&v=beta&t=TLTrDeS_IWYLOylikudVRE6IjjgLFlhBWCWtVkzvvo0",
+        "photo": "images/mary.webp",
         "role": "Solutions Architect | SRE | DevOps | AWS",
         "link": "https://www.linkedin.com/in/mary-evelyn-rojas-roa-03a1801a6/",
         "email": "mevere66@gmail.com",
         "comment": "Excellent partner, proactive and curious; in other words, 'a man who solves'."
       },
       {
-        "name": "Labor Recommendation",
-        "person_name": "Mauricio Acevedo",
-        "photo": "https://media.licdn.com/dms/image/v2/D4E35AQHBoNs45tBzsA/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1664297440977?e=1748030400&v=beta&t=dbG4q-lfpxF6CvaODxkpy7lmHHfpqWEKul1rjVbXpbE",
-        "role": "Master in Project Management",
-        "link": "https://www.linkedin.com/in/msc-mauricio-alfredo-acevedo-d%C3%ADaz-32055464/",
-        "email": "mauricioacevedodiaz@gmail.com"
+        "type": "Personal Recommendation",
+        "person_name": "Katherine Andrade",
+        "email": "katherin2511@hotmail.com",
+        "phone": "+34 665 84 20 23",
+        "comment":"I have seen him grow into a responsible, hardworking, and kind person. Always learning and improving himself."
       }
     ]
 }
