@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /login/
-Disallow: /private/
+Allow: /
+
+Sitemap: https://101rockyprojects.github.io/portafolio/sitemap.xml
