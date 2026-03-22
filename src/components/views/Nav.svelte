@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { fade, fly } from 'svelte/transition';
   import LanguageToggle from '@App/components/views/LanguageToggle.svelte';
-  import { i18nStores } from '@App/components/stores/data.ts';
+  import { i18nStores } from '@App/stores/data.ts';
   const { nav } = i18nStores;
   
   let isMenuOpen = false;
@@ -42,6 +42,7 @@
   }
 
   onMount(() => {
+    handleResize();
     const sections = navItems.map(item => document.querySelector(item.href));
     const observer = new IntersectionObserver((entries) => {
       let currentActiveSection = '';
@@ -60,17 +61,12 @@
       }
     });
 
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
-
     return () => {
       sections.forEach(section => {
         if (section) {
           observer.unobserve(section);
         }
       });
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
     };
   });
 </script>
@@ -78,61 +74,69 @@
 <svelte:window on:scroll={handleScroll} on:resize={handleResize} />
 
 <header class={`fixed w-full max-w-[100dvw] z-50 transition-transform duration-300 ${showNav ? 'translate-y-0' : '-translate-y-full'}`}>
-  <nav class={`mx-auto px-4 pb-3 bg-gradient-to-b from-ocean via-ocean ${isMenuOpen ? 'bg-ocean' : 'to-transparent'}`} aria-label="Navigation">
-    <div class="flex items-center h-14 text-base md:text-lg justify-between">
-      <img src="images/logo.webp" alt="Personal Logo" class="hidden md:block rounded-full overflow-hidden w-16 h-16 pt-2">
+  <nav class={`mx-auto px-4 bg-gradient-to-b from-secondary/10 to-surface-container-low backdrop-blur-sm border-b border-gold/20 shadow-lg`} aria-label="Navigation">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo + Branding -->
+      <div class="flex items-center gap-3 min-w-fit">
+        <a href="#about" class="invert flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+          <img src="/images/icon.svg" alt="Rocky Logo" class="w-10 h-10 md:w-12 md:h-12 drop-shadow-lg" />
+        </a>
+      </div>
       
-      <div class="hidden md:flex space-x-6">
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-8 flex-1 justify-center">
         {#each navItems as item}
           <a 
             href={item.href}
             class={`
-              text-base md:text-lg transform transition-all duration-300 ease-in-out hover:-translate-y-1 hover:text-gold h-16 flex items-center
-              ${activeSection === item.href.substring(1) ?
-                'text-caramel' :
-                'text-white'
-              }
+              relative text-sm md:text-base font-semibold transition-all duration-300
+              ${activeSection === item.href.substring(1) ? 'text-gold' : 'text-white hover:text-gold'}
             `}
           >
-            &lt;{item.title}/&gt;
+            {item.title}
+            {#if activeSection === item.href.substring(1)}
+              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold via-gold to-gold rounded-full"></span>
+            {/if}
           </a>
         {/each}
       </div>
       
-      <button 
-        class="burguer-menu-btn"
-        on:click={toggleMenu}
-        aria-label="Menu"
-      >
-        <span class={`burger-layer ${isMenuOpen ? 'rotate-45 translate-y-2 bg-flame h-1' : 'bg-white h-0.5'}`}></span>
-        <span class={`burger-layer ${isMenuOpen ? 'opacity-0' : 'bg-white opacity-100 h-0.5'}`}></span>
-        <span class={`burger-layer ${isMenuOpen ? '-rotate-45 -translate-y-2 bg-flame h-1' : 'bg-white h-0.5'}`}></span>
-      </button>
-
-      <img src="images/logo.webp" alt="Personal Logo" class="block md:hidden rounded-full overflow-hidden w-16 h-16 pt-2 ml-4">
-      <LanguageToggle />
+      <!-- Right Controls: Language + Mobile Menu -->
+      <div class="flex items-center gap-3 md:gap-4">
+        <LanguageToggle />
+        
+        <!-- Mobile Menu Button -->
+        <button 
+          class="md:hidden flex flex-col justify-between w-6 h-5 focus:outline-none hover:scale-110 transition-transform"
+          on:click={toggleMenu}
+          aria-label="Menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span class={`w-full h-0.5 bg-secondary transition-all duration-300 rounded-full ${isMenuOpen ? 'rotate-45 translate-y-2 bg-gold' : ''}`}></span>
+          <span class={`w-full h-0.5 bg-secondary transition-all duration-300 rounded-full ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+          <span class={`w-full h-0.5 bg-secondary transition-all duration-300 rounded-full ${isMenuOpen ? '-rotate-45 -translate-y-2.5 bg-gold' : ''}`}></span>
+        </button>
+      </div>
     </div>
   </nav>
   
+  <!-- Mobile Menu Dropdown -->
   {#if isMenuOpen}
     <div 
-      class="burguer-menu"
+      class="md:hidden bg-surface-container-low/95 backdrop-blur-sm border-b border-gold/20 shadow-lg overflow-hidden"
       transition:fly={{ y: -200, duration: 300 }}
     >
-      <div class="flex flex-col">
+      <div class="flex flex-col px-4 py-2">
         {#each navItems as item}
           <a 
             href={item.href}
             on:click={closeMenu}
             class={`
-              burguer-menu-item
-              ${activeSection === item.href.substring(1) ?
-                'text-caramel' :
-                'text-white'
-              }
+              py-3 px-3 text-sm font-semibold rounded-lg transition-all duration-300
+              ${activeSection === item.href.substring(1) ? 'text-gold bg-gold/10' : 'text-white hover:text-gold hover:bg-white/5'}
             `}
           >
-            &lt;{item.title}/&gt;
+            {item.title}
           </a>
         {/each}
       </div>
@@ -140,10 +144,11 @@
   {/if}
 </header>
 
+<!-- Mobile Menu Overlay -->
 {#if isMenuOpen}
   <button type="button"
     aria-label="Close menu"
-    class="fixed inset-0 z-40 bg-black bg-opacity-50"
+    class="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
     on:click={closeMenu}
     transition:fade={{ duration: 200 }}
   ></button>
@@ -152,9 +157,6 @@
 <style lang="postcss">
   nav {
     font-family: 'Readex Pro';
-    src: url('/fonts/ReadexPro-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
   }
 
   .burguer-menu-btn {
@@ -166,7 +168,7 @@
   }
 
   .burguer-menu-item {
-    @apply py-3 text-base text-center transition-colors duration-300 hover:text-gold readex-bold hover:bg-white/10
+    @apply py-3 text-base text-center transition-colors duration-300 hover:text-gold hover:bg-white/10 font-readex font-bold tracking-wider;
   }
 
   .burger-layer {

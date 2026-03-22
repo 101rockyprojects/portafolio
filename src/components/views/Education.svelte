@@ -1,11 +1,11 @@
 <script lang="ts">
     import { locale } from 'svelte-i18n';
-    import { i18nStores } from '@App/components/stores/data.ts';
+    import { i18nStores } from '@App/stores/data.ts';
     
   const { nav, educations } = i18nStores;
 </script>
   
-<section id="education" class="section relative w-full lg:min-w-[45dvw] lg:pl-0">
+<section id="education" class="section relative w-full overflow-hidden bg-surface-container-low !py-24 md:!py-28">
   <aside class="comment text-start top-0">
     <pre class="ml-[10dvw] md:ml-[55dvw] lg:ml-[15dvw]">
       &lbrace;
@@ -18,44 +18,138 @@
       &rbrace;
     </pre>
   </aside>
-  <h2 class="section-title lg:text-start">&lt;{$nav.education}/&gt;</h2>
-  <div class="max-w-3xl mx-auto grid gap-8">
-    {#each $educations as education}
-      <article class="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-4 group">
-        {#if education.type === 'language' && education.level}
-          <article class="flex justify-between items-start">
-            <div>
-              <h3 class="text-xl font-bold text-caramel mb-1">{education.title} {education.level}</h3>
-              <p class="text-white">{education.institution}</p>
-              <time datetime={education.finalDate} class="text-gray-400">
-                {education.initialDate} - {education.finalDate} | {education.country}
-              </time>
-            </div>
-            <img src="{education.logo}" alt="{education.institution} Logo" class="w-14 h-14 object-contain shadow-neon" loading="lazy">
-          </article>
-        {:else}
-          <img src="{education.logo}" alt="{education.institution} Logo" class="absolute max-w-20 max-h-20 right-4 shadow-neon" loading="lazy">
-          <article class="flex flex-col justify-between items-start">
-            <h3 class="text-xl font-bold text-caramel mb-1">{education.title}</h3>
-            <p class="text-white">{education.institution}</p>
-            <time datetime={education.finalDate} class="text-gray-400">
-              {education.initialDate} - {education.finalDate} | {education.country}
-            </time>
-            <p class="text-white opacity-50 readex-thin">{education.description}</p>
-          </article>
-        {/if}
-      </article>
-    {/each}
-    <article class="flex justify-between items-start">
-        <p class="text-2xl text-center text-white/50 readex-bold w-full">
-          {$locale === 'en' ? 'And every day learning more...' : 'Y cada día aprendiendo más...'}
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-gradient-to-b from-surface-container-low to-surface"></div>
+    <div class="absolute -top-44 right-[-12rem] h-[32rem] w-[32rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(221,183,255,0.12),transparent_60%)] blur-2xl"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 md:px-0">
+    <header class="flex flex-col gap-6">
+      <div class="inline-flex items-center gap-2 rounded-full bg-surface-variant/60 backdrop-blur-md px-3 py-1.5 border border-outline-variant/20 w-fit">
+        <span class="h-1.5 w-1.5 rounded-full bg-green-400 shadow-[0_0_24px_rgba(221,183,255,0.22)] animate-ping"></span>
+        <span class="text-[11px] tracking-[0.24em] uppercase text-on-surface-variant font-semibold">
+          {$locale === 'en' ? 'Status: Learning...' : 'Estado: estudiando...'}
+        </span>
+      </div>
+
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+        <h2 class="font-readex text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-on-surface">
+          <span class="text-secondary font-mono">&lt;</span>{$nav.education}<span class="text-secondary font-mono">/&gt;</span>
+        </h2>
+        <p class="max-w-xl text-on-surface-variant leading-relaxed">
+          {$locale === 'en'
+            ? 'The education that shaped my engineering profile.'
+            : 'Formación que moldeó mi perfil ingenieril.'}
         </p>
-    </article>
+      </div>
+    </header>
+
+    <div class="education-grid">
+      {#each $educations as education}
+        <article class="education-card">
+          <header class="flex items-start justify-between gap-4">
+            <div class="min-w-0">
+              <h3 class="card-title">{education.institution}</h3>
+              <p class="card-subtitle">
+                {education.title}
+              </p>
+
+              <div class="meta-stack">
+                <div class="meta-line">
+                  <span class="meta-icon" aria-hidden="true">🗓</span>
+                  <time datetime={education.finalDate} class="meta-text">
+                    {education.initialDate} — {education.finalDate}
+                  </time>
+                </div>
+                <!-- <div class="meta-line">
+                  <span class="meta-icon" aria-hidden="true">📍</span>
+                  <span class="meta-text">{education.country}</span>
+                </div> -->
+              </div>
+            </div>
+
+            <div class="logo-badge" aria-hidden="true">
+              <img
+                src={education.logo}
+                alt=""
+                class="h-10 w-10 md:h-11 md:w-11 object-contain"
+                loading="lazy"
+              />
+            </div>
+          </header>
+
+          {#if education.description}
+            <p class="card-description">{education.description}</p>
+          {/if}
+
+          {#if education.type === 'language' && education.level}
+            <div class="level-badge">
+              <span class="text-[11px] tracking-[0.22em] uppercase font-semibold text-on-surface-variant/70">
+                {$locale === 'en' ? 'Level' : 'Nivel'}
+              </span>
+              <span class="font-semibold text-on-surface">{education.level}</span>
+            </div>
+          {/if}
+        </article>
+      {/each}
+    </div>
   </div>
 </section>
 
 <style lang="postcss">
-  .section-title {
-    @apply pt-4 lg:text-start;
+  .education-grid {
+    @apply mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto;
+  }
+
+  .education-card {
+    @apply relative rounded-2xl;
+    @apply bg-surface-container/65 backdrop-blur-md;
+    @apply border border-outline-variant/15;
+    @apply p-6 md:p-7;
+    @apply shadow-[0_16px_32px_rgba(96,99,238,0.08)];
+    @apply transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_24px_48px_rgba(96,99,238,0.10)];
+    @apply space-y-5;
+  }
+
+  .logo-badge {
+    @apply inline-flex items-center justify-center;
+    @apply h-12 w-12 md:h-14 md:w-14 rounded-2xl;
+    @apply bg-surface-variant/40 backdrop-blur-md;
+    @apply border border-outline-variant/20;
+  }
+
+  .card-title {
+    @apply font-readex text-lg md:text-xl font-bold text-on-surface leading-snug;
+  }
+
+  .card-subtitle {
+    @apply mt-2 text-sm md:text-base font-semibold text-secondary;
+  }
+
+  .meta-stack {
+    @apply mt-5 space-y-2;
+  }
+
+  .meta-line {
+    @apply flex items-center gap-2;
+  }
+
+  .meta-icon {
+    @apply text-on-surface-variant/70;
+  }
+
+  .meta-text {
+    @apply text-sm text-on-surface-variant;
+  }
+
+  .card-description {
+    @apply text-sm md:text-base text-on-surface-variant leading-relaxed;
+  }
+
+  .level-badge {
+    @apply inline-flex items-center justify-between gap-3;
+    @apply rounded-xl px-4 py-3;
+    @apply bg-surface-container-high/35;
+    @apply border border-outline-variant/15;
   }
 </style>

@@ -1,7 +1,9 @@
 <script lang="ts">
-  import { i18nStores } from '@App/components/stores/data.ts';
+  import { i18nStores } from '@App/stores/data.ts';
+  import { locale } from 'svelte-i18n';
   import Fa from 'svelte-fa';
   import { faAward, faExternalLink, faTimes } from '@fortawesome/free-solid-svg-icons';
+  import { fade } from 'svelte/transition';
 
   const { nav, achievements } = i18nStores;
 
@@ -19,59 +21,179 @@
   }
 </script>
 
-<section id="achievements" class="section relative">
-  <h2 class="section-title">&lt;{$nav.achievements}/&gt;</h2>
-  <article class="flex flex-wrap gap-4 flex-col mx-auto md:w-11/12 lg:w-full">
-      {#each $achievements as achievement}
-          <button class="relative flex items-center cursor-pointer gap-4 py-3 mb-4 group" on:click={() => openModal(achievement)}>
-            <Fa 
-              icon={faAward}
-              class="text-2xl text-caramel group-hover:text-flame transition-colors duration-500 ease-out"
-            />
-            <h3 class="text-lg font-bold text-start w-full transform transition-all duration-300 ease-in-out translate-x-1 group-hover:-translate-x-1">
-              {achievement.title}
-            </h3>
-            <span class="top-0 left-0 w-1/3 h-[2px] bars"></span>
-            <span class="bottom-0 right-0 w-3/4 h-[2px] bars"></span>
-          </button>
+<section id="achievements" class="section relative overflow-hidden bg-surface !py-24 md:!py-28">
+  <aside class="comment text-start top-4 left-0">
+    <pre class="ml-[10dvw] md:ml-[55dvw] lg:ml-[15dvw]">
+      curl --user "rocky:xxxxxxxxx" --request POST --data '
+        {#each $achievements as achievement}
+          &quot;&#123;{achievement.title}&#125;&quot;
+        {/each}
+      '
+    </pre>
+  </aside>
+
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-gradient-to-b from-surface to-surface-container-low"></div>
+    <div class="absolute -top-48 left-[-10rem] h-[30rem] w-[30rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,209,111,0.10),transparent_60%)] blur-2xl"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 md:px-0">
+    <header class="flex flex-col gap-6">
+      <div class="inline-flex items-center gap-2 rounded-full bg-surface-variant/60 backdrop-blur-md px-3 py-1.5 border border-outline-variant/20 w-fit">
+        <span class="h-1.5 w-1.5 rounded-full bg-secondary shadow-[0_0_24px_rgba(255,209,111,0.22)]"></span>
+        <span class="text-[11px] tracking-[0.24em] uppercase text-on-surface-variant font-semibold">
+          {$locale === 'en' ? 'Honors & badges' : 'Honores y medallas'}
+        </span>
+      </div>
+
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+        <h2 class="font-readex text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-on-surface">
+          <span class="text-secondary font-mono">&lt;</span>{$nav.achievements}<span class="text-secondary font-mono">/&gt;</span>
+        </h2>
+        <p class="max-w-xl text-on-surface-variant leading-relaxed">
+          {$locale === 'en'
+            ? 'Awards, and measurable progress.'
+            : 'Hitos, reconocimientos y progreso medible.'}
+        </p>
+      </div>
+    </header>
+
+    <div class="achievements-grid">
+      {#each $achievements as achievement, idx}
+        <button
+          type="button"
+          class="achievement-card group"
+          on:click={() => openModal(achievement)}
+          title={achievement.title}
+        >
+          <div class="icon-ring" aria-hidden="true">
+            <Fa icon={faAward} class="text-2xl text-secondary group-hover:text-gold transition-colors duration-300" />
+          </div>
+
+          <div class="min-w-0 text-center">
+            <p class="badge-kicker">
+              {$locale === 'en' ? 'Award' : 'Logro'} #{String(idx + 1).padStart(2, '0')}
+            </p>
+            <h3 class="badge-title">{achievement.title}</h3>
+          </div>
+        </button>
       {/each}
-  </article>
+    </div>
+  </div>
 
   {#if showModal}
-      <section class="modal">
-          <article id="modal-content" class="bg-elegant rounded-lg shadow-2xl pt-0 px-6 pb-6 max-w-2xl w-3/4 max-h-[85dvh] overflow-x-auto relative">
-            <button class="flex justify-end w-full sticky top-2 right-2 mb-2" on:click={closeModal}>
-                <Fa icon={faTimes} class="text-3xl text-flame hover:scale-110 hover:rotate-90 transition-all duration-300 ease-out" />
-            </button>
-            <a
-                href="{selectedAchievement.link}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-lg md:text-xl lg:text-2xl font-bold mb-4 text-balance flex items-center gap-2 text-caramel hover:text-gold hover:underline"
-            >
-                <h3>{selectedAchievement.title}</h3>
-                <Fa icon={faExternalLink} class="text-2xl mt-1" />
-            </a>
-            <img src={selectedAchievement.image} alt={selectedAchievement.title} class="w-[80%] h-full max-h-[20rem] object-cover mb-4 rounded-md mx-auto" loading="lazy"/>
-            <div class="text-[0.8rem] md:text-sm transition-opacity readex-thin">
-              {#if selectedAchievement.description?.length}
-              {#each selectedAchievement.description as paragraph}
-                <p class="readex-thin my-[1lh]">{paragraph}</p>
-              {/each}
-            {/if}
-          </article>
-      </section>
+    <div class="modal-layer" transition:fade={{ duration: 200 }}>
+      <button
+        type="button"
+        class="modal-backdrop"
+        on:click={closeModal}
+        aria-label={$locale === 'en' ? 'Close modal' : 'Cerrar modal'}
+      ></button>
+
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <button type="button" class="modal-close" on:click={closeModal} aria-label={$locale === 'en' ? 'Close' : 'Cerrar'}>
+          <Fa icon={faTimes} class="text-xl text-secondary hover:text-on-surface transition-colors duration-200" />
+        </button>
+
+        <img
+          src={selectedAchievement.image}
+          alt={selectedAchievement.title}
+          class="modal-image"
+          loading="lazy"
+        />
+
+        <a
+          href={selectedAchievement.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="modal-title"
+        >
+          <h3 class="min-w-0">{selectedAchievement.title}</h3>
+          <Fa icon={faExternalLink} class="text-lg" />
+        </a>
+
+        {#if selectedAchievement.description?.length}
+          <div class="modal-description">
+            {#each selectedAchievement.description as paragraph}
+              <p>{paragraph}</p>
+            {/each}
+          </div>
+        {/if}
+      </div>
+    </div>
   {/if}
 </section>
 
 <style lang="postcss">
-  .section-title {
-    @apply lg:text-start;
+  .achievements-grid {
+    @apply mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
   }
-  .modal {
-    @apply fixed inset-0 bg-white/10 backdrop-blur-sm flex items-center justify-center z-50 overflow-y-hidden;
+
+  .achievement-card {
+    @apply rounded-2xl;
+    @apply bg-surface-container/65 backdrop-blur-md;
+    @apply border border-outline-variant/15;
+    @apply p-6 md:p-7;
+    @apply flex flex-col items-center justify-center gap-4;
+    @apply transition-all duration-500 cursor-pointer;
+    @apply hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_24px_48px_rgba(96,99,238,0.10)];
   }
-  .bars {
-    @apply  absolute bg-caramel group-hover:bg-flame group-hover:w-full transition-all duration-300 ease-out;
+
+  .icon-ring {
+    @apply h-14 w-14 rounded-full;
+    @apply bg-surface-variant/40 backdrop-blur-md;
+    @apply border border-outline-variant/20;
+    @apply flex items-center justify-center;
+    @apply transition-transform duration-300 group-hover:scale-105;
+  }
+
+  .badge-kicker {
+    @apply text-[11px] tracking-[0.22em] uppercase font-semibold;
+    @apply text-on-surface-variant/70;
+  }
+
+  .badge-title {
+    @apply mt-2 font-readex font-semibold text-base md:text-lg;
+    @apply text-on-surface leading-snug line-clamp-4;
+    @apply group-hover:text-secondary transition-colors duration-300;
+  }
+
+  .modal-layer {
+    @apply fixed inset-0 z-50 flex items-center justify-center p-4;
+  }
+
+  .modal-backdrop {
+    @apply absolute inset-0 bg-black/70 backdrop-blur-sm;
+  }
+
+  .modal-content {
+    @apply relative max-w-2xl w-full max-h-[85dvh] overflow-y-auto;
+    @apply rounded-2xl bg-surface-container/80 backdrop-blur-md;
+    @apply border border-outline-variant/15;
+    @apply p-6 md:p-8;
+    @apply shadow-[0_24px_48px_rgba(0,0,0,0.35)];
+  }
+
+  .modal-close {
+    @apply absolute top-4 right-4 z-10;
+    @apply h-10 w-10 rounded-xl;
+    @apply bg-surface-variant/40 border border-outline-variant/20;
+    @apply flex items-center justify-center;
+    @apply transition-all duration-200 hover:-translate-y-0.5 hover:border-secondary/30;
+  }
+
+  .modal-image {
+    @apply w-auto h-64 object-contain rounded-xl mb-6 mx-auto;
+  }
+
+  .modal-title {
+    @apply flex items-center justify-between gap-3 mb-4;
+    @apply font-readex text-2xl md:text-3xl font-bold;
+    @apply text-secondary hover:text-on-surface transition-colors duration-200;
+  }
+
+  .modal-description {
+    @apply space-y-3 text-sm md:text-base text-on-surface-variant;
+    @apply leading-relaxed;
   }
 </style>

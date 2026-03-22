@@ -9,6 +9,14 @@
 
     let classImage: string = 'w-6';
     let classIcon: string = 'text-3xl';
+    if (size === '0.5x') {
+        classImage = 'w-4';
+        classIcon = 'text-2xl';
+    }
+    if (size === '1.5x') {
+        classImage = 'w-8';
+        classIcon = 'text-4xl';
+    }
     if (size === '2x') {
         classImage = 'w-10';
         classIcon = 'text-5xl';
