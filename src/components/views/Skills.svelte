@@ -59,7 +59,7 @@
           </div>
 
           <!-- Skills Grid -->
-          <div class="grid { length > 10 ? 'grid-cols-5 lg:grid-cols-7' : 'grid-cols-3 lg:grid-cols-5' } gap-3">
+          <div class="grid { length > 10 ? 'grid-cols-3 md:grid-cols-5 lg:grid-cols-7' : 'grid-cols-3 lg:grid-cols-5' } gap-3">
             {#each Object.keys(techData) as key (key)}
               {#if techData[key].category === category && applyFilter(techData[key])}
                 <a 
