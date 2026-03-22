@@ -12,7 +12,7 @@
   ];
 </script>
 
-<section id="hobbies" class="section relative">
+<section id="hobbies" class="section relative bg-surface">
   <h2 class="section-title text-center mb-10">
     <span class="text-gold">[</span> {$nav.hobbies} <span class="text-gold">]</span>
   </h2>
@@ -69,7 +69,7 @@
   }
 
   .hobby-card {
-    @apply rounded-xl min-h-56 md:min-h-72 cursor-pointer relative;
+    @apply rounded-xl min-h-56 md:min-h-72 relative;
     @apply bg-cover bg-center bg-no-repeat;
     @apply border border-gold/30 transition-all duration-500;
     @apply hover:border-gold/60 hover:shadow-2xl hover:shadow-gold/30;

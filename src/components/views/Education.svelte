@@ -6,6 +6,12 @@
 </script>
   
 <section id="education" class="section relative w-full overflow-hidden bg-surface-container-low !py-24 md:!py-28">
+  <!-- Background lights -->
+  <div class="pointer-events-none absolute inset-0 z-0">
+    <div class="absolute top-64 left-1/3 h-28 w-[56rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(100,200,100,0.25),transparent_60%)] blur-2xl"></div>
+    <div class="absolute bottom-20 -right-[8rem] h-[14rem] w-[28rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(100,20,200,0.25),transparent_60%)] blur-2xl"></div>
+  </div>
+
   <aside class="comment text-start top-0">
     <pre class="ml-[10dvw] md:ml-[55dvw] lg:ml-[15dvw]">
       &lbrace;
@@ -54,7 +60,7 @@
                 {education.title}
               </p>
 
-              <div class="meta-stack">
+              <div class="mt-5 space-y-2">
                 <div class="meta-line">
                   <span class="meta-icon" aria-hidden="true">🗓</span>
                   <time datetime={education.finalDate} class="meta-text">
@@ -124,10 +130,6 @@
 
   .card-subtitle {
     @apply mt-2 text-sm md:text-base font-semibold text-secondary;
-  }
-
-  .meta-stack {
-    @apply mt-5 space-y-2;
   }
 
   .meta-line {

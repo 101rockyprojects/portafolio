@@ -10,7 +10,6 @@ export default {
         colors: {
           white: '#D5DAEB',          // Azul grisáceo claro
           gold: '#F0B30F',           // Oro neón
-          ocean: '#203F7E',          // Azul medio vibrante
 
           surface: '#060e20',
           'surface-container-low': '#081329',

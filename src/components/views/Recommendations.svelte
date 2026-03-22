@@ -106,7 +106,7 @@
     .npc-avatar {
         @apply w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-gold/60;
         @apply group-hover:border-gold/80 transition-colors duration-300;
-        @apply ring-2 ring-ocean/50 group-hover:ring-gold/30;
+        @apply ring-2 ring-primary/50 group-hover:ring-gold/30;
     }
 
     .npc-info {
@@ -126,13 +126,13 @@
     }
 
     .dialog-bubble {
-        @apply relative bg-gradient-to-br from-secondary/10 to-ocean/70 rounded-lg border border-white/10;
+        @apply relative bg-gradient-to-br from-secondary/10 to-surface-bright/20 rounded-lg border border-white/10;
         @apply p-4 md:p-5 text-[1.1rem];
         @apply group-hover:border-gold/40 transition-all duration-300;
     }
 
     .dialog-text {
-        @apply text-gray-100 italic leading-relaxed;
+        @apply text-gray-100 italic leading-relaxed font-mono text-xs md:text-sm;
         @apply group-hover:text-white transition-colors duration-300;
     }
 

@@ -20,21 +20,21 @@
   }
 </script>
 
-<section id="skills" class="section relative">
+<section id="skills" class="section relative bg-surface/50 border-b border-outline-variant/15">
   <div class="flex flex-col items-center mb-4 lg:flex-row lg:justify-between gap-2">
       <h2 class="font-readex text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-on-surface">
         <span class="text-secondary font-mono">&lt;</span>Skill Set<span class="text-secondary font-mono">/&gt;</span>
       </h2>
 
       <!-- Filter Controls -->
-      <div class="inline-flex gap-1 bg-ocean/20 backdrop-blur-sm rounded-full p-1 border border-gold/30">
+      <div class="inline-flex gap-1 bg-primary/40 backdrop-blur-sm rounded-full p-1 border border-gold/30">
       {#each ['All', 'Experienced', 'Learning', 'Want'] as level}
         <button
           on:click={() => filterLevel = level}
           class={`px-4 md:px-5 py-2 rounded-full font-semibold transition-all duration-300 text-sm md:text-base ${
             filterLevel === level
               ? 'bg-gradient-to-r from-secondary to-primary-container text-surface-container-low shadow-lg shadow-gold/50'
-              : 'text-white/70 hover:text-white'
+              : 'text-white hover:text-surface-container-low'
           }`}
         >
           {level === 'All' ? ($locale === 'es' ? 'Todos' : 'All') : getLevelLabel(level)}
@@ -50,7 +50,7 @@
       {#each Object.keys($categories) as category}
         {@const categoryName = $categories[category]}
         {@const length = Object.values(techData).filter(tech => tech.category === category && applyFilter(tech)).length}
-        <article class="category-container { length > 10 ? 'col-span-2' : '' }">
+        <article class="category-container { length > 10 ? 'md:col-span-2' : '' }">
           <!-- Category Header -->
           <div class="category-header mb-4">
             <h3 class="text-lg md:text-xl font-bold text-center">

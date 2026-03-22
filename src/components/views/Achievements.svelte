@@ -3,22 +3,69 @@
   import { locale } from 'svelte-i18n';
   import Fa from 'svelte-fa';
   import { faAward, faExternalLink, faTimes } from '@fortawesome/free-solid-svg-icons';
-  import { fade } from 'svelte/transition';
+  import { onDestroy } from 'svelte';
 
   const { nav, achievements } = i18nStores;
 
   let showModal = false;
   let selectedAchievement: any = null;
+  let dialogEl: HTMLDialogElement | null = null;
+  let prevHtmlOverflow: string | null = null;
+  let prevBodyOverflow: string | null = null;
 
   function openModal(achievement: any) {
-      selectedAchievement = achievement;
-      showModal = true;
+    selectedAchievement = achievement;
+    showModal = true;
+    queueMicrotask(() => {
+      if (!dialogEl || dialogEl.open) return;
+      try {
+        dialogEl.showModal();
+      } catch {
+        // no-op: avoid crashing if showModal() is not allowed
+      }
+    });
   }
 
   function closeModal() {
-      showModal = false;
-      selectedAchievement = null;
+    if (dialogEl?.open) {
+      dialogEl.close();
+      return;
+    }
+    showModal = false;
+    selectedAchievement = null;
   }
+
+  function lockPageScroll() {
+    if (typeof document === 'undefined') return;
+    if (prevHtmlOverflow === null) prevHtmlOverflow = document.documentElement.style.overflow;
+    if (prevBodyOverflow === null) prevBodyOverflow = document.body.style.overflow;
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function unlockPageScroll() {
+    if (typeof document === 'undefined') return;
+    if (prevHtmlOverflow !== null) document.documentElement.style.overflow = prevHtmlOverflow;
+    if (prevBodyOverflow !== null) document.body.style.overflow = prevBodyOverflow;
+    prevHtmlOverflow = null;
+    prevBodyOverflow = null;
+  }
+
+  function handleDialogClose() {
+    showModal = false;
+    selectedAchievement = null;
+  }
+
+  function handleDialogClick(event: MouseEvent) {
+    if (event.target === dialogEl) closeModal();
+  }
+
+  $: if (showModal) lockPageScroll();
+  $: if (!showModal) unlockPageScroll();
+
+  onDestroy(() => {
+    unlockPageScroll();
+  });
 </script>
 
 <section id="achievements" class="section relative overflow-hidden bg-surface !py-24 md:!py-28">
@@ -40,9 +87,9 @@
   <div class="max-w-6xl mx-auto px-4 md:px-0">
     <header class="flex flex-col gap-6">
       <div class="inline-flex items-center gap-2 rounded-full bg-surface-variant/60 backdrop-blur-md px-3 py-1.5 border border-outline-variant/20 w-fit">
-        <span class="h-1.5 w-1.5 rounded-full bg-secondary shadow-[0_0_24px_rgba(255,209,111,0.22)]"></span>
+        <span class="h-1.5 w-1.5 rounded-full bg-green-400 shadow-[0_0_24px_rgba(255,209,111,0.22)]"></span>
         <span class="text-[11px] tracking-[0.24em] uppercase text-on-surface-variant font-semibold">
-          {$locale === 'en' ? 'Honors & badges' : 'Honores y medallas'}
+          {$locale === 'en' ? 'Response:' : 'Respuesta:'}
         </span>
       </div>
 
@@ -63,7 +110,7 @@
         <button
           type="button"
           class="achievement-card group"
-          on:click={() => openModal(achievement)}
+          onclick={() => openModal(achievement)}
           title={achievement.title}
         >
           <div class="icon-ring" aria-hidden="true">
@@ -81,52 +128,50 @@
     </div>
   </div>
 
-  {#if showModal}
-    <div class="modal-layer" transition:fade={{ duration: 200 }}>
-      <button
-        type="button"
-        class="modal-backdrop"
-        on:click={closeModal}
-        aria-label={$locale === 'en' ? 'Close modal' : 'Cerrar modal'}
-      ></button>
+</section>
 
-      <div class="modal-content" role="dialog" aria-modal="true">
-        <button type="button" class="modal-close" on:click={closeModal} aria-label={$locale === 'en' ? 'Close' : 'Cerrar'}>
-          <Fa icon={faTimes} class="text-xl text-secondary hover:text-on-surface transition-colors duration-200" />
-        </button>
+{#if selectedAchievement}
+  <dialog
+    bind:this={dialogEl}
+    class="modal-layer"
+    onclose={handleDialogClose}
+    onclick={handleDialogClick}
+    aria-label={$locale === 'en' ? 'Achievement details' : 'Detalle del logro'}
+  >
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button type="button" class="modal-close" onclick={closeModal} aria-label={$locale === 'en' ? 'Close' : 'Cerrar'}>
+        <Fa icon={faTimes} class="text-xl text-secondary hover:text-on-surface transition-colors duration-200" />
+      </button>
 
-        <img
-          src={selectedAchievement.image}
-          alt={selectedAchievement.title}
-          class="modal-image"
-          loading="lazy"
-        />
+      {#if selectedAchievement.image}
+        <img src={selectedAchievement.image} alt={selectedAchievement.title} class="modal-image" loading="lazy" />
+      {/if}
 
-        <a
-          href={selectedAchievement.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="modal-title"
-        >
+      {#if selectedAchievement.link}
+        <a href={selectedAchievement.link} target="_blank" rel="noopener noreferrer" class="modal-title">
           <h3 class="min-w-0">{selectedAchievement.title}</h3>
           <Fa icon={faExternalLink} class="text-lg" />
         </a>
+      {:else}
+        <div class="modal-title">
+          <h3 class="min-w-0">{selectedAchievement.title}</h3>
+        </div>
+      {/if}
 
-        {#if selectedAchievement.description?.length}
-          <div class="modal-description">
-            {#each selectedAchievement.description as paragraph}
-              <p>{paragraph}</p>
-            {/each}
-          </div>
-        {/if}
-      </div>
+      {#if selectedAchievement.description?.length}
+        <div class="modal-description">
+          {#each selectedAchievement.description as paragraph}
+            <p>{paragraph}</p>
+          {/each}
+        </div>
+      {/if}
     </div>
-  {/if}
-</section>
+  </dialog>
+{/if}
 
 <style lang="postcss">
   .achievements-grid {
-    @apply mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+    @apply mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
   }
 
   .achievement-card {
@@ -159,19 +204,29 @@
   }
 
   .modal-layer {
-    @apply fixed inset-0 z-50 flex items-center justify-center p-4;
-  }
-
-  .modal-backdrop {
-    @apply absolute inset-0 bg-black/70 backdrop-blur-sm;
+    @apply z-[9999] p-0 m-0 border-0;
+    @apply w-[100dvw] h-[100dvh] max-w-none max-h-none;
+    @apply bg-transparent;
+    display: grid;
+    place-items: center;
+    overflow: visible;
+    isolation: isolate;
   }
 
   .modal-content {
-    @apply relative max-w-2xl w-full max-h-[85dvh] overflow-y-auto;
+    @apply relative z-10 max-w-[90dvw] md:max-w-2xl w-full max-h-[85dvh] overflow-y-auto;
     @apply rounded-2xl bg-surface-container/80 backdrop-blur-md;
     @apply border border-outline-variant/15;
     @apply p-6 md:p-8;
     @apply shadow-[0_24px_48px_rgba(0,0,0,0.35)];
+    @apply text-on-surface;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modal-layer::backdrop {
+    @apply bg-black/70;
+    backdrop-filter: blur(6px);
   }
 
   .modal-close {
