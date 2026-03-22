@@ -49,7 +49,7 @@
     }
 </script>
   
-<section id="contact" class="section relative overflow-hidden bg-surface !py-16">
+<section id="contact" class="section contact-container relative overflow-hidden bg-surface !py-16">
   <div class="pointer-events-none absolute inset-0 -z-10">
     <div class="absolute inset-0 bg-gradient-to-b from-surface to-surface-container-low"></div>
     <div class="absolute -top-40 right-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(144,147,255,0.18),transparent_60%)] blur-2xl"></div>
@@ -173,10 +173,31 @@
 </section>
 
 <style lang="postcss">
+  .contact-container {
+    @apply bg-gradient-to-b from-secondary/10 to-surface-container-low;
+    @apply backdrop-blur-md;
+    @apply border-b border-outline-variant/15;
+    @apply shadow-[0_16px_32px_rgba(0,0,0,0.18)];
+    @apply relative overflow-hidden;
+  }
+
+  .contact-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('images/totk-doodles.webp');
+    background-size: 300px;
+    background-repeat: repeat;
+    opacity: 0.07;
+    filter: invert(1);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+  }
+
   .contact-card {
     @apply rounded-2xl;
-    @apply bg-surface-container/70 backdrop-blur-md;
-    @apply border border-outline-variant/15;
+    @apply bg-gold/5;
+    @apply border border-gold/15;
     @apply p-6 md:p-8;
     @apply shadow-[0_16px_32px_rgba(96,99,238,0.08)];
   }

@@ -89,14 +89,15 @@
   });
 </script>
   
-<section id="about" class="section relative overflow-hidden bg-surface !py-16 md:!py-20 lg:!py-24">
-  <div class="pointer-events-none absolute inset-0 -z-10">
+<section id="about" class="section relative overflow-hidden bg-surface !py-24 shadow-[#081329_0px_25px_40px_20px]">
+  <!-- Background lights -->
+  <div class="pointer-events-none absolute inset-0 z-0">
     <div class="absolute inset-0 bg-gradient-to-b from-surface to-surface-container-low"></div>
     <div class="absolute -top-32 left-1/2 h-96 w-[56rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(144,147,255,0.22),transparent_60%)] blur-2xl"></div>
-    <div class="absolute -bottom-40 right-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,209,111,0.12),transparent_60%)] blur-2xl"></div>
+    <div class="absolute -bottom-10 right-[-5rem] h-[25rem] w-[25rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,209,111,0.12),transparent_60%)] blur-2xl"></div>
   </div>
 
-  <div class="max-w-6xl mx-auto px-4 md:px-0">
+  <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-0">
     <div class="grid gap-10 lg:grid-cols-[1.15fr_0.75fr] items-start">
       <!-- Editorial Hero -->
       <article class="min-w-0" transition:fade={{ duration: 600 }}>
@@ -169,7 +170,7 @@
             {$locale === 'en' ? 'Build something together' : 'Construyamos algo juntos'}
           </a>
           <a href="#experience" class="cta-secondary">
-            {$locale === 'en' ? 'More about me?' : '¿Más sobre mí?'}
+            {$locale === 'en' ? 'My background?' : '¿Mi experiencia?'}
           </a>
         </div>
       </article>
@@ -248,9 +249,22 @@
 
   .profile-card {
     @apply rounded-2xl bg-surface-container/70 backdrop-blur-md;
-    @apply border border-outline-variant/15;
     @apply p-6 md:p-8 my-auto;
     @apply shadow-[0_16px_32px_rgba(96,99,238,0.08)];
+  }
+
+  .profile-card::before {
+    @apply rounded-2xl;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('images/totk-doodles.webp');
+    background-size: 250px;
+    background-repeat: repeat;
+    opacity: 0.05;
+    filter: invert(1);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
   }
 
   .badge-glass {

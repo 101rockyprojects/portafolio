@@ -27,7 +27,7 @@
   }
 </script>
 
-<section id="projects" class="section relative overflow-hidden bg-surface-container-low !py-24 md:!py-28">
+<section id="projects" class="section projects-container relative overflow-hidden bg-surface-container-low !py-24 md:!py-28">
   <aside class="comment text-start top-4">
     <pre class="ml-[10dvw] md:ml-[55dvw] lg:ml-[15dvw]">
       &lt;section&gt;
@@ -52,9 +52,9 @@
   <div class="max-w-6xl mx-auto px-4 md:px-0">
     <header class="flex flex-col gap-6">
       <div class="inline-flex items-center gap-2 rounded-full bg-surface-variant/60 backdrop-blur-md px-3 py-1.5 border border-outline-variant/20 w-fit">
-        <span class="h-1.5 w-1.5 rounded-full bg-secondary shadow-[0_0_24px_rgba(255,209,111,0.22)]"></span>
+        <span class="h-1.5 w-1.5 rounded-full bg-green-400 shadow-[0_0_24px_rgba(255,209,111,0.22)] animate-ping"></span>
         <span class="text-[11px] tracking-[0.24em] uppercase text-on-surface-variant font-semibold">
-          {$locale === 'en' ? 'Selected work' : 'Trabajo seleccionado'}
+          {$locale === 'en' ? 'Searching best projects...' : 'Buscando mejores proyectos...'}
         </span>
       </div>
 
@@ -114,7 +114,7 @@
               <img
                 src={project.image || 'images/placeholder.webp'}
                 alt={project.name}
-                class="card-image"
+                class="card-image group-hover:scale-110"
                 loading="lazy"
                 decoding="async"
               />
@@ -179,6 +179,15 @@
 </section>
 
 <style lang="postcss">
+  .projects-container,
+  .card-footer {
+    @apply bg-gradient-to-b from-secondary/10 to-surface-container-low;
+    @apply backdrop-blur-md;
+    @apply border-b border-outline-variant/15;
+    @apply shadow-[0_16px_32px_rgba(0,0,0,0.18)];
+    @apply relative overflow-hidden;
+  }
+
   .filter-wrapper {
     @apply flex flex-wrap items-center justify-center gap-2 p-3 md:p-4;
     @apply rounded-2xl bg-surface-container/60 backdrop-blur-md;
@@ -187,7 +196,7 @@
 
   .filter-chip {
     @apply relative inline-flex items-center cursor-pointer;
-    @apply px-3 md:px-4 py-2 rounded-full;
+    @apply px-3 py-2 rounded-full;
     @apply bg-surface-variant/40 backdrop-blur-md;
     @apply border border-outline-variant/20;
     @apply text-on-surface-variant text-xs md:text-sm font-semibold;
@@ -199,7 +208,7 @@
   }
 
   .filter-chip.active {
-    @apply bg-gradient-to-br from-outline-variant to-ocean text-white border-0;
+    @apply bg-gradient-to-br from-outline-variant to-primary text-white border-0;
     @apply -translate-y-1 shadow-[0_16px_32px_rgba(96,99,238,0.10)];
   }
 
@@ -222,7 +231,7 @@
   }
 
   .project-card.first {
-    @apply col-span-2;
+    @apply md:col-span-2 border-2 border-primary/50;
   }
 
   .card-image-wrapper {
@@ -234,7 +243,7 @@
   }
 
   .card-image {
-    @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-110;
+    @apply w-full h-full object-cover transition-transform duration-500;
   }
 
   .card-overlay {
@@ -273,12 +282,13 @@
   .card-footer {
     @apply flex items-center justify-between;
     @apply px-5 py-4 md:px-6;
-    @apply transition-colors duration-300 bg-surface-container-high/35 hover:bg-secondary;
+    @apply bg-gradient-to-l hover:from-gold/50 hover:to-primary/5;
+    @apply transition-colors duration-300;
   }
 
   .link-indicator {
-    @apply text-sm font-semibold text-on-surface;
-    @apply transition-colors duration-300 group-hover:text-surface-container-low;
+    @apply text-base font-semibold text-on-surface;
+    @apply transition-colors duration-300 group-hover:text-gold;
   }
 
   .doc-indicator {
@@ -286,5 +296,19 @@
     @apply text-on-surface-variant/80 hover:text-white;
     @apply border border-outline-variant/20 rounded-full px-5 py-1;
     @apply bg-surface-variant/40 hover:bg-outline-variant;
+  }
+
+  .projects-container::before,
+  .card-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('images/doodles.webp');
+    background-size: 300px;
+    background-repeat: repeat;
+    opacity: 0.15;
+    filter: invert(1);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
   }
 </style>

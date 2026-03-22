@@ -1,24 +1,24 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { fade, fly } from 'svelte/transition';
   import LanguageToggle from '@App/components/views/LanguageToggle.svelte';
   import { i18nStores } from '@App/stores/data.ts';
   const { nav } = i18nStores;
   
-  let isMenuOpen = false;
-  let scrollY = 0;
-  let prevScrollY = 0;
-  let showNav = true;
-  let windowWidth = 0;
+  let isMenuOpen = $state(false);
+  let prevScrollY = $state(0);
+  let showNav = $state(true);
+  let windowWidth = $state(0);
+  let isPinned = $state(false);
+  let hoverReveal = $state(false);
 
-  $: navItems = [
+  const navItems = $derived([
     { title: $nav.about, href: '#about' },
     { title: $nav.experience, href: '#experience' },
     { title: $nav.projects, href: '#projects' },
     { title: $nav.contact, href: '#contact' },
-  ];
+  ]);
 
-  let activeSection = '';
+  let activeSection = $state('about');
   
   function closeMenu() {
     isMenuOpen = false;
@@ -29,8 +29,15 @@
   }
 
   function handleScroll() {
-    scrollY = window.scrollY;
-    showNav = scrollY < prevScrollY || scrollY < 50;
+    const scrollY = window.scrollY;
+    const scrollingUp = scrollY < prevScrollY;
+
+    if (isPinned || isMenuOpen || hoverReveal) {
+      showNav = true;
+    } else {
+      showNav = scrollingUp || scrollY < 50;
+    }
+
     prevScrollY = scrollY;
   }
 
@@ -41,45 +48,73 @@
     }
   }
 
-  onMount(() => {
-    handleResize();
-    const sections = navItems.map(item => document.querySelector(item.href));
-    const observer = new IntersectionObserver((entries) => {
-      let currentActiveSection = '';
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          currentActiveSection = entry.target.id;
-        }
-      });
-      if (currentActiveSection) {
-        activeSection = currentActiveSection;
-      }
-    }, { threshold: 0.6 });
-    sections.forEach(section => {
-      if (section) {
-        observer.observe(section);
-      }
-    });
+  function handleRevealEnter() {
+    hoverReveal = true;
+    showNav = true;
+  }
 
-    return () => {
-      sections.forEach(section => {
-        if (section) {
-          observer.unobserve(section);
-        }
-      });
-    };
+  function handleRevealLeave() {
+    hoverReveal = false;
+    handleScroll();
+  }
+
+  function togglePinned() {
+    isPinned = !isPinned;
+    showNav = true;
+  }
+
+  const observedSectionIds = ['about', 'experience', 'projects', 'contact'];
+
+  $effect(() => {
+    if (typeof window === 'undefined') return;
+
+    handleResize();
+    handleScroll();
+
+    const sections = observedSectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible[0]) activeSection = (visible[0].target as HTMLElement).id;
+      },
+      {
+        rootMargin: '-20% 0px -65% 0px',
+        threshold: [0.2, 0.35, 0.5, 0.65],
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  });
+
+  $effect(() => {
+    if (isMenuOpen) showNav = true;
   });
 </script>
 
 <svelte:window on:scroll={handleScroll} on:resize={handleResize} />
 
-<header class={`fixed w-full max-w-[100dvw] z-50 transition-transform duration-300 ${showNav ? 'translate-y-0' : '-translate-y-full'}`}>
-  <nav class={`mx-auto px-4 bg-gradient-to-b from-secondary/10 to-surface-container-low backdrop-blur-sm border-b border-gold/20 shadow-lg`} aria-label="Navigation">
-    <div class="flex items-center justify-between h-16">
+<button
+  type="button"
+  class="nav-reveal-zone"
+  aria-label="Reveal navigation"
+  onmouseenter={handleRevealEnter}
+  onclick={togglePinned}
+></button>
+
+<header class={`nav-header fixed w-full max-w-[100dvw] z-50 transition-transform duration-300 ${showNav ? 'translate-y-0' : '-translate-y-full'}`}>
+  <nav class="nav-shell mx-auto px-4" aria-label="Navigation" onmouseenter={handleRevealEnter} onmouseleave={handleRevealLeave}>
+    <div class="nav-content flex items-center justify-between h-16">
       <!-- Logo + Branding -->
       <div class="flex items-center gap-3 min-w-fit">
         <a href="#about" class="invert flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-          <img src="/images/icon.svg" alt="Rocky Logo" class="w-10 h-10 md:w-12 md:h-12 drop-shadow-lg" />
+          <img src="images/icon.svg" alt="Rocky Logo" class="w-10 h-10 md:w-12 md:h-12 drop-shadow-lg" />
         </a>
       </div>
       
@@ -90,12 +125,12 @@
             href={item.href}
             class={`
               relative text-sm md:text-base font-semibold transition-all duration-300
-              ${activeSection === item.href.substring(1) ? 'text-gold' : 'text-white hover:text-gold'}
+              ${activeSection === item.href.substring(1) ? 'text-secondary' : 'text-on-surface hover:text-secondary'}
             `}
           >
             {item.title}
             {#if activeSection === item.href.substring(1)}
-              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-gold via-gold to-gold rounded-full"></span>
+              <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-secondary via-secondary to-secondary rounded-full"></span>
             {/if}
           </a>
         {/each}
@@ -108,13 +143,13 @@
         <!-- Mobile Menu Button -->
         <button 
           class="md:hidden flex flex-col justify-between w-6 h-5 focus:outline-none hover:scale-110 transition-transform"
-          on:click={toggleMenu}
+          onclick={toggleMenu}
           aria-label="Menu"
           aria-expanded={isMenuOpen}
         >
-          <span class={`w-full h-0.5 bg-secondary transition-all duration-300 rounded-full ${isMenuOpen ? 'rotate-45 translate-y-2 bg-gold' : ''}`}></span>
+          <span class={`w-full h-0.5 bg-secondary transition-all duration-300 rounded-full ${isMenuOpen ? 'rotate-45 translate-y-2 bg-secondary' : ''}`}></span>
           <span class={`w-full h-0.5 bg-secondary transition-all duration-300 rounded-full ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-          <span class={`w-full h-0.5 bg-secondary transition-all duration-300 rounded-full ${isMenuOpen ? '-rotate-45 -translate-y-2.5 bg-gold' : ''}`}></span>
+          <span class={`w-full h-0.5 bg-secondary transition-all duration-300 rounded-full ${isMenuOpen ? '-rotate-45 -translate-y-2.5 bg-secondary' : ''}`}></span>
         </button>
       </div>
     </div>
@@ -123,17 +158,17 @@
   <!-- Mobile Menu Dropdown -->
   {#if isMenuOpen}
     <div 
-      class="md:hidden bg-surface-container-low/95 backdrop-blur-sm border-b border-gold/20 shadow-lg overflow-hidden"
+      class="md:hidden bg-surface-container-low/95 backdrop-blur-sm border-b border-outline-variant/15 shadow-lg overflow-hidden"
       transition:fly={{ y: -200, duration: 300 }}
     >
       <div class="flex flex-col px-4 py-2">
         {#each navItems as item}
           <a 
             href={item.href}
-            on:click={closeMenu}
+            onclick={closeMenu}
             class={`
               py-3 px-3 text-sm font-semibold rounded-lg transition-all duration-300
-              ${activeSection === item.href.substring(1) ? 'text-gold bg-gold/10' : 'text-white hover:text-gold hover:bg-white/5'}
+              ${activeSection === item.href.substring(1) ? 'text-secondary bg-surface-variant/40' : 'text-on-surface hover:text-secondary hover:bg-surface-variant/30'}
             `}
           >
             {item.title}
@@ -149,7 +184,7 @@
   <button type="button"
     aria-label="Close menu"
     class="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
-    on:click={closeMenu}
+    onclick={closeMenu}
     transition:fade={{ duration: 200 }}
   ></button>
 {/if}
@@ -159,12 +194,43 @@
     font-family: 'Readex Pro';
   }
 
+  .nav-reveal-zone {
+    @apply fixed top-0 left-0 right-0 h-4 z-[60];
+    @apply bg-transparent;
+  }
+
+  .nav-shell {
+    @apply bg-gradient-to-b from-secondary/10 to-surface-container-low;
+    @apply backdrop-blur-md;
+    @apply border-b border-outline-variant/15;
+    @apply shadow-[0_16px_32px_rgba(0,0,0,0.18)];
+    @apply relative overflow-hidden;
+  }
+
+  .nav-shell::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('images/totk-doodles.webp');
+    background-size: 640px;
+    background-repeat: repeat;
+    opacity: 0.07;
+    filter: invert(1);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+  }
+
+  .nav-content {
+    position: relative;
+    z-index: 1;
+  }
+
   .burguer-menu-btn {
     @apply md:hidden flex flex-col justify-between w-6 h-5 focus:outline-none
   }
 
   .burguer-menu {
-    @apply md:hidden bg-ocean text-white overflow-hidden
+    @apply md:hidden bg-primary text-white overflow-hidden
   }
 
   .burguer-menu-item {

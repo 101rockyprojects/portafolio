@@ -8,21 +8,19 @@
   const { nav, experiences } = i18nStores;
 </script>
 
-<section id="experience" class="section relative overflow-hidden bg-surface !py-24 md:!py-28">
+<section id="experience" class="section experience-container relative overflow-hidden !py-24 md:!py-28">
   <aside class="comment text-start top-0 min-w-fit">
-    <div class="relative border-l-4 ml-[20dvw] pt-1 pl-4 border-white">
+    <div class="relative border-l-4 ml-[40dvw] md:ml-[24dvw] mt-2 pt-1 pl-4 border-white rounded-xl">
       <div class="absolute w-5 h-5 bg-white rounded-full -left-[12px] top-0"></div>
       <div class="absolute w-3 h-3 bg-surface rounded-full -left-[8px] top-1"></div>
       <div class="absolute w-5 h-5 bg-white rounded-full -left-[12px] top-11"></div>
       <div class="absolute w-3 h-3 bg-surface rounded-full -left-[8px] top-12"></div>
-      <div class="absolute w-3 h-3 bg-white rounded-full -left-[8px] top-[5.75rem]"></div>
       <div class="absolute w-[0.4rem] h-[0.4rem] bg-surface rounded-full -left-[5px] top-[5.9rem]"></div>
-      <pre class="flex flex-col flex-wrap gap-1">
-        <span class="">hotfix: Remove exposed api_key</span>
-        <p class="text-sm mb-1">Oops, removed from index.html</p>
-        <span class="">feat: Make the best portfolio</span>
-        <p class="text-sm mb-1">Add some text and color</p>
-        <span class="">Init project</span>
+      <pre class="flex flex-col flex-wrap gap-1 text-mono leading-tight">
+        <span class="leading-tight">hotfix: Remove exposed api_key</span>
+        <p class="text-xs leading-tight">Oops, removed from index.html</p>
+        <span class="leading-tight">Make the best portfolio</span>
+        <p class="text-xs leading-tight">Add some text and color</p>
       </pre>
     </div>
   </aside>
@@ -37,7 +35,7 @@
       <div class="inline-flex items-center gap-2 rounded-full bg-surface-variant/60 backdrop-blur-md px-3 py-1.5 border border-outline-variant/20 w-fit">
         <span class="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_24px_rgba(144,147,255,0.30)]"></span>
         <span class="text-[11px] tracking-[0.24em] uppercase text-on-surface-variant font-semibold">
-          {$locale === 'en' ? 'Engineering precision' : 'Precisión de ingeniería'}
+          {$locale === 'en' ? 'git init Engineering' : 'git init Ingeniería'}
         </span>
       </div>
 
@@ -80,7 +78,7 @@
                 </div>
 
                 <span class="index-badge" aria-label={$locale === 'en' ? 'Experience index' : 'Índice de experiencia'}>
-                  {String(idx + 1).padStart(2, '0')}
+                  {"v.1.0." + String(idx + 1)}
                 </span>
               </div>
 
@@ -139,6 +137,27 @@
 </section>
 
 <style lang="postcss">
+  .experience-container {
+    @apply bg-gradient-to-b from-secondary/10 to-surface-container-low;
+    @apply backdrop-blur-md;
+    @apply border-y border-gold/15;
+    @apply shadow-[0_16px_32px_rgba(0,0,0,0.18)];
+    @apply relative overflow-hidden;
+  }
+
+  .experience-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('images/totk-doodles.webp');
+    background-size: 340px;
+    background-repeat: repeat;
+    opacity: 0.1;
+    filter: invert(1);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+  }
+
   .experience-row {
     @apply relative grid gap-6 lg:gap-10 lg:grid-cols-[0.9fr_1.1fr] items-start;
   }
@@ -148,7 +167,7 @@
   }
 
   .timeline-line {
-    @apply absolute left-3 top-2 bottom-2 w-[0.125rem] bg-primary/20 h-[105%];
+    @apply absolute left-3 top-2 bottom-2 w-[0.125rem] bg-primary/20 h-[105%] rounded;
   }
 
   .timeline-dot {
@@ -161,12 +180,12 @@
     @apply rounded-2xl bg-surface-container/65 backdrop-blur-md;
     @apply border border-outline-variant/15;
     @apply p-5 md:p-6;
-    @apply shadow-[0_16px_32px_rgba(96,99,238,0.08)];
+    @apply shadow-[0_10px_32px_rgba(240,180,15,0.08)];
   }
 
   .index-badge {
     @apply inline-flex items-center justify-center;
-    @apply h-9 w-12 rounded-full;
+    @apply h-9 w-fit px-4 rounded-full;
     @apply bg-surface-variant/60 backdrop-blur-md;
     @apply border border-outline-variant/20;
     @apply font-mono text-sm font-semibold text-on-surface;
@@ -192,7 +211,7 @@
     @apply rounded-2xl bg-transparent lg:bg-surface-container/65 lg:backdrop-blur-md;
     @apply lg:border border-outline-variant/15;
     @apply pl-10 lg:p-7;
-    @apply lg:shadow-[0_16px_32px_rgba(96,99,238,0.08)];
+    @apply lg:shadow-[0_10px_32px_rgba(240,180,15,0.08)];
   }
 
   .status-pill {
