@@ -12,8 +12,8 @@
     <div class="absolute bottom-20 -right-[8rem] h-[14rem] w-[28rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(100,20,200,0.25),transparent_60%)] blur-2xl"></div>
   </div>
 
-  <aside class="comment text-start top-0">
-    <pre class="ml-[10dvw] md:ml-[55dvw] lg:ml-[15dvw]">
+  <aside class="comment text-start top-0 mt-4">
+    <pre class="ml-[8dvw] lg:ml-[20dvw]">
       &lbrace;
 
         &quot;{$nav.education}&quot;: &lbrace;
@@ -21,6 +21,7 @@
           &quot;{education.title}&quot;,
         {/each}
         &rbrace;
+        
       &rbrace;
     </pre>
   </aside>

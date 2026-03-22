@@ -27,11 +27,11 @@
       </h2>
 
       <!-- Filter Controls -->
-      <div class="inline-flex gap-1 bg-primary/40 backdrop-blur-sm rounded-full p-1 border border-gold/30">
+      <div class="inline-flex sm:gap-1 bg-primary/40 backdrop-blur-sm rounded-full p-1 border border-gold/30">
       {#each ['All', 'Experienced', 'Learning', 'Want'] as level}
         <button
           on:click={() => filterLevel = level}
-          class={`px-4 md:px-5 py-2 rounded-full font-semibold transition-all duration-300 text-sm md:text-base ${
+          class={`px-2 sm:px-3.5 md:px-5 py-2 rounded-full font-semibold transition-all duration-300 text-xs sm:text-sm md:text-base ${
             filterLevel === level
               ? 'bg-gradient-to-r from-secondary to-primary-container text-surface-container-low shadow-lg shadow-gold/50'
               : 'text-white hover:text-surface-container-low'

@@ -10,7 +10,7 @@
 
   const { about } = i18nStores;
   const highlightSkills = [
-    'Java 8/17/20+ (Spring Boot | Hibernate/JPA)',
+    'Java 8/17/20+ (Spring Boot&nbsp;|&nbsp;Hibernate/JPA)',
     'PHP 8+ (Laravel)',
     'PostgreSQL',
     'JWT',
@@ -213,7 +213,7 @@
           </p>
           <div class="mt-3 flex flex-wrap gap-2">
             {#each highlightSkills as skill (skill)}
-              <span class="badge-glass">{skill}</span>
+              <span class="badge-glass">{@html skill}</span>
             {/each}
           </div>
         </div>

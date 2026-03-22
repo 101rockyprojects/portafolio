@@ -29,7 +29,7 @@
 
 <section id="projects" class="section projects-container relative overflow-hidden bg-surface-container-low !py-24 md:!py-28">
   <aside class="comment text-start top-4">
-    <pre class="ml-[10dvw] md:ml-[55dvw] lg:ml-[15dvw]">
+    <pre class="ml-[8dvw] lg:ml-[20dvw]">
       &lt;section&gt;
       
         &lt;h1&gt;{$nav.projects}&lt;/h1&gt;
@@ -54,7 +54,7 @@
       <div class="inline-flex items-center gap-2 rounded-full bg-surface-variant/60 backdrop-blur-md px-3 py-1.5 border border-outline-variant/20 w-fit">
         <span class="h-1.5 w-1.5 rounded-full bg-green-400 shadow-[0_0_24px_rgba(255,209,111,0.22)] animate-ping"></span>
         <span class="text-[11px] tracking-[0.24em] uppercase text-on-surface-variant font-semibold">
-          {$locale === 'en' ? 'Searching best projects...' : 'Buscando mejores proyectos...'}
+          {$locale === 'en' ? 'Loading projects...' : 'Cargando proyectos...'}
         </span>
       </div>
 

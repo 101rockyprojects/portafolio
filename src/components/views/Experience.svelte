@@ -16,11 +16,11 @@
       <div class="absolute w-5 h-5 bg-white rounded-full -left-[12px] top-11"></div>
       <div class="absolute w-3 h-3 bg-surface rounded-full -left-[8px] top-12"></div>
       <div class="absolute w-[0.4rem] h-[0.4rem] bg-surface rounded-full -left-[5px] top-[5.9rem]"></div>
-      <pre class="flex flex-col flex-wrap gap-1 text-mono leading-tight">
-        <span class="leading-tight">hotfix: Remove exposed api_key</span>
-        <p class="text-xs leading-tight">Oops, removed from index.html</p>
-        <span class="leading-tight">Make the best portfolio</span>
-        <p class="text-xs leading-tight">Add some text and color</p>
+      <pre class="flex flex-col flex-wrap gap-1 text-mono">
+        <span class="leading-tight md:leading-none">hotfix:Remove exposed API_KEY</span>
+        <p class="text-xs leading-relaxed md:leading-tight">Oops, removed from app.css</p>
+        <span class="leading-tight md:leading-none">Make the best portfolio</span>
+        <p class="text-xs leading-relaxed md:leading-tight">Add some text and color</p>
       </pre>
     </div>
   </aside>
@@ -103,10 +103,10 @@
             <div class="role-card">
               <div class="flex items-start justify-between gap-4">
                 <div class="min-w-0">
-                  <p class="text-[11px] tracking-[0.22em] uppercase text-on-surface-variant/70 font-semibold">
+                  <p class="text-[11px] tracking-[0.22em] uppercase text-secondary/80 font-semibold">
                     {$locale === 'en' ? 'Role' : 'Rol'}
                   </p>
-                  <h4 class="mt-2 font-readex text-xl md:text-2xl font-bold text-on-surface leading-snug">
+                  <h4 class="mt-2 font-mono text-xl md:text-2xl font-semibold text-on-surface leading-snug">
                     {experience.title}
                   </h4>
                 </div>
@@ -185,10 +185,10 @@
 
   .index-badge {
     @apply inline-flex items-center justify-center;
-    @apply h-9 w-fit px-4 rounded-full;
+    @apply h-6 w-fit px-4 rounded-full;
     @apply bg-surface-variant/60 backdrop-blur-md;
     @apply border border-outline-variant/20;
-    @apply font-mono text-sm font-semibold text-on-surface;
+    @apply font-mono text-xs md:text-sm font-semibold text-on-surface;
   }
 
   .meta-row {
@@ -200,7 +200,7 @@
   }
 
   .meta-val {
-    @apply text-sm font-semibold text-on-surface-variant;
+    @apply text-sm font-semibold text-on-surface-variant text-end leading-none;
   }
 
   .experience-right {

@@ -70,12 +70,12 @@
 
 <section id="achievements" class="section relative overflow-hidden bg-surface !py-24 md:!py-28">
   <aside class="comment text-start top-4 left-0">
-    <pre class="ml-[10dvw] md:ml-[55dvw] lg:ml-[15dvw]">
-      curl --user "rocky:xxxxxxxxx" --request POST --data '
+    <pre class="ml-[8dvw] lg:ml-[20dvw]">
+      curl --user "rocky:xxxxxxxxx" --request POST --data '&lbrace;
         {#each $achievements as achievement}
           &quot;&#123;{achievement.title}&#125;&quot;
         {/each}
-      '
+      &rbrace;'
     </pre>
   </aside>
 

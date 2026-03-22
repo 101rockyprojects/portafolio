@@ -91,7 +91,7 @@
               <Fa icon={faLocationDot} />
             </span>
             <span class="contact-text">
-              {$locale === 'en' ? 'Remote' : 'Remoto'}
+              {$locale === 'en' ? 'Remote' : 'Remoto'} | 127.0.0.1
             </span>
           </div>
         </div>
@@ -251,6 +251,6 @@
   }
 
   .contact-text {
-    @apply font-semibold;
+    @apply font-semibold text-sm md:text-base;
   }
 </style>

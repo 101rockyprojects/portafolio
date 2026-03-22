@@ -58,7 +58,7 @@ img {
 }
 
 .section {
-  @apply py-8 px-[8%];
+  @apply py-8 px-[2%] md:px-[8%];
   width: inherit;
 }
 
@@ -90,7 +90,7 @@ img {
 }
 
 .comment {
-  @apply absolute text-white opacity-[12%] w-full max-w-[99dvw] text-base md:text-lg lg:text-xl leading-[0.6rem] md:leading-[0.65rem] lg:leading-[0.7rem] ml-[-4.5em] select-none;
+  @apply absolute text-white opacity-[16%] w-full max-w-[99dvw] text-sm md:text-base lg:text-lg leading-[0.6rem] md:leading-[0.65rem] lg:leading-[0.7rem] ml-[-4.5em] select-none;
 }
 
 @media (prefers-color-scheme: light) {
