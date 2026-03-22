@@ -303,7 +303,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('images/doodles.webp');
+    background-image: url('/images/doodles.webp');
     background-size: 300px;
     background-repeat: repeat;
     opacity: 0.15;
