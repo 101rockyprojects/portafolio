@@ -1,154 +1,178 @@
 {
-    "nav": {
-      "about": "About",
-      "projects": "Projects",
-      "experience": "Experience",
-      "education": "Education",
-      "achievements": "Awards",
-      "hobbies": "Hobbies",
-      "contact": "Contact me",
-      "recommendations": "References"
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "achievements": "Achievements",
+    "hobbies": "Hobbies",
+    "contact": "Contact",
+    "recommendations": "References"
+  },
+  "about": {
+    "title": "Engineer",
+    "slogan": "Small upgrades lead to great systems.",
+    "extra": "Java 20+ · Spring Boot · PHP 8+ · Laravel · Kafka/RabbitMQ",
+    "description": "Backend Engineer who builds systems, APIs and microservices with the best practices, documentation and clean architecture.",
+    "salute": "Hi, I'm",
+    "gag": "Yes, like the movies!"
+  },
+  "projects": [
+    {
+      "name": "Tycontec",
+      "description": "A landing page for Tycontec, a company that offers technology solutions.",
+      "learnt": "Setting up a landing page with SvelteKit and Tailwind, and deploying it on Cloudflare.",
+      "technologies": ["Cloudflare", "Supabase", "PostgreSQL", "Node.js", "Svelte"],
+      "link": "https://tycontect-web.tycontec.workers.dev/",
+      "image": "images/tycontec.webp"
     },
-    "about": {
+    {
+      "name": "Devtools Directory",
+      "description": "A lightweight directory of developer tools (including AI tools).",
+      "learnt": "Store the catalog in Supabase (using Postgres) with Row Level Security (RLS) and supports public suggestions to add new tools.",
+      "technologies": ["Supabase", "PostgreSQL", "Svelte", "Vite", "Node.js"],
+      "link": "https://devtools-directory.netlify.app/",
+      "documentation": "https://deepwiki.com/101rockyprojects/devtools",
+      "image": "images/devtools.webp"
+    },
+    {
+      "name": "Meloday",
+      "description": "A website that offers a different song for each day of the year.",
+      "learnt": "Setting up the YouTube API, handling large volumes of data, and getting familiar with Svelte and Vite.",
+      "technologies": ["Svelte", "Vite", "YouTube API", "JavaScript"],
+      "link": "https://101rockyprojects.github.io/meloday/",
+      "documentation": "https://deepwiki.com/101rockyprojects/meloday",
+      "image": "images/meloday.webp"
+    },
+    {
+      "name": "Cuida Backend",
+      "description": "A platform to improve the visibility of animal shelters in Cúcuta, Colombia.",
+      "learnt": "Setting up the RESTful API for Cuida's front-end, the admin panel, creating middleware, and managing roles and databases.",
+      "technologies": ["Strapi", "Node.js", "JavaScript", "TypeScript"],
+      "link": "https://github.com/101rockyprojects/cuida-backend/",
+      "documentation": "https://deepwiki.com/101rockyprojects/cuida-backend"
+    }
+  ],
+  "experience": [
+    {
       "title": "Backend Developer",
-      "slogan": "Small upgrades lead to great systems.",
-      "extra": "Adaptable, efficient, and curious System Engineer.",
-      "description": "Specialized in large-scale system development. Focused on providing simple solutions to complex problems. Like the systems, I am in constant improvement and learning.",
-      "salute": "Hello! I'm",
-      "gag": "Yes, like the movies!"
+      "company": "Sespesoft SAS",
+      "companyLink": "https://sespesoft.com/",
+      "initialDate": "May 2021",
+      "finalDate": "August 2025",
+      "country": "Colombia",
+      "description": [
+        "Led backend with Java 20+ and Spring Boot; improved bulk processing by 40%.",
+        "Built event-driven flows with Kafka and RabbitMQ; added resilience with Retry and Timeout.",
+        "Delivered REST and SOAP APIs; handled 10k+ weekly transactions with Hibernate/JPA.",
+        "Automated legal compliance (Res. 2275); cut deployment time by 30% through CI.",
+        "Raised coverage to 95% with E2E tests (Playwright) and contract checks (SoapUI).",
+        "Designed and developed a dynamic and customizable geolocation microservice based on jerarchies integrating Java and PHP systems using Kafka and RabbitMQ, enabling asynchronous data synchronization and centralized management of location and headquarters configuration.",
+        "This initial implementation laid the foundation for an event-driven architecture that later unified microservices into a unique reliable authentication and session management microservice using JWT and refresh tokens."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Systems Engineering",
+      "logo": "images/simonbolivar.webp",
+      "institution": "Simón Bolívar University",
+      "initialDate": "2020",
+      "finalDate": "2024",
+      "country": "Colombia",
+      "description": "Focus on software engineering",
+      "type": "qualification"
     },
-    "projects": [
-      {
-        "name": "Meloday",
-        "description": "A website that offers a different song for each day of the year.",
-        "learnt": "Setting up the YouTube API, handling large volumes of data, getting familiar with Svelte and Vite.",
-        "technologies": ["Javascript", "Svelte", "Vite", "Youtube API", "Tailwind"],
-        "link": "https://101rockyprojects.github.io/meloday/",
-        "image": "images/meloday.webp"
-      },
-      {
-        "name": "Cuida Backend",
-        "description": "Platform for the visibility of Animal Shelters in Cúcuta, Colombia.",
-        "learnt": "Setting up the RESTful API for Cuida's front-end, the admin panel, creating middleware, managing roles and databases.",
-        "technologies": ["Javascript", "Typescript", "Strapi", "Node.js"],
-        "link": "https://github.com/101rockyprojects/cuida-backend/",
-        "documentation": "https://deepwiki.com/101rockyprojects/cuida-backend"
-      }
-    ],
-    "experience": [
-      {
-        "title": "Backend Developer",
-        "company": "Sespesoft SAS",
-        "companyLink": "https://sespesoft.com/",
-        "initialDate": "May 2021",
-        "finalDate": "August 2025",
-        "country": "Colombia",
-        "description": [
-          "Highlights include the creation of a queuing system with RabbitMQ to notify events between various systems using Laravel, and dynamic georeferencing and role-based authentication systems.",
-          "I implemented in record time critical functionalities in the Aisalud, health services invoice registration and control, system to comply with Resolution 2275 of 2023 of the Colombian Ministry of Health.",
-          "Working with Hexagonal and DDD architectures, configuring Docker environments, handling ORMs like Hibernate, scripting with PHP, and applying SOLID principles; under SCRUM and Kanban methodologies."
-        ]
-      }
-    ],
-    "education": [
-      {
-        "title": "Systems Engineering",
-        "logo": "images/simonbolivar.webp",
-        "institution": "Simón Bolívar University",
-        "initialDate": "2020",
-        "finalDate": "2024",
-        "country": "Colombia",
-        "description": "Focus on software engineering",
-        "type": "qualification"
-      },
-      {
-        "title": "English",
-        "logo": "images/universal.webp",
-        "level": "B2",
-        "institution": "'Universal Centro de Idiomas'",
-        "initialDate": "2021",
-        "finalDate": "2022",
-        "country": "Colombia",
-        "type": "language"
-      }
-    ],
-    "achievements": [
-      {
-        "title": "The Engineering Card",
-        "description": [
-          "I'm no longer just an engineer at heart, it's official now! And endorsed by COPNIA.",
-          "The titanic effort of 5 years, the tangible fruit of resilience. An image of 50KB with the incalculable weight of being one of the greatest achievements of my life.",
-          "The title that will always precede my name: 'Systems Engineer'."
-        ],
-        "image": "images/engineer_professional_card.webp",
-        "link": "https://tramites.copnia.gov.co/Copnia_Microsite/CertificateOfGoodStanding/CertificateOfGoodStandingStart"
-      },
-      {
-        "title": "EFSET English C1",
-        "description": [
-          "Latest results from the 90-minute exam (Reading, listening, writing, and speaking).",
-          "Realized on August 4th, 2024. Learning every day to improve it."
-        ],
-        "image": "images/efset_67.webp",
-        "link": "https://cert.efset.org/PTbQL6"
-      },
-      {
-          "title": "B2 English Certificate",
-          "description": [
-            "After one year of effort, I completed modules B1 and B2 in English at Universal Language Center.",
-            "Through daily virtual classes, exercises, readings, and weekly exams I obtained the certification in just one year."
-          ],
-          "image": "images/certificate_universal.webp",
-          "link": "https://www.universal.edu.co/"
-      },
-      {
-          "title": "3rd Place - Training Camp of Los Santanderes",
-          "description": [
-            "Can you learn what you need for a programming marathon in only one week? Yes! After this wonderful event that lasted three weeks learning advanced algorithm and math concepts we achieved third place.",
-            "In teams of three, we held a four-hour marathon where 'Agileware', the only team of two people and being novices, managed to come third among 16 teams!"
-          ],
-          "image": "images/certificate_marathon.webp",
-          "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"
-      }
-    ],
-    "hobbies": [
-      {
-        "name": "Programming",
-        "description": "Always seeking new challenges or something innovative.",
-        "image": "images/coding.webp"
-      },
-      {
-        "name": "Video Games",
-        "description": "Super competitive, although playing with friends is better.",
-        "image": "images/gaming.webp"
-      },
-      {
-        "name": "Reading",
-        "description": "Aficionado of novels about dystopias, science fiction, horror, and suspense.",
-        "image": "images/reading.webp"
-      },
-      {
-        "name": "Training",
-        "description": "The body is a temple; it must be cared for and admired.",
-        "image": "images/training.webp"
-      }
-    ],
-    "recommendations": [
-      {
-        "type": "Personal Recommendation",
-        "person_name": "Mary Rojas",
-        "photo": "images/mary.webp",
-        "role": "Solutions Architect | SRE | DevOps | AWS",
-        "link": "https://www.linkedin.com/in/mary-evelyn-rojas-roa-03a1801a6/",
-        "email": "mevere66@gmail.com",
-        "comment": "Excellent partner, proactive and curious; in other words, 'a man who solves'."
-      },
-      {
-        "type": "Personal Recommendation",
-        "person_name": "Katherine Andrade",
-        "email": "katherin2511@hotmail.com",
-        "phone": "+34 665 84 20 23",
-        "comment":"I have seen him grow into a responsible, hardworking, and kind person. Always learning and improving himself."
-      }
-    ]
+    {
+      "title": "English",
+      "logo": "images/universal.webp",
+      "level": "B2",
+      "institution": "Universal Centro de Idiomas",
+      "initialDate": "2021",
+      "finalDate": "2022",
+      "country": "Colombia",
+      "type": "language"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Professional Engineering Card",
+      "description": [
+        "I'm no longer just an engineer at heart—it's official now! Endorsed by COPNIA.",
+        "Five years of titanic effort and the tangible fruit of resilience. A 50KB image with the incalculable weight of being one of the greatest achievements of my life.",
+        "The title that will always come before my name: 'Systems Engineer'."
+      ],
+      "image": "images/engineer_professional_card.webp",
+      "link": "https://tramites.copnia.gov.co/Copnia_Microsite/CertificateOfGoodStanding/CertificateOfGoodStandingStart"
+    },
+    {
+      "title": "EFSET English C1",
+      "description": [
+        "Latest results from the 90-minute exam (reading, listening, writing, and speaking).",
+        "Taken on August 4, 2024. Learning every day to improve it."
+      ],
+      "image": "images/efset_67.webp",
+      "link": "https://cert.efset.org/PTbQL6"
+    },
+    {
+      "title": "B2 English Certificate",
+      "description": [
+        "After one year of effort, I completed the B1 and B2 English modules at Universal Centro de Idiomas.",
+        "Through daily virtual classes, exercises, readings, and weekly exams, I obtained the certification in just one year."
+      ],
+      "image": "images/certificate_universal.webp",
+      "link": "https://www.universal.edu.co/"
+    },
+    {
+      "title": "3rd Place - Training Camp of Los Santanderes",
+      "description": [
+        "Can you learn what you need for a programming marathon in just one week? Yes! After this wonderful event that lasted three weeks, learning advanced algorithms and math concepts, we achieved third place.",
+        "In teams of three, we held a four-hour marathon where 'Agileware'—the only two-person team and complete newcomers—managed to place third among 16 teams."
+      ],
+      "image": "images/certificate_marathon.webp",
+      "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Programming",
+      "description": "Always looking for new challenges and building something innovative.",
+      "image": "images/coding.webp"
+    },
+    {
+      "name": "Gaming",
+      "description": "Highly competitive, but playing with friends is even better.",
+      "image": "images/gaming.webp"
+    },
+    {
+      "name": "Reading",
+      "description": "A fan of dystopian novels, science fiction, horror, and thrillers.",
+      "image": "images/reading.webp"
+    },
+    {
+      "name": "Training",
+      "description": "The body is a temple; it must be cared for and admired.",
+      "image": "images/training.webp"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "Personal recommendation",
+      "person_name": "Mary Rojas",
+      "photo": "images/mary.webp",
+      "role": "Ingeniera DevOps | SRE | AWS",
+      "link": "https://www.linkedin.com/in/mary-evelyn-rojas-roa-03a1801a6/",
+      "email": "mevere66@gmail.com",
+      "comment": "Excellent partner—proactive and curious; in other words, 'a man who gets things done'."
+    },
+    {
+      "type": "Personal recommendation",
+      "person_name": "Neil Jácome",
+      "photo": "images/neil.png",
+      "role": "Industrial Engineer | Developer",
+      "link": "https://www.linkedin.com/in/neil-sebasti%C3%A1n-j%C3%A1come-contreras/",
+      "email": "neilsebastian14@gmail.com",
+      "comment": "He is a 'crack' in what he does, even teaching me how to expand my knowledge and career."
+    }
+  ]
 }

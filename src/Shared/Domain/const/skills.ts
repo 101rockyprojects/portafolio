@@ -1,12 +1,26 @@
-import { type IconDefinition, faPhp, faJs, faNodeJs, faJava, faPython, faGitAlt, faYoutubeSquare, faDocker, faNpm, faGolang, faLaravel } from '@fortawesome/free-brands-svg-icons';
-import { faArrowsAlt, faSpoon } from '@fortawesome/free-solid-svg-icons';
+import {
+  type IconDefinition,
+  faAws,
+  faPhp,
+  faJs,
+  faNodeJs,
+  faJava,
+  faPython,
+  faGitAlt,
+  faGithub,
+  faYoutubeSquare,
+  faDocker,
+  faGolang,
+  faLaravel,
+  faCloudflare,
+} from '@fortawesome/free-brands-svg-icons';
 
 export const techData: Record<string, { source: IconDefinition | string; category: string; level: string; link: string, color?: string }> = {
-  'Composer': {
-    source: 'composer.webp',
+  'Bitbucket': {
+    source: 'bitbucket.webp',
     category: 'Tool',
     level: 'Experienced',
-    link: 'https://getcomposer.org',
+    link: 'https://bitbucket.org/product/',
   },
   'Docker': {
     source: faDocker,
@@ -22,7 +36,19 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     link: 'https://git-scm.com',
     color: 'text-orange-600',
   },
-  'Javascript': {
+  'GitHub': {
+    source: faGithub,
+    category: 'Tool',
+    level: 'Experienced',
+    link: 'https://github.com',
+  },
+  'Gradle': {
+    source: 'gradle.webp',
+    category: 'Tool',
+    level: 'Experienced',
+    link: 'https://gradle.org/',
+  },
+  'JavaScript': {
     source: faJs,
     category: 'Front',
     level: 'Experienced',
@@ -36,7 +62,19 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     link: 'https://www.java.com/en',
     color: 'text-red-600',
   },
-  'Mysql': {
+  'JWT': {
+    source: 'jwt.webp',
+    category: 'Tool',
+    level: 'Experienced',
+    link: 'https://www.jwt.io/',
+  },
+  'Maven': {
+    source: 'maven.svg',
+    category: 'Tool',
+    level: 'Experienced',
+    link: 'https://maven.apache.org/',
+  },
+  'MySQL': {
     source: 'mysql.webp',
     category: 'Tool',
     level: 'Experienced',
@@ -49,13 +87,6 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     link: 'https://nodejs.org/en',
     color: 'text-green-600',
   },
-  'Npm': {
-    source: faNpm,
-    category: 'Tool',
-    level: 'Experienced',
-    link: 'https://nodejs.org/en',
-    color: 'text-red-600',
-  },
   'PHP': {
     source: faPhp,
     category: 'Back',
@@ -63,7 +94,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     link: 'https://www.php.net/',
     color: 'text-indigo-500',
   },
-  'Postgres': {
+  'PostgreSQL': {
     source: 'postgres.webp',
     category: 'Tool',
     level: 'Experienced',
@@ -80,6 +111,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     source: 'kafka.webp',
     category: 'Tool',
     level: 'Experienced',
+    color: 'invert',
     link: 'https://kafka.apache.org/'
   },
   'RabbitMQ': {
@@ -88,25 +120,36 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     level: 'Experienced',
     link: 'https://www.rabbitmq.com'
   },
-  'Scalar': {
-    source: faArrowsAlt,
-    category: 'Front',
+  'AWS S3': {
+    source: faAws,
+    category: 'Tool',
     level: 'Experienced',
-    link: 'https://github.com/mirdware/scalar?tab=readme-ov-file#scalar',
-    color: 'text-flame',
+    link: 'https://aws.amazon.com/s3/',
   },
-  'Scoop': {
-    source: faSpoon,
-    category: 'Back',
+  'Playwright': {
+    source: 'playwright.webp',
+    category: 'Tool',
     level: 'Experienced',
-    link: 'https://scoop.ct.ws/?i=1',
-    color: 'text-gold',
+    link: 'https://playwright.dev/',
+  },
+  'Postman': {
+    source: 'postman.webp',
+    category: 'Tool',
+    level: 'Experienced',
+    color: 'text-orange-500',
+    link: 'https://www.postman.com/',
   },
   'Strapi': {
     source: 'strapi.svg',
     category: 'Back',
     level: 'Learning',
     link: 'https://strapi.io/',
+  },
+  'Supabase': {
+    source: 'supabase.svg',
+    category: 'Back',
+    level: 'Experienced',
+    link: 'https://supabase.com/',
   },
   'Svelte': {
     source: 'svelte.svg',
@@ -120,7 +163,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     level: 'Experienced',
     link: 'https://tailwindcss.com/',
   },
-  'Typescript': {
+  'TypeScript': {
     source: 'typescript.webp',
     category: 'Front',
     level: 'Experienced',
@@ -129,17 +172,36 @@ export const techData: Record<string, { source: IconDefinition | string; categor
   'Vite': {
     source: 'vite.svg',
     category: 'Front',
-    level: 'Learning',
+    level: 'Experienced',
     link: 'https://vitejs.dev',
   },
-  'Youtube API': {
+  'Vue.js': {
+    source: 'vue.webp',
+    category: 'Front',
+    level: 'Learning',
+    link: 'https://vuejs.org/',
+  },
+  'Cloudflare': {
+    source: faCloudflare,
+    category: 'Tool',
+    level: 'Learning',
+    color: 'text-orange-400',
+    link: 'https://www.cloudflare.com/',
+  },
+  'YouTube API': {
     source: faYoutubeSquare,
     category: 'Tool',
     level: 'Experienced',
     link: 'https://developers.google.com/youtube/v3/getting-started',
     color: 'text-red-600',
   },
-  'Hibernate': {
+  'Spring Boot': {
+    source: 'spring-icon.svg',
+    category: 'Back',
+    level: 'Experienced',
+    link: 'https://spring.io'
+  },
+  'Hibernate/JPA': {
     source: 'hibernate.webp',
     category: 'Back',
     level: 'Experienced',
@@ -155,7 +217,7 @@ export const techData: Record<string, { source: IconDefinition | string; categor
   'Go': {
     source: faGolang,
     category: 'Back',
-    level: 'Learning',
+    level: 'Want',
     link: 'https://golang.org/',
     color: 'text-blue-400',
   },

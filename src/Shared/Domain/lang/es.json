@@ -1,155 +1,178 @@
 {
   "nav": {
-      "about": "Sobre mí",
-      "projects": "Proyectos",
-      "experience": "Experiencia",
-      "education": "Educación",
-      "achievements": "Logros",
-      "hobbies": "Pasatiempos",
-      "contact": "Contáctame",
-      "recommendations": "Referencias"
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "achievements": "Logros",
+    "hobbies": "Pasatiempos",
+    "contact": "Contáctame",
+    "recommendations": "Referencias"
   },
   "about": {
-      "title": "Desarrollador Back-end",
-      "slogan": "Pequeñas mejoras llevan a grandes sistemas.",
-      "extra": "Ingenierio de sistemas adaptable, eficiente y curioso.",
-      "description": "Especializado en desarrollo de sistemas de amplio alcance. Enfocado en otorgar soluciones sencillas a problemas complejos. Tal como los sistemas, estoy en constante mejora y aprendizaje.",
-      "salute": "Un gusto, soy",
-      "gag": "¿Balboa? Casi"
+    "title": "Ingeniero",
+    "slogan": "Pequeñas mejoras llevan a grandes sistemas.",
+    "extra": "Java 20+ · Spring Boot · PHP 8+ · Laravel · Kafka/RabbitMQ",
+    "description": "Ingeniero Backend que construye sistemas, APIs y microservicios con las mejores prácticas, documentación y arquitectura limpia.",
+    "salute": "Un gusto, soy",
+    "gag": "¿Balboa? Casi"
   },
   "projects": [
-      {
-        "name": "Meloday",
-        "description": "Página web que ofrece una canción diferente para cada día del año.",
-        "learnt": "Configuración de la API de Youtube, manejo de grandes volúmenes de datos, familiarizándome con Svelte y Vite.",
-        "technologies": ["Javascript", "Svelte", "Vite", "Youtube API", "Tailwind"],
-        "link": "https://101rockyprojects.github.io/meloday/ ",
-        "documentation": "https://deepwiki.com/101rockyprojects/meloday",
-        "image": "images/meloday.webp"
-      },
-      {
-        "name": "Cuida Backend",
-        "description": "Plataforma para la visibilidad de Refugios Animales de Cúcuta, Colombia.",
-        "learnt": "Configuración de la API RESTful para el front-end de Cuida, el panel de administración, creación de middleware, manejo de roles y base de datos.",
-        "technologies": ["Javascript", "Typescript", "Node.js", "Strapi"],
-        "link": "https://github.com/101rockyprojects/cuida-backend/",
-        "documentation": "https://deepwiki.com/101rockyprojects/cuida-backend"
-      }
+    {
+      "name": "Tycontec",
+      "description": "Una landing page para Tycontec, una empresa que ofrece soluciones tecnológicas.",
+      "learnt": "Configuración de una landing page con Svelte y Tailwind, y despliegue en Cloudflare.",
+      "technologies": ["Cloudflare", "Supabase", "PostgreSQL", "Node.js", "Svelte"],
+      "link": "https://tycontect-web.tycontec.workers.dev/",
+      "image": "images/tycontec.webp"
+    },
+    {
+      "name": "Devtools Directory",
+      "description": "Un directorio de herramientas para desarrolladores (incluyendo herramientas IA)",
+      "learnt": "Guardar un catálogo utilizando Supabase (que usa Postgres) con Row Level Security (RLS) y permitiendo sugerencias para agregar nuevas herramientas.",
+      "technologies": ["Supabase", "PostgreSQL", "Svelte", "Vite", "Node.js"],
+      "link": "https://devtools-directory.netlify.app/",
+      "documentation": "https://deepwiki.com/101rockyprojects/devtools",
+      "image": "images/devtools.webp"
+    },
+    {
+      "name": "Meloday",
+      "description": "Página web que ofrece una canción diferente para cada día del año.",
+      "learnt": "Configuración de la API de YouTube, manejo de grandes volúmenes de datos, familiarizándome con Svelte y Vite.",
+      "technologies": ["Svelte", "Vite", "YouTube API", "JavaScript"],
+      "link": "https://101rockyprojects.github.io/meloday/",
+      "documentation": "https://deepwiki.com/101rockyprojects/meloday",
+      "image": "images/meloday.webp"
+    },
+    {
+      "name": "Cuida Backend",
+      "description": "Plataforma para la visibilidad de refugios animales en Cúcuta, Colombia.",
+      "learnt": "Configuración de la API RESTful para el front-end de Cuida, el panel de administración, creación de middleware, manejo de roles y base de datos.",
+      "technologies": ["Strapi", "Node.js", "JavaScript", "TypeScript"],
+      "link": "https://github.com/101rockyprojects/cuida-backend/",
+      "documentation": "https://deepwiki.com/101rockyprojects/cuida-backend"
+    }
   ],
   "experience": [
-      {
-        "title": "Desarrollador Backend",
-        "company": "Sespesoft SAS",
-        "companyLink": "https://sespesoft.com/",
-        "initialDate": "Mayo 2021",
-        "finalDate": "Agosto 2025",
-        "country": "Colombia",
-        "description": [
-          "Destaco la creación de un sistema de colas con RabbitMQ para notificar eventos entre diversos sistemas de la empresa con Laravel, un sistema de georreferenciación dinamica y autenticación por roles y permisos.",
-          "Logré implementar en tiempo récord funcionalidades críticas en el sistema de registro y control de facturas de servicios de salud Aisalud para cumplir con la Resolución 2275 de 2023 del Ministerio de Salud de Colombia.",
-          "Trabajando con arquitecturas Hexagonal y DDD, configuración de entornos Docker, manejo de ORMs como Hibernate, scripts con PHP y uso de principios SOLID; bajo metolodologías SCRUM y Kanban."
-        ]
-      }
+    {
+      "title": "Desarrollador Backend",
+      "company": "Sespesoft SAS",
+      "companyLink": "https://sespesoft.com/",
+      "initialDate": "Mayo 2021",
+      "finalDate": "Agosto 2025",
+      "country": "Colombia",
+      "description": [
+        "Lideré backend con Java 20+ y Spring Boot; optimicé carga masiva un 40%.",
+        "Implementé eventos con Kafka y RabbitMQ; resiliencia con Retry y Timeout.",
+        "Desarrollé APIs REST y SOAP; más de 10k transacciones semanales con Hibernate/JPA.",
+        "Automaticé cumplimiento legal (Res. 2275); reduje despliegues un 30% con CI.",
+        "Subí cobertura al 95% con E2E (Playwright) y validación de contratos (SoapUI).",
+        "Diseñé y desarrollé un microservicio de geolocalización dinámico y personalizable basado en jerarquías, que integró sistemas en Java y PHP mediante Kafka y RabbitMQ, permitiendo la sincronización asíncrona de datos y la centralización de la parametrización de ubicaciones y sedes.",
+        "Esta primera implementación sentó las bases para una arquitectura orientada a eventos que posteriormente permitió unificar los microservicios en un robusto microservicio central de autenticación y gestión de sesiones usando JWT y refresco de tokens."
+      ]
+    }
   ],
   "education": [
-      {
-        "title": "Ingeniería de Sistemas",
-        "logo": "images/simonbolivar.webp",
-        "institution": "Universidad Simón Bolívar",
-        "initialDate": "2020",
-        "finalDate": "2024",
-        "country": "Colombia",
-        "description": "Enfoque en ingeniería de software",
-        "type": "qualification"
-      },
-      {
-        "title": "Inglés",
-        "logo": "images/universal.webp",
-        "level": "B2",
-        "institution": "Universal Centro de Idiomas",
-        "initialDate": "2021",
-        "finalDate": "2022",
-        "country": "Colombia",
-        "type": "language"
-      }
+    {
+      "title": "Ingeniería de Sistemas",
+      "logo": "images/simonbolivar.webp",
+      "institution": "Universidad Simón Bolívar",
+      "initialDate": "2020",
+      "finalDate": "2024",
+      "country": "Colombia",
+      "description": "Enfoque en ingeniería de software",
+      "type": "qualification"
+    },
+    {
+      "title": "Inglés",
+      "logo": "images/universal.webp",
+      "level": "B2",
+      "institution": "Universal Centro de Idiomas",
+      "initialDate": "2021",
+      "finalDate": "2022",
+      "country": "Colombia",
+      "type": "language"
+    }
   ],
   "achievements": [
-      {
-        "title": "Carta profesional de Ingeniería",
-        "description": [
-          "¡Ya no solo soy ingeniero de corazón, ahora es oficial! Avalado por el COPNIA.",
-          "El titánico esfuerzo de 5 años, el fruto tangible de la resiliencia. Una imagen de 50KB con el peso incalculable de ser uno de los mayores logros de mi vida.",
-          "El título que siempre va a preceder a mi nombre: 'Ingeniero de Sistemas'."
-        ],
-        "image": "images/engineer_professional_card.webp",
-        "link": "https://tramites.copnia.gov.co/Copnia_Microsite/CertificateOfGoodStanding/CertificateOfGoodStandingStart"
-      },
-      {
-        "title": "EFSET Inglés C1",
-        "description": [
-          "Últimos resultados del examen de 90 minutos (Lectura, escucha, escritura, y habla).",
-          "Realizado el 4 de Agosto del 2024. Aprendiendo cada día para mejorarlo."
-        ],
-        "image": "images/efset_67.webp",
-        "link": "https://cert.efset.org/PTbQL6"
-      },
-      {
-        "title": "Certificado Inglés B2",
-        "description": [
-          "Luego de un año de esfuerzo, logré completar los módulos B1 y B2 de inglés en Universal Centro de Idiomas.",
-          "A través de clases virtuales diarias, ejercicios, lecturas, y examenes semanales obtuve la certificación en un solo año."
-        ],
-        "image": "images/certificate_universal.webp",
-        "link": "https://www.universal.edu.co/"
-      },
-      {
-        "title": "3er Lugar - Training Camp de los Santanderes",
-        "description": [
-          "¿En una semana puedes aprender lo necesario para una maratón de programación? ¡Sí! Tras este maravilloso evento que duró 3 semanas aprendiendo conceptos avanzados de algortimia y matemática se obtuvo el 3er puesto.",
-          "En equipos de 3, se realizó una maratón de 4 horas donde 'Agileware', el único equipo de 2 personas y siendo novatos, ¡logramos ser los terceros entre 16 equipos!"
-        ],
-        "image": "images/certificate_marathon.webp",
-        "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"
-      }
+    {
+      "title": "Tarjeta profesional de Ingeniería",
+      "description": [
+        "¡Ya no solo soy ingeniero de corazón, ahora es oficial! Avalado por el COPNIA.",
+        "El titánico esfuerzo de 5 años, el fruto tangible de la resiliencia. Una imagen de 50KB con el peso incalculable de ser uno de los mayores logros de mi vida.",
+        "El título que siempre va a preceder a mi nombre: 'Ingeniero de Sistemas'."
+      ],
+      "image": "images/engineer_professional_card.webp",
+      "link": "https://tramites.copnia.gov.co/Copnia_Microsite/CertificateOfGoodStanding/CertificateOfGoodStandingStart"
+    },
+    {
+      "title": "EFSET Inglés C1",
+      "description": [
+        "Últimos resultados del examen de 90 minutos (lectura, escucha, escritura y habla).",
+        "Realizado el 4 de agosto de 2024. Aprendiendo cada día para mejorarlo."
+      ],
+      "image": "images/efset_67.webp",
+      "link": "https://cert.efset.org/PTbQL6"
+    },
+    {
+      "title": "Certificado de Inglés B2",
+      "description": [
+        "Luego de un año de esfuerzo, logré completar los módulos B1 y B2 de inglés en Universal Centro de Idiomas.",
+        "A través de clases virtuales diarias, ejercicios, lecturas y exámenes semanales obtuve la certificación en un solo año."
+      ],
+      "image": "images/certificate_universal.webp",
+      "link": "https://www.universal.edu.co/"
+    },
+    {
+      "title": "3er lugar - Training Camp de los Santanderes",
+      "description": [
+        "¿En una semana puedes aprender lo necesario para una maratón de programación? ¡Sí! Tras este maravilloso evento, que duró 3 semanas, aprendimos conceptos avanzados de algoritmia y matemática y obtuvimos el 3er puesto.",
+        "En equipos de 3, se realizó una maratón de 4 horas donde 'Agileware', el único equipo de 2 personas y siendo novatos, ¡logramos ser terceros entre 16 equipos!"
+      ],
+      "image": "images/certificate_marathon.webp",
+      "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"
+    }
   ],
   "hobbies": [
-      {
-        "name": "Programar",
-        "description": "Siempre buscando nuevos desafíos o algo innovador.",
-        "image": "images/coding.webp"
-      },
-      {
-        "name": "Videojuegos",
-        "description": "Supercompetitivo, aunque jugar con amigos es mejor.",
-        "image": "images/gaming.webp"
-      },
-      {
-        "name": "Leer",
-        "description": "Aficionado de novelas sobre distopías, ciencia ficción, terror y suspenso.",
-        "image": "images/reading.webp"
-      },
-      {
-        "name": "Entrenar",
-        "description": "El cuerpo es un templo, debe ser cuidado y admirado.",
-        "image": "images/training.webp"
-      }
+    {
+      "name": "Programar",
+      "description": "Siempre buscando nuevos desafíos o algo innovador.",
+      "image": "images/coding.webp"
+    },
+    {
+      "name": "Videojuegos",
+      "description": "Supercompetitivo, aunque jugar con amigos es mejor.",
+      "image": "images/gaming.webp"
+    },
+    {
+      "name": "Leer",
+      "description": "Aficionado a novelas sobre distopías, ciencia ficción, terror y suspenso.",
+      "image": "images/reading.webp"
+    },
+    {
+      "name": "Entrenar",
+      "description": "El cuerpo es un templo; debe ser cuidado y admirado.",
+      "image": "images/training.webp"
+    }
   ],
   "recommendations": [
-      {
-        "type": "Recomendación Personal",
-        "person_name": "Mary Rojas",
-        "photo": "images/mary.webp",
-        "role": "Arquitecta de Soluciones | SRE | DevOps | AWS",
-        "link": "https://www.linkedin.com/in/mary-evelyn-rojas-roa-03a1801a6/",
-        "email": "mevere66@gmail.com",
-        "comment": "Excelente compañero, proactivo y curioso; en otras palabras, 'un man que resuelve'."
-      },
-      {
-        "type": "Recomendación Personal",
-        "person_name": "Katherine Andrade",
-        "email": "katherin2511@hotmail.com",
-        "phone": "+34 665 84 20 23",
-        "comment":"Lo he visto crecer y convertirse en una persona responsable, trabajadora y amable. Siempre aprendiendo y superándose a sí mismo."
-      }
+    {
+      "type": "Recomendación personal",
+      "person_name": "Mary Rojas",
+      "photo": "images/mary.webp",
+      "role": "DevOps Engineer | SRE | AWS",
+      "link": "https://www.linkedin.com/in/mary-evelyn-rojas-roa-03a1801a6/",
+      "email": "mevere66@gmail.com",
+      "comment": "Excelente compañero, proactivo y curioso; en otras palabras, 'un man que resuelve'."
+    },
+    {
+      "type": "Personal recommendation",
+      "person_name": "Neil Jácome",
+      "photo": "images/neil.png",
+      "role": "Ingeniero Industrial | Desarrollador",
+      "link": "https://www.linkedin.com/in/neil-sebasti%C3%A1n-j%C3%A1come-contreras/",
+      "email": "neilsebastian14@gmail.com",
+      "comment": "Es un 'crack' en lo que hace, incluso me ha enseñado a expandir mis conocimientos y mi carrera."
+    }
   ]
-}  
+}
