@@ -20,35 +20,35 @@
   "projects": [
     {
       "name": "Tycontec",
-      "description": "Una landing page para Tycontec, una empresa que ofrece soluciones tecnológicas.",
-      "learnt": "Configuración de una landing page con Svelte y Tailwind, y despliegue en Cloudflare.",
+      "description": "Desarrollo de la landing page oficial para Tycontec, una empresa de soluciones tecnológicas, enfocada en la optimización de carga y diseño responsivo.",
+      "learnt": "Implementación de arquitecturas modernas de frontend con Svelte y Tailwind CSS, junto con el despliegue y gestión de edge computing mediante Cloudflare Workers.",
       "technologies": ["Cloudflare", "Supabase", "PostgreSQL", "Node.js", "Svelte"],
       "link": "https://tycontect-web.tycontec.workers.dev/",
       "image": "images/tycontec.webp"
     },
     {
       "name": "Devtools Directory",
-      "description": "Un directorio de herramientas para desarrolladores (incluyendo herramientas IA)",
-      "learnt": "Guardar un catálogo utilizando Supabase (que usa Postgres) con Row Level Security (RLS) y permitiendo sugerencias para agregar nuevas herramientas.",
-      "technologies": ["Supabase", "PostgreSQL", "Svelte", "Vite", "Node.js"],
+      "description": "Un ecosistema de recursos para desarrolladores que centraliza herramientas esenciales, incluyendo utilidades basadas en Inteligencia Artificial.",
+      "learnt": "Dominio de persistencia de datos y seguridad en Supabase, implementando Row Level Security (RLS) y sistemas de contribución de contenido por parte de los usuarios.",
+      "technologies": ["Supabase", "PostgreSQL", "Svelte", "Node.js"],
       "link": "https://devtools-directory.netlify.app/",
       "documentation": "https://deepwiki.com/101rockyprojects/devtools",
       "image": "images/devtools.webp"
     },
     {
       "name": "Meloday",
-      "description": "Página web que ofrece una canción diferente para cada día del año.",
-      "learnt": "Configuración de la API de YouTube, manejo de grandes volúmenes de datos, familiarizándome con Svelte y Vite.",
-      "technologies": ["Svelte", "Vite", "YouTube API", "JavaScript"],
+      "description": "Plataforma interactiva que ofrece una experiencia musical curada, asignando una canción única para cada día del año.",
+      "learnt": "Integración avanzada con la API de YouTube y gestión eficiente de grandes volúmenes de datos dinámicos utilizando Svelte y Vite para un rendimiento óptimo.",
+      "technologies": ["Svelte", "YouTube API"],
       "link": "https://101rockyprojects.github.io/meloday/",
       "documentation": "https://deepwiki.com/101rockyprojects/meloday",
       "image": "images/meloday.webp"
     },
     {
       "name": "Cuida Backend",
-      "description": "Plataforma para la visibilidad de refugios animales en Cúcuta, Colombia.",
-      "learnt": "Configuración de la API RESTful para el front-end de Cuida, el panel de administración, creación de middleware, manejo de roles y base de datos.",
-      "technologies": ["Strapi", "Node.js", "JavaScript", "TypeScript"],
+      "description": "Infraestructura backend para una plataforma social dedicada a dar visibilidad y apoyo a refugios de animales en Cúcuta, Colombia.",
+      "learnt": "Diseño de APIs RESTful robustas, gestión de middlewares de seguridad, control de acceso basado en roles (RBAC) y administración de contenidos con Strapi y TypeScript.",
+      "technologies": ["Strapi", "Node.js", "TypeScript"],
       "link": "https://github.com/101rockyprojects/cuida-backend/",
       "documentation": "https://deepwiki.com/101rockyprojects/cuida-backend"
     }
@@ -62,13 +62,12 @@
       "finalDate": "Agosto 2025",
       "country": "Colombia",
       "description": [
-        "Lideré backend con Java 20+ y Spring Boot; optimicé carga masiva un 40%.",
-        "Implementé eventos con Kafka y RabbitMQ; resiliencia con Retry y Timeout.",
-        "Desarrollé APIs REST y SOAP; más de 10k transacciones semanales con Hibernate/JPA.",
-        "Automaticé cumplimiento legal (Res. 2275); reduje despliegues un 30% con CI.",
-        "Subí cobertura al 95% con E2E (Playwright) y validación de contratos (SoapUI).",
-        "Diseñé y desarrollé un microservicio de geolocalización dinámico y personalizable basado en jerarquías, que integró sistemas en Java y PHP mediante Kafka y RabbitMQ, permitiendo la sincronización asíncrona de datos y la centralización de la parametrización de ubicaciones y sedes.",
-        "Esta primera implementación sentó las bases para una arquitectura orientada a eventos que posteriormente permitió unificar los microservicios en un robusto microservicio central de autenticación y gestión de sesiones usando JWT y refresco de tokens."
+        "Lideré el desarrollo backend utilizando Java 20+ y Spring Boot, logrando optimizar en un 40% los procesos de carga masiva de datos y parametrización.",
+        "Diseñé e implementé arquitecturas basadas en eventos con Kafka y RabbitMQ bajo un enfoque Hexagonal, garantizando una comunicación asíncrona eficiente y resiliente.",
+        "Desarrollé y mantuve APIs REST y SOAP con manejo de concurrencia, soportando más de 10,000 transacciones semanales mediante Hibernate y JPA.",
+        "Automaticé el cumplimiento de normativas legales (Resolución 2275) en tiempo récord, reduciendo los tiempos de desarrollo y despliegue en un 30%.",
+        "Elevé la cobertura de código al 95% mediante pruebas E2E (Playwright) y validación de contratos SOAP, asegurando la alta fiabilidad del sistema.",
+        "Diseñé un microservicio de geolocalización jerárquico que integró sistemas Java y PHP, sentando las bases para un ecosistema unificado de autenticación y gestión de sesiones con JWT."
       ]
     }
   ],
@@ -80,7 +79,7 @@
       "initialDate": "2020",
       "finalDate": "2024",
       "country": "Colombia",
-      "description": "Enfoque en ingeniería de software",
+      "description": "Graduado con beca del 100% por excelencia académica. Formación integral con enfoque en ingeniería de software y algoritmia de alto nivel.",
       "type": "qualification"
     },
     {
@@ -91,43 +90,34 @@
       "initialDate": "2021",
       "finalDate": "2022",
       "country": "Colombia",
+      "description": "Certificación de suficiencia en lengua inglesa.",
       "type": "language"
     }
   ],
   "achievements": [
     {
-      "title": "Tarjeta profesional de Ingeniería",
+      "title": "Tarjeta Profesional de Ingeniería",
       "description": [
-        "¡Ya no solo soy ingeniero de corazón, ahora es oficial! Avalado por el COPNIA.",
-        "El titánico esfuerzo de 5 años, el fruto tangible de la resiliencia. Una imagen de 50KB con el peso incalculable de ser uno de los mayores logros de mi vida.",
-        "El título que siempre va a preceder a mi nombre: 'Ingeniero de Sistemas'."
+        "Acreditación oficial ante el COPNIA. Es el respaldo legal y ético a cinco años de disciplina y formación técnica.",
+        "Un hito que representa mi compromiso con la excelencia en la Ingeniería de Sistemas."
       ],
       "image": "images/engineer_professional_card.webp",
       "link": "https://tramites.copnia.gov.co/Copnia_Microsite/CertificateOfGoodStanding/CertificateOfGoodStandingStart"
     },
     {
-      "title": "EFSET Inglés C1",
+      "title": "Inglés C1 - EFSET",
       "description": [
-        "Últimos resultados del examen de 90 minutos (lectura, escucha, escritura y habla).",
-        "Realizado el 4 de agosto de 2024. Aprendiendo cada día para mejorarlo."
+        "Dominio avanzado del idioma (lectura, escucha, escritura y habla), certificado en agosto de 2024.",
+        "Capacidad técnica para entornos internacionales."
       ],
       "image": "images/efset_67.webp",
       "link": "https://cert.efset.org/PTbQL6"
     },
     {
-      "title": "Certificado de Inglés B2",
+      "title": "3er Lugar - Maratón de Programación",
       "description": [
-        "Luego de un año de esfuerzo, logré completar los módulos B1 y B2 de inglés en Universal Centro de Idiomas.",
-        "A través de clases virtuales diarias, ejercicios, lecturas y exámenes semanales obtuve la certificación en un solo año."
-      ],
-      "image": "images/certificate_universal.webp",
-      "link": "https://www.universal.edu.co/"
-    },
-    {
-      "title": "3er lugar - Training Camp de los Santanderes",
-      "description": [
-        "¿En una semana puedes aprender lo necesario para una maratón de programación? ¡Sí! Tras este maravilloso evento, que duró 3 semanas, aprendimos conceptos avanzados de algoritmia y matemática y obtuvimos el 3er puesto.",
-        "En equipos de 3, se realizó una maratón de 4 horas donde 'Agileware', el único equipo de 2 personas y siendo novatos, ¡logramos ser terceros entre 16 equipos!"
+        "Podio obtenido entre 16 equipos en el Training Camp de los Santanderes tras una intensa competencia de algoritmos y lógica.",
+        "Demostración de agilidad mental y resolución de problemas bajo presión."
       ],
       "image": "images/certificate_marathon.webp",
       "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"

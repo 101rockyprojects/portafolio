@@ -20,35 +20,35 @@
   "projects": [
     {
       "name": "Tycontec",
-      "description": "A landing page for Tycontec, a company that offers technology solutions.",
-      "learnt": "Setting up a landing page with SvelteKit and Tailwind, and deploying it on Cloudflare.",
+      "description": "Development of the official landing page for Tycontec, a technology solutions company, focused on fast loading times and responsive design.",
+      "learnt": "Implementing modern frontend architectures using Svelte and Tailwind CSS, alongside deploying and managing edge computing through Cloudflare Workers.",
       "technologies": ["Cloudflare", "Supabase", "PostgreSQL", "Node.js", "Svelte"],
       "link": "https://tycontect-web.tycontec.workers.dev/",
       "image": "images/tycontec.webp"
     },
     {
       "name": "Devtools Directory",
-      "description": "A lightweight directory of developer tools (including AI tools).",
-      "learnt": "Store the catalog in Supabase (using Postgres) with Row Level Security (RLS) and supports public suggestions to add new tools.",
-      "technologies": ["Supabase", "PostgreSQL", "Svelte", "Vite", "Node.js"],
+      "description": "A developer resource ecosystem that centralizes essential tools, including AI-based utilities.",
+      "learnt": "Mastering data persistence and security in Supabase by implementing Row Level Security (RLS) and community-driven content suggestion systems.",
+      "technologies": ["Supabase", "PostgreSQL", "Svelte", "Node.js"],
       "link": "https://devtools-directory.netlify.app/",
       "documentation": "https://deepwiki.com/101rockyprojects/devtools",
       "image": "images/devtools.webp"
     },
     {
       "name": "Meloday",
-      "description": "A website that offers a different song for each day of the year.",
-      "learnt": "Setting up the YouTube API, handling large volumes of data, and getting familiar with Svelte and Vite.",
-      "technologies": ["Svelte", "Vite", "YouTube API", "JavaScript"],
+      "description": "An interactive platform offering a curated musical experience by assigning a unique song for every day of the year.",
+      "learnt": "Advanced integration with the YouTube API and efficient management of large dynamic datasets using Svelte and Vite for optimal performance.",
+      "technologies": ["Svelte", "YouTube API"],
       "link": "https://101rockyprojects.github.io/meloday/",
       "documentation": "https://deepwiki.com/101rockyprojects/meloday",
       "image": "images/meloday.webp"
     },
     {
       "name": "Cuida Backend",
-      "description": "A platform to improve the visibility of animal shelters in Cúcuta, Colombia.",
-      "learnt": "Setting up the RESTful API for Cuida's front-end, the admin panel, creating middleware, and managing roles and databases.",
-      "technologies": ["Strapi", "Node.js", "JavaScript", "TypeScript"],
+      "description": "Backend infrastructure for a social platform dedicated to increasing visibility and support for animal shelters in Cúcuta, Colombia.",
+      "learnt": "Designing robust RESTful APIs, managing security middlewares, implementing Role-Based Access Control (RBAC), and content management with Strapi and TypeScript.",
+      "technologies": ["Strapi", "Node.js", "TypeScript"],
       "link": "https://github.com/101rockyprojects/cuida-backend/",
       "documentation": "https://deepwiki.com/101rockyprojects/cuida-backend"
     }
@@ -62,13 +62,12 @@
       "finalDate": "August 2025",
       "country": "Colombia",
       "description": [
-        "Led backend with Java 20+ and Spring Boot; improved bulk processing by 40%.",
-        "Built event-driven flows with Kafka and RabbitMQ; added resilience with Retry and Timeout.",
-        "Delivered REST and SOAP APIs; handled 10k+ weekly transactions with Hibernate/JPA.",
-        "Automated legal compliance (Res. 2275); cut deployment time by 30% through CI.",
-        "Raised coverage to 95% with E2E tests (Playwright) and contract checks (SoapUI).",
-        "Designed and developed a dynamic and customizable geolocation microservice based on jerarchies integrating Java and PHP systems using Kafka and RabbitMQ, enabling asynchronous data synchronization and centralized management of location and headquarters configuration.",
-        "This initial implementation laid the foundation for an event-driven architecture that later unified microservices into a unique reliable authentication and session management microservice using JWT and refresh tokens."
+        "Led backend development using Java 20+ and Spring Boot, achieving a 40% optimization in bulk data processing and environment configuration.",
+        "Designed and implemented event-driven architectures using Kafka and RabbitMQ with a Hexagonal approach, ensuring efficient and resilient asynchronous communication.",
+        "Developed and maintained REST and SOAP APIs with concurrency handling, supporting over 10,000 weekly transactions via Hibernate and JPA.",
+        "Automated compliance with legal regulations (Resolution 2275) in record time, reducing development and deployment cycles by 30%.",
+        "Increased code coverage to 95% through E2E testing (Playwright) and SOAP contract validation, significantly improving system reliability.",
+        "Designed a hierarchical geolocation microservice that integrated Java and PHP systems, establishing the foundation for a unified authentication and JWT session management ecosystem."
       ]
     }
   ],
@@ -80,54 +79,45 @@
       "initialDate": "2020",
       "finalDate": "2024",
       "country": "Colombia",
-      "description": "Focus on software engineering",
+      "description": "Awarded a 100% merit-based academic scholarship. Focused on software engineering and advanced algorithmic problem-solving.",
       "type": "qualification"
     },
     {
       "title": "English",
       "logo": "images/universal.webp",
       "level": "B2",
-      "institution": "Universal Centro de Idiomas",
+      "institution": "Universal Language Center",
       "initialDate": "2021",
       "finalDate": "2022",
       "country": "Colombia",
+      "description": "English language proficiency certification.",
       "type": "language"
     }
   ],
   "achievements": [
     {
-      "title": "Professional Engineering Card",
+      "title": "Professional Engineering License",
       "description": [
-        "I'm no longer just an engineer at heart—it's official now! Endorsed by COPNIA.",
-        "Five years of titanic effort and the tangible fruit of resilience. A 50KB image with the incalculable weight of being one of the greatest achievements of my life.",
-        "The title that will always come before my name: 'Systems Engineer'."
+        "Official certification granted by COPNIA. It serves as the legal and ethical backing of five years of technical discipline.",
+        "A milestone representing my commitment to excellence in Systems Engineering."
       ],
       "image": "images/engineer_professional_card.webp",
       "link": "https://tramites.copnia.gov.co/Copnia_Microsite/CertificateOfGoodStanding/CertificateOfGoodStandingStart"
     },
     {
-      "title": "EFSET English C1",
+      "title": "English C1 - EFSET",
       "description": [
-        "Latest results from the 90-minute exam (reading, listening, writing, and speaking).",
-        "Taken on August 4, 2024. Learning every day to improve it."
+        "Advanced language proficiency (reading, listening, writing, and speaking), certified in August 2024.",
+        "Fully capable of working in international technical environments."
       ],
       "image": "images/efset_67.webp",
       "link": "https://cert.efset.org/PTbQL6"
     },
     {
-      "title": "B2 English Certificate",
+      "title": "3rd Place - Programming Marathon",
       "description": [
-        "After one year of effort, I completed the B1 and B2 English modules at Universal Centro de Idiomas.",
-        "Through daily virtual classes, exercises, readings, and weekly exams, I obtained the certification in just one year."
-      ],
-      "image": "images/certificate_universal.webp",
-      "link": "https://www.universal.edu.co/"
-    },
-    {
-      "title": "3rd Place - Training Camp of Los Santanderes",
-      "description": [
-        "Can you learn what you need for a programming marathon in just one week? Yes! After this wonderful event that lasted three weeks, learning advanced algorithms and math concepts, we achieved third place.",
-        "In teams of three, we held a four-hour marathon where 'Agileware'—the only two-person team and complete newcomers—managed to place third among 16 teams."
+        "Achieved a podium finish among 16 teams at the Santanderes Training Camp after an intense logic and algorithm competition.",
+        "Proved mental agility and problem-solving skills under high-pressure conditions."
       ],
       "image": "images/certificate_marathon.webp",
       "link": "https://www.linkedin.com/posts/jefferson-jaramillo-vega_finalizamos-nuestro-primer-training-camp-activity-7005548294483374080-bwqi/"
