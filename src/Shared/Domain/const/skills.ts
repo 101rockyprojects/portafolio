@@ -214,6 +214,24 @@ export const techData: Record<string, { source: IconDefinition | string; categor
     link: 'https://laravel.com',
     color: 'text-red-700',
   },
+  'Claude': {
+    source: 'claude.webp',
+    category: 'Tool',
+    level: 'Experienced',
+    link: 'https://www.anthropic.com/claude',
+  },
+  'Codex': {
+    source: 'codex.webp',
+    category: 'Tool',
+    level: 'Experienced',
+    link: 'https://openai.com/index/introducing-codex/',
+  },
+  'Opencode': {
+    source: 'opencode.webp',
+    category: 'Tool',
+    level: 'Experienced',
+    link: 'https://opencode.ai',
+  },
   'Go': {
     source: faGolang,
     category: 'Back',

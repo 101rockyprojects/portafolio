@@ -19,12 +19,21 @@
   },
   "projects": [
     {
-      "name": "Tycontec",
-      "description": "Development of the official landing page for Tycontec, a technology solutions company, focused on fast loading times and responsive design.",
-      "learnt": "Implementing modern frontend architectures using Svelte and Tailwind CSS, alongside deploying and managing edge computing through Cloudflare Workers.",
+      "name": "HabboHotel",
+      "description": "REST API built with Spring Boot 4 and Java 25 for hotel room availability searches, following hexagonal architecture, DDD, Apache Kafka, and Docker.",
+      "learnt": "Hexagonal architecture (ports & adapters), Domain-Driven Design (DDD), Apache Kafka integration for asynchronous communication, and Docker Compose service orchestration.",
+      "technologies": ["Java", "Spring Boot", "PostgreSQL", "Kafka", "Docker"],
+      "link": "https://github.com/101rockyprojects/habbohotel",
+      "documentation": "https://deepwiki.com/101rockyprojects/habbohotel",
+      "image": "images/habbohotel.webp"
+    },
+    {
+      "name": "Kiubo",
+      "description": "Digital transformation platform connecting local businesses with customers, enabling nearby service and establishment discovery.",
+      "learnt": "Modern web application development with focus on performance, responsive design, and edge computing deployment through Cloudflare Workers.",
       "technologies": ["Cloudflare", "Supabase", "PostgreSQL", "Node.js", "Svelte"],
-      "link": "https://tycontect-web.tycontec.workers.dev/",
-      "image": "images/tycontec.webp"
+      "link": "https://kiubo.rockybarrios10.workers.dev/",
+      "image": "images/kiubo.webp"
     },
     {
       "name": "Devtools Directory",
