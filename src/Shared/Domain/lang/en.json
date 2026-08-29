@@ -49,7 +49,7 @@
       "description": "An interactive platform offering a curated musical experience by assigning a unique song for every day of the year.",
       "learnt": "Advanced integration with the YouTube API and efficient management of large dynamic datasets using Svelte and Vite for optimal performance.",
       "technologies": ["Svelte", "YouTube API"],
-      "link": "https://101rockyprojects.github.io/meloday/",
+      "link": "https://meloday.rockybarrios10.workers.dev/",
       "documentation": "https://deepwiki.com/101rockyprojects/meloday",
       "image": "images/meloday.webp"
     },
